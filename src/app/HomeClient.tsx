@@ -23,8 +23,9 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
     const [error, setError] = useState("");
     const router = useRouter();
     const searchParams = useSearchParams();
-    useSession();
+    const { data: session, status } = useSession();
     const hasInvalidSessionError = searchParams.get("error") === INVALID_SESSION_ERROR_PARAM;
+    const username = (session?.user as { username?: string } | undefined)?.username ?? session?.user?.name ?? null;
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -51,14 +52,26 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
     return (
         <main className="flex flex-col min-h-screen text-gray-800 overflow-x-hidden relative">
             <header className="fixed top-0 left-0 right-0 z-50 navbar-app text-black">
-                <div className="max-w-5xl mx-auto px-3 md:px-4 py-2 flex justify-between items-center gap-3">
-                    <Link
-                        href="/"
-                        className="font-display font-bold text-lg md:text-xl tracking-tight text-black hover:opacity-80 transition-opacity"
-                    >
-                        GitPulse
-                    </Link>
-                    <AuthButton />
+                <div className="max-w-5xl mx-auto px-3 md:px-4 py-2 flex justify-between items-center gap-3 md:gap-4">
+                    <div className="flex items-center gap-2 md:gap-4 min-w-0">
+                        <Link
+                            href="/"
+                            className="font-display font-bold text-lg md:text-xl tracking-tight text-black hover:opacity-80 transition-opacity shrink-0"
+                        >
+                            GitPulse
+                        </Link>
+                        <span className="hidden sm:inline text-sm text-gray-600 border-l border-gray-300 pl-2 md:pl-4">
+                            Chat with your Repo
+                        </span>
+                    </div>
+                    <nav className="flex items-center gap-3 shrink-0">
+                        {status === "authenticated" && username && (
+                            <span className="text-xs text-gray-600 hidden sm:inline">
+                                Logged in with GitHub · <span className="font-medium text-black">@{username}</span>
+                            </span>
+                        )}
+                        <AuthButton />
+                    </nav>
                 </div>
             </header>
 

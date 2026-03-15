@@ -31,12 +31,13 @@
   background-size: var(--dot-size);
 }
 
-/* Navbar – same as page background (cream + dots) */
+/* Navbar – same as page background (cream + dots) with dark border */
 .navbar-app {
   background-color: var(--background);
   background-image: var(--dot-pattern);
   background-size: var(--dot-size);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: none;
 }
 
 @property --angle {
