@@ -26,6 +26,7 @@
     "@auth/prisma-adapter": "^2.11.1",
     "@babel/parser": "^7.28.5",
     "@babel/traverse": "^7.28.5",
+    "@fontsource/iosevka": "^5.2.5",
     "@google/generative-ai": "^0.24.1",
     "@octokit/graphql": "^9.0.3",
     "@prisma/client": "^6.19.2",

@@ -50,11 +50,11 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
 
     return (
         <main className="flex flex-col min-h-screen text-gray-800 overflow-x-hidden relative">
-            <header className="sticky top-0 z-30 bg-white/70 backdrop-blur-xl border-b border-black">
+            <header className="fixed top-0 left-0 right-0 z-50 navbar-white text-black">
                 <div className="max-w-5xl mx-auto px-3 md:px-4 py-2 flex justify-between items-center gap-3">
                     <Link
                         href="/"
-                        className="inline-flex items-center px-3 py-1.5 rounded-md bg-[#FEF9F2] border border-black font-display font-bold text-sm md:text-base tracking-tight text-foreground hover:text-amber-600 transition-colors shadow-[1px_1px_0px_rgba(0,0,0,1)]"
+                        className="font-display font-bold text-lg md:text-xl tracking-tight text-black hover:opacity-80 transition-opacity"
                     >
                         GitPulse
                     </Link>
@@ -62,12 +62,13 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
                 </div>
             </header>
 
-            <div className="fixed inset-0 z-0 pointer-events-none opacity-30">
-                <div className="absolute top-[-20%] left-[-10%] w-[80vw] max-w-[500px] h-[80vw] max-h-[500px] bg-[#F9C79A] rounded-full blur-[80px] md:blur-[128px]" />
-                <div className="absolute bottom-[-20%] right-[-10%] w-[80vw] max-w-[500px] h-[80vw] max-h-[500px] bg-amber-200 rounded-full blur-[80px] md:blur-[128px]" />
+            <div className="h-12 shrink-0" aria-hidden />
+
+            <div className="fixed inset-0 z-0 pointer-events-none opacity-20">
+                <div className="absolute top-[-20%] left-[-10%] w-[80vw] max-w-[500px] h-[80vw] max-h-[500px] bg-[#DD9651] rounded-full blur-[80px] md:blur-[128px]" />
             </div>
 
-            <section className="flex flex-col items-center justify-center py-12 md:py-16 px-4 relative overflow-hidden z-10">
+            <section className="flex flex-col items-center justify-center pt-4 pb-12 md:pt-6 md:pb-16 px-4 relative overflow-hidden z-10">
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -75,7 +76,7 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
                     transition={{ duration: 0.8 }}
                     className="z-10 flex flex-col items-center text-center max-w-xl w-full px-4"
                 >
-                    <div className="mb-5 conic-border-container rounded-full flex items-center justify-center">
+                    <div className="mb-4 conic-border-container rounded-full flex items-center justify-center">
                         <CodeIcon className="w-20 h-20 md:w-24 md:h-24" />
                     </div>
 
@@ -84,7 +85,7 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
                     </h1>
                     <h1 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight mt-1 pb-2 relative w-fit mx-auto leading-tight">
                         <span className="text-foreground">Master </span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-red-500">Any Repo. Instantly.</span>
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#DD9651] to-[#E69247]">Any Repo. Instantly.</span>
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl text-foreground-muted mt-6 mb-6 max-w-xl mx-auto font-medium leading-relaxed">
@@ -98,19 +99,19 @@ export default function HomeClient({ initialPosts = [] }: { initialPosts?: BlogP
                     )}
 
                     <form onSubmit={handleSubmit} className="w-full max-w-md relative group">
-                        <div className="flex items-center bg-white border-2 border-black p-1 rounded-lg shadow-[3px_3px_0px_rgba(0,0,0,1)]">
+                        <div className="flex items-center bg-white border border-black rounded-lg overflow-hidden">
                             <input
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                placeholder="username or username/repo"
-                                className="flex-1 bg-transparent border-none outline-none text-gray-900 px-3 py-2 md:px-4 md:py-3 placeholder-gray-500 text-sm md:text-base w-full min-w-0"
+                                placeholder="Paste a GitHub repo URL or username/repo to analyze..."
+                                className="flex-1 bg-transparent border-none outline-none text-black px-3 py-2.5 md:px-4 md:py-3 placeholder-[#A0A0A0] text-sm md:text-base w-full min-w-0"
                                 suppressHydrationWarning
                             />
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="bg-[#F9C79A] text-black font-bold p-2 md:p-3 rounded-md border-2 border-black hover:bg-amber-400 transition-colors disabled:opacity-50 shrink-0 shadow-[3px_3px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5"
+                                className="bg-[#DD9651] text-black font-bold p-2.5 md:p-3 rounded-r-md hover:bg-[#C98645] transition-colors disabled:opacity-50 shrink-0"
                                 suppressHydrationWarning
                             >
                                 {loading ? <Loader2 className="w-4 h-4 md:w-5 md:h-5 animate-spin" /> : <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}

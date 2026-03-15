@@ -1,19 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { Toaster } from "sonner";
+import "@fontsource/iosevka/latin-400.css";
+import "@fontsource/iosevka/latin-500.css";
+import "@fontsource/iosevka/latin-600.css";
+import "@fontsource/iosevka/latin-700.css";
 import "./globals.css";
 import JsonLd from "./components/json-ld";
 import { Providers } from "@/components/Providers";
 import { getCanonicalSiteUrl } from "@/lib/site-url";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
 export const viewport: Viewport = {
-  themeColor: "#FDFCFB",
+  themeColor: "#FCFAF5",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -103,7 +100,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className="antialiased font-sans"
         suppressHydrationWarning

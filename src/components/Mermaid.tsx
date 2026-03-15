@@ -218,8 +218,8 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
 
         try {
             const canvas = await html2canvas(element, {
-                backgroundColor: '#18181b', // zinc-900
-                scale: 2, // Higher resolution
+                backgroundColor: '#FCFAF5',
+                scale: 2,
             });
 
             const link = document.createElement('a');
@@ -245,23 +245,27 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
             >
                 <div
                     ref={diagramRef}
-                    className="overflow-x-auto bg-zinc-950/50 p-4 rounded-lg border border-white/5 hover:border-white/10 transition-colors flex justify-center min-w-0"
+                    className="overflow-x-auto bg-[#FCFAF5] p-6 rounded-xl border border-gray-200 shadow-sm flex justify-center min-w-0"
                     dangerouslySetInnerHTML={{ __html: svg }}
                     style={{ minHeight: svg ? 'auto' : '200px' }}
                 />
 
                 {/* Overlay controls */}
                 {!isGenerating && svg && (
-                    <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-all">
+                    <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all">
                         <button
                             onClick={exportToPNG}
-                            className="p-2 bg-zinc-800/80 hover:bg-zinc-700 text-zinc-400 hover:text-white rounded-lg backdrop-blur-sm"
+                            className="p-2 bg-white border border-black text-black hover:bg-[#DD9651] hover:text-white hover:border-[#DD9651] rounded-lg shadow-sm transition-colors"
                             title="Export as PNG"
                         >
                             <Download className="w-4 h-4" />
                         </button>
                         <button
-                            className="p-2 bg-zinc-800/80 hover:bg-zinc-700 text-zinc-400 hover:text-white rounded-lg backdrop-blur-sm"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsModalOpen(true);
+                            }}
+                            className="p-2 bg-white border border-black text-black hover:bg-[#DD9651] hover:text-white hover:border-[#DD9651] rounded-lg shadow-sm transition-colors"
                             title="View Fullscreen"
                         >
                             <Maximize2 className="w-4 h-4" />
@@ -270,9 +274,9 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                 )}
 
                 {showOverlay && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900/50 backdrop-blur-sm rounded-lg z-10">
-                        <div className="flex items-center gap-2 text-zinc-400">
-                            <Sparkles className="w-5 h-5 animate-pulse text-purple-400" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#FCFAF5]/95 backdrop-blur-sm rounded-xl border border-gray-200 z-10">
+                        <div className="flex items-center gap-2 text-gray-600">
+                            <Sparkles className="w-5 h-5 animate-pulse text-[#DD9651]" />
                             <span className="text-sm font-medium">
                                 {isFixing ? "Fixing diagram..." : "Generating diagram..."}
                             </span>
@@ -281,14 +285,14 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                 )}
 
                 {error && !isFixing && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900/90 backdrop-blur-sm rounded-lg p-4 text-center z-10">
-                        <p className="text-red-400 text-sm mb-3 max-w-[90%] break-words">{error}</p>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#FCFAF5]/98 backdrop-blur-sm rounded-xl border border-gray-200 p-4 text-center z-10">
+                        <p className="text-red-600 text-sm mb-3 max-w-[90%] break-words">{error}</p>
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
                                 handleRetry();
                             }}
-                            className="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 rounded-lg text-sm transition-colors flex items-center gap-2"
+                            className="px-4 py-2 bg-white border border-black text-black hover:bg-[#DD9651] hover:text-white hover:border-[#DD9651] rounded-lg text-sm transition-colors flex items-center gap-2"
                         >
                             <Sparkles className="w-4 h-4" />
                             Fix Diagram
@@ -304,19 +308,19 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 md:p-8"
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 md:p-8"
                         onClick={() => setIsModalOpen(false)}
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
-                            className="relative w-full max-w-[95vw] max-h-[95vh] bg-zinc-900 rounded-2xl border border-white/10 shadow-2xl overflow-hidden flex flex-col"
+                            className="relative w-full max-w-[95vw] max-h-[95vh] bg-[#FCFAF5] rounded-2xl border border-gray-200 shadow-2xl overflow-hidden flex flex-col"
                             onClick={(e) => e.stopPropagation()}
                         >
                             {/* Header */}
-                            <div className="flex items-center justify-between p-4 border-b border-white/10 bg-zinc-900/50">
-                                <h3 className="text-sm font-medium text-zinc-400 flex items-center gap-2">
+                            <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white">
+                                <h3 className="text-sm font-medium text-black flex items-center gap-2">
                                     <ZoomIn className="w-4 h-4" />
                                     Diagram Preview
                                 </h3>
@@ -324,7 +328,7 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                                     {!isGenerating && svg && (
                                         <button
                                             onClick={exportToPNG}
-                                            className="p-2 hover:bg-white/10 rounded-lg text-zinc-400 hover:text-white transition-colors"
+                                            className="p-2 hover:bg-[#DD9651] hover:text-white rounded-lg text-black transition-colors"
                                             title="Export as PNG"
                                         >
                                             <Download className="w-5 h-5" />
@@ -332,7 +336,7 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                                     )}
                                     <button
                                         onClick={() => setIsModalOpen(false)}
-                                        className="p-2 hover:bg-white/10 rounded-lg text-zinc-400 hover:text-white transition-colors"
+                                        className="p-2 hover:bg-gray-100 rounded-lg text-black transition-colors"
                                         title="Close"
                                     >
                                         <X className="w-5 h-5" />
@@ -341,14 +345,13 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                             </div>
 
                             {/* Content */}
-                            <div className="flex-1 overflow-auto bg-zinc-950/50 relative custom-scrollbar diagram-modal-content">
+                            <div className="flex-1 overflow-auto bg-[#FCFAF5] relative custom-scrollbar diagram-modal-content">
                                 <style>{`
                                     .diagram-modal-content svg {
                                         width: 100% !important;
                                         height: auto !important;
                                         max-width: 100% !important;
                                         max-height: 80vh !important;
-                                        color-scheme: dark;
                                     }
                                 `}</style>
                                 <div className="min-h-full w-full flex items-center justify-center p-4 md:p-12">
@@ -357,7 +360,7 @@ export const Mermaid = ({ chart, isStreaming = false }: MermaidProps) => {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.2 }}
                                         ref={modalRef}
-                                        className="bg-zinc-900/40 p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl flex items-center justify-center"
+                                        className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg flex items-center justify-center"
                                         style={{ minWidth: 'min(90vw, 800px)' }}
                                         dangerouslySetInnerHTML={{ __html: svg }}
                                     />

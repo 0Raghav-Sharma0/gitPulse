@@ -13,7 +13,7 @@ export default function AuthButton() {
 
     if (status === "loading") {
         return (
-            <div className="h-8 w-20 bg-[#FEF9F2] animate-pulse rounded-full border border-black" />
+            <div className="h-8 w-20 bg-white animate-pulse rounded-lg border border-black" />
         );
     }
 
@@ -22,9 +22,9 @@ export default function AuthButton() {
             <div className="relative">
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="flex items-center rounded-full bg-white border border-black hover:bg-[#F9C79A] transition-all group overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)]"
+                    className="flex items-center rounded-lg bg-white border border-black hover:bg-[#DD9651]/10 transition-colors group overflow-hidden"
                 >
-                    <div className="w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden border border-black group-hover:border-amber-500 transition-colors">
+                    <div className="w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden border border-black group-hover:border-[#DD9651] transition-colors">
                         {session.user?.image ? (
                             <Image
                                 src={session.user.image}
@@ -55,14 +55,14 @@ export default function AuthButton() {
                                 initial={{ opacity: 0, scale: 0.95, y: 10 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95, y: 10 }}
-                                className="absolute right-0 mt-2 w-48 bg-[#FEF9F2] border-2 border-black rounded-xl p-2 shadow-2xl z-50 backdrop-blur-xl"
+                                className="absolute right-0 mt-2 w-48 bg-white border border-black rounded-xl p-2 shadow-xl z-50"
                             >
                                 <Link
                                     href="/dashboard"
-                                    className="flex items-center gap-3 px-3 py-2 text-sm text-gray-800 hover:text-gray-900 hover:bg-[#F9C79A] rounded-lg transition-all group font-medium"
+                                    className="flex items-center gap-3 px-3 py-2 text-sm text-black hover:bg-[#DD9651]/15 rounded-lg transition-colors group font-medium"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
-                                    <LayoutDashboard className="w-4 h-4 group-hover:text-amber-600" />
+                                    <LayoutDashboard className="w-4 h-4 group-hover:text-[#DD9651]" />
                                     <span>Dashboard</span>
                                 </Link>
                                 <div className="h-px bg-black/10 my-1" />
@@ -71,7 +71,7 @@ export default function AuthButton() {
                                         signOut();
                                         setIsMenuOpen(false);
                                     }}
-                                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-gray-800 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all font-medium"
+                                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-black hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors font-medium"
                                 >
                                     <LogOut className="w-4 h-4" />
                                     <span>Sign Out</span>
@@ -87,9 +87,9 @@ export default function AuthButton() {
     return (
         <button
             onClick={() => signIn("github")}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white border border-black font-bold text-gray-900 hover:bg-[#F9C79A] transition-all text-xs md:text-sm shadow-[2px_2px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 group"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-black font-bold text-black hover:bg-[#DD9651] hover:text-white transition-colors text-xs md:text-sm group"
         >
-            <Github className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-900" />
+            <Github className="w-3.5 h-3.5 md:w-4 md:h-4" />
             <span>Sign in with GitHub</span>
         </button>
     );

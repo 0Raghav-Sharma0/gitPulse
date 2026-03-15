@@ -2,14 +2,14 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #FDFCFB;
-  --foreground: #2D2E33;
+  --background: #FCFAF5;
+  --foreground: #000000;
   --foreground-muted: #5A5A5A;
-  --accent: #F9C79A;
-  --accent-amber: #F7AD33;
+  --accent: #DD9651;
+  --accent-amber: #E69247;
   --accent-coral: #ED474A;
   --card: #FEF9F2;
-  --dot-pattern: radial-gradient(#d1d1d1 1px, transparent 1px);
+  --dot-pattern: radial-gradient(#D8D8D8 1px, transparent 1px);
   --dot-size: 24px 24px;
 }
 
@@ -21,7 +21,7 @@
   --color-accent-amber: var(--accent-amber);
   --color-accent-coral: var(--accent-coral);
   --color-card: var(--card);
-  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Iosevka Charon Mono", "Iosevka", ui-monospace, monospace;
 }
 
 /* Light theme only - match sample page */
@@ -29,6 +29,12 @@
   background-color: var(--background);
   background-image: var(--dot-pattern);
   background-size: var(--dot-size);
+}
+
+/* Navbar – solid white like reference */
+.navbar-white {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @property --angle {
@@ -84,6 +90,6 @@ body {
 /* Chunky display style for hero/headlines (matches “Master Any Repo. Instantly.”) */
 .font-display {
   font-family: var(--font-sans);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }

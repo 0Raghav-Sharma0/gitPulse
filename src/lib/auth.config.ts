@@ -3,6 +3,7 @@ import GitHub from "next-auth/providers/github";
 import { INVALID_SESSION_ERROR_CODE } from "./session-guard";
 
 const authConfig: NextAuthConfig = {
+    secret: process.env.AUTH_SECRET,
     providers: [
         GitHub({
             clientId: process.env.AUTH_GITHUB_ID,
