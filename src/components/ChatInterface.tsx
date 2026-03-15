@@ -292,7 +292,7 @@ export function ChatInterface({ repoContext, onToggleSidebar, initialPrompt }: C
 
             toast.error(isDeepScanLimitReached ? "Deep scan limit exhausted" : "Security scan failed", {
                 description: isDeepScanLimitReached
-                    ? "Your monthly deep scan limit is exhausted. Contact admin pieisnot22by7@gmail.com for more reasonable limits."
+                    ? "Your monthly deep scan limit is exhausted. Contact support for more reasonable limits."
                     : errorMessage,
             });
 
@@ -300,7 +300,7 @@ export function ChatInterface({ repoContext, onToggleSidebar, initialPrompt }: C
                 ? {
                     id: placeholderMessageId,
                     role: "model",
-                    content: "Your deep scan limit is exhausted for this month.\n\nPlease contact admin at **pieisnot22by7@gmail.com** for more reasonable limits.",
+                    content: "Your deep scan limit is exhausted for this month.\n\nPlease contact support for more reasonable limits.",
                 }
                 : {
                     id: placeholderMessageId,

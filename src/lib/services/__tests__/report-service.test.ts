@@ -205,13 +205,13 @@ describe("buildOutreachPack", () => {
             ],
         };
 
-        const outreach = buildOutreachPack(scan, "https://repomind.in/report/shared/token123");
+        const outreach = buildOutreachPack(scan, "https://example.com/report/shared/token123");
         expect(outreach.maintainerNote).toContain("privately first");
         expect(outreach.maintainerNote).toContain("I came across acme/widget");
         expect(outreach.strongestFinding?.finding.title).toBe("Authentication Bypass");
         expect(outreach.shareUrl).toContain("/report/shared/");
         expect(outreach.outreachMessage).toContain("One finding that stood out most");
         expect(outreach.outreachMessage).toContain("review the full findings");
-        expect(outreach.outreachMessage).toContain("Repo profile: https://repomind.in/repo/acme/widget");
+        expect(outreach.outreachMessage).toContain("Repo profile: https://example.com/repo/acme/widget");
     });
 });

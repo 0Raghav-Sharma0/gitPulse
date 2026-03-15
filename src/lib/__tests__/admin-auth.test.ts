@@ -26,22 +26,22 @@ afterEach(() => {
 
 describe("isAdminUser", () => {
     it("returns true for the configured admin username", () => {
-        process.env.ADMIN_GITHUB_USERNAME = "403errors";
-        expect(isAdminUser(withUsername("403errors"))).toBe(true);
+        process.env.ADMIN_GITHUB_USERNAME = "admin";
+        expect(isAdminUser(withUsername("admin"))).toBe(true);
     });
 
     it("returns false for unauthenticated sessions", () => {
-        process.env.ADMIN_GITHUB_USERNAME = "403errors";
+        process.env.ADMIN_GITHUB_USERNAME = "admin";
         expect(isAdminUser(null)).toBe(false);
     });
 
     it("returns false for authenticated non-admin users", () => {
-        process.env.ADMIN_GITHUB_USERNAME = "403errors";
+        process.env.ADMIN_GITHUB_USERNAME = "admin";
         expect(isAdminUser(withUsername("someone-else"))).toBe(false);
     });
 
     it("returns false when ADMIN_GITHUB_USERNAME is missing", () => {
         delete process.env.ADMIN_GITHUB_USERNAME;
-        expect(isAdminUser(withUsername("403errors"))).toBe(false);
+        expect(isAdminUser(withUsername("otheruser"))).toBe(false);
     });
 });

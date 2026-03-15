@@ -21,10 +21,15 @@ function isRepoWithStars(data: unknown): data is RepoWithStars {
 export function GitHubBadge() {
     const [stars, setStars] = useState<number | null>(null);
 
+    const repoOwner = typeof process.env.NEXT_PUBLIC_GITHUB_REPO_OWNER === "string" ? process.env.NEXT_PUBLIC_GITHUB_REPO_OWNER : null;
+    const repoName = typeof process.env.NEXT_PUBLIC_GITHUB_REPO_NAME === "string" ? process.env.NEXT_PUBLIC_GITHUB_REPO_NAME : null;
+    const repoHref = repoOwner && repoName ? `https://github.com/${repoOwner}/${repoName}` : "#";
+
     useEffect(() => {
+        if (!repoOwner || !repoName) return;
         const getStars = async () => {
             try {
-                const data = await fetchRepoDetails("403errors", "repomind");
+                const data = await fetchRepoDetails(repoOwner, repoName);
                 if (isRepoWithStars(data)) {
                     setStars(data.stargazers_count);
                 }
@@ -33,11 +38,11 @@ export function GitHubBadge() {
             }
         };
         getStars();
-    }, []);
+    }, [repoOwner, repoName]);
 
     return (
         <a
-            href="https://github.com/403errors/repomind"
+            href={repoHref}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:scale-105 transition-transform cursor-pointer block"

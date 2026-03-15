@@ -73,7 +73,7 @@ async function fetchPage(windowConfig, page) {
       Authorization: `Bearer ${githubToken}`,
       Accept: "application/vnd.github+json",
       "X-GitHub-Api-Version": "2022-11-28",
-      "User-Agent": "RepoMind-Weekly-Repo-Catalog",
+      "User-Agent": "GitPulse-Weekly-Repo-Catalog",
     },
   });
 

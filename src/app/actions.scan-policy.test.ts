@@ -165,7 +165,7 @@ vi.mock("@/lib/services/report-service", () => ({
 }));
 
 vi.mock("@/lib/site-url", () => ({
-    getPublicSiteUrl: vi.fn(() => "https://repomind.in"),
+    getPublicSiteUrl: vi.fn(() => "https://example.com"),
 }));
 
 vi.mock("@/lib/session-guard", () => ({

@@ -1,13 +1,11 @@
-const PRIMARY_SITE_URL = "https://repomind.in";
-
 function normalizeSiteUrl(url: string): string {
   return url.replace(/\/+$/, "");
 }
 
 export function getCanonicalSiteUrl(): string {
-  return PRIMARY_SITE_URL;
+  return normalizeSiteUrl(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000");
 }
 
 export function getPublicSiteUrl(): string {
-  return normalizeSiteUrl(process.env.NEXT_PUBLIC_APP_URL || PRIMARY_SITE_URL);
+  return normalizeSiteUrl(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000");
 }

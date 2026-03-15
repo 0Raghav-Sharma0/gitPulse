@@ -49,7 +49,7 @@ describe("admin actions", () => {
         userFindUniqueMock.mockReset();
         userDeleteMock.mockReset();
 
-        authMock.mockResolvedValue({ user: { id: "admin_1", username: "403errors" } });
+        authMock.mockResolvedValue({ user: { id: "admin_1", username: "admin" } });
         isAdminUserMock.mockReturnValue(true);
     });
 
@@ -99,7 +99,7 @@ describe("admin actions", () => {
         userFindUniqueMock.mockResolvedValue({
             id: "admin_1",
             email: null,
-            githubLogin: "403errors",
+            githubLogin: "admin",
         });
 
         await expect(deleteLoggedInUserAccount({ userId: "admin_1" })).rejects.toThrow(

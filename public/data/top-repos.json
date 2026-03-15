@@ -1304,35 +1304,6 @@
     "language": "TypeScript"
   },
   {
-    "owner": "403errors",
-    "repo": "repomind",
-    "stars": 218,
-    "description": "An open-source, AI-powered application using Agentic CAG to chat with any public GitHub repository or developer profile, offering deep code analysis, visual architecture maps and security audits",
-    "topics": [
-      "ai",
-      "analysis",
-      "cag",
-      "coding-assistant",
-      "deep-search",
-      "developer-tools",
-      "flowcharts",
-      "framer-motion",
-      "gemini",
-      "github-api",
-      "github-profile-analyzer",
-      "mobile-first",
-      "nextjs",
-      "open-source",
-      "rag",
-      "repository-analysis",
-      "security-audits",
-      "typescript",
-      "vercel",
-      "vercel-kv"
-    ],
-    "language": "TypeScript"
-  },
-  {
     "owner": "ansys",
     "repo": "pyaedt",
     "stars": 307,

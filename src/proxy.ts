@@ -13,9 +13,9 @@ export const proxy = auth((req) => {
         const origin = req.headers.get('origin');
 
         // Define allowed origins
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
         const allowedOrigins = [
-            'https://repomind.in',
-            'https://repomind-ai.vercel.app',
+            appUrl.replace(/\/$/, ''),
             'http://localhost:3000',
             'http://localhost:3001',
         ];

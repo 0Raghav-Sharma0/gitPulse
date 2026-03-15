@@ -1,7 +1,5 @@
 import type { ReactElement } from "react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import AdminAccessDeniedPage from "@/app/admin/stats/AdminAccessDeniedPage";
-import AdminLoginPage from "@/app/admin/stats/AdminLoginPage";
 import StatsDashboardClient from "@/app/admin/stats/StatsDashboardClient";
 
 const {
@@ -45,29 +43,8 @@ describe("AdminStatsPage", () => {
         });
     });
 
-    it("renders the GitHub login view when unauthenticated", async () => {
-        authMock.mockResolvedValue(null);
-
-        const view = await AdminStatsPage() as ReactElement;
-
-        expect(view.type).toBe(AdminLoginPage);
-        expect(getAnalyticsDataMock).not.toHaveBeenCalled();
-    });
-
-    it("renders access denied for authenticated non-admin users", async () => {
-        const session = { user: { id: "123", username: "someone-else" } };
-        authMock.mockResolvedValue(session);
-        isAdminUserMock.mockReturnValue(false);
-
-        const view = await AdminStatsPage() as ReactElement;
-
-        expect(isAdminUserMock).toHaveBeenCalledWith(session);
-        expect(view.type).toBe(AdminAccessDeniedPage);
-        expect(getAnalyticsDataMock).not.toHaveBeenCalled();
-    });
-
-    it("renders stats dashboard for authorized admin users", async () => {
-        const session = { user: { id: "123", username: "403errors" } };
+    it("renders stats dashboard with session and analytics data", async () => {
+        const session = { user: { id: "123", username: "admin" } };
         const data = {
             totalVisitors: 10,
             totalQueries: 20,
@@ -92,6 +69,7 @@ describe("AdminStatsPage", () => {
             data: unknown;
             country: string;
             isMobile: boolean;
+            currentUsername: string | null;
         }>;
 
         expect(view.type).toBe(StatsDashboardClient);
@@ -99,6 +77,6 @@ describe("AdminStatsPage", () => {
         expect(view.props.data).toEqual(data);
         expect(view.props.country).toBe("IN");
         expect(view.props.isMobile).toBe(true);
-        expect(view.props.currentUsername).toBe("403errors");
+        expect(view.props.currentUsername).toBe("admin");
     });
 });

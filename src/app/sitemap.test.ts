@@ -29,7 +29,7 @@ describe("sitemap blog metadata", () => {
     getCuratedReposMock.mockReset();
     getIndexableTopicsMock.mockReset();
 
-    getCanonicalSiteUrlMock.mockReturnValue("https://repomind.in");
+    getCanonicalSiteUrlMock.mockReturnValue("https://example.com");
     getCuratedReposMock.mockResolvedValue([]);
     getIndexableTopicsMock.mockResolvedValue([]);
   });
@@ -44,7 +44,7 @@ describe("sitemap blog metadata", () => {
     ]);
 
     const routes = await sitemap();
-    const blogRoute = routes.find((entry) => entry.url === "https://repomind.in/blog/my-post");
+    const blogRoute = routes.find((entry) => entry.url === "https://example.com/blog/my-post");
 
     expect(blogRoute?.lastModified).toEqual(updatedAt);
   });
@@ -59,9 +59,9 @@ describe("sitemap blog metadata", () => {
 
     const routes = await sitemap();
 
-    expect(routes.some((entry) => entry.url === "https://repomind.in/repo/facebook/react")).toBe(true);
-    expect(routes.some((entry) => entry.url === "https://repomind.in/repo/vercel/next.js")).toBe(true);
-    expect(routes.some((entry) => entry.url === "https://repomind.in/topics/typescript")).toBe(true);
-    expect(routes.some((entry) => entry.url === "https://repomind.in/topics/react")).toBe(true);
+    expect(routes.some((entry) => entry.url === "https://example.com/repo/facebook/react")).toBe(true);
+    expect(routes.some((entry) => entry.url === "https://example.com/repo/vercel/next.js")).toBe(true);
+    expect(routes.some((entry) => entry.url === "https://example.com/topics/typescript")).toBe(true);
+    expect(routes.some((entry) => entry.url === "https://example.com/topics/react")).toBe(true);
   });
 });

@@ -130,7 +130,7 @@ describe("report false positive services", () => {
             status: "CONFIRMED_FALSE_POSITIVE",
             submittedByUserId: "user_1",
             submittedByUser: { githubLogin: "octocat" },
-            reviewedByUser: { githubLogin: "403errors" },
+            reviewedByUser: { githubLogin: "testuser" },
             reviewedAt: new Date("2026-03-09T10:00:00.000Z"),
             createdAt: new Date("2026-03-09T09:00:00.000Z"),
             updatedAt: new Date("2026-03-09T10:00:00.000Z"),
@@ -151,6 +151,6 @@ describe("report false positive services", () => {
             }),
             include: expect.any(Object),
         });
-        expect(updated.reviewedByGithubLogin).toBe("403errors");
+        expect(updated.reviewedByGithubLogin).toBe("testuser");
     });
 });

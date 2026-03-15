@@ -63,7 +63,7 @@ Whether you are performing a [security scan](/) or trying to [visualize a reposi
     `
   },
   {
-    slug: "free-greptile-alternative-repomind",
+    slug: "free-greptile-alternative-gitpulse",
     title: "GitPulse vs. Greptile & Copilot: The Best Free Alternative for Repo Chat",
     excerpt: "Looking for a free Greptile alternative or a GitHub Copilot web alternative? We compare GitPulse against the market leaders to see why zero-setup and open access are the future.",
     date: "March 12, 2026",

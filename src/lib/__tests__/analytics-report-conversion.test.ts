@@ -141,10 +141,10 @@ describe("report conversion analytics", () => {
     });
 
     it("skips report conversion for the configured admin", async () => {
-        process.env.ADMIN_GITHUB_USERNAME = "403errors";
+        process.env.ADMIN_GITHUB_USERNAME = "admin";
 
         await trackReportConversionEvent("report_fix_chat_started", "scan_123", {
-            actorUsername: "403errors",
+            actorUsername: "admin",
         });
 
         expect(pipelineCalls.filter((c) => c.type === "incr")).toEqual([]);

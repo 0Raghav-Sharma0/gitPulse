@@ -9,7 +9,7 @@ import { toast } from "sonner";
 export default function Footer() {
     const [isOpen, setIsOpen] = useState(false);
     const [copied, setCopied] = useState(false);
-    const email = "pieisnot22by7@gmail.com";
+    const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@example.com";
 
     const handleCopy = () => {
         navigator.clipboard.writeText(email);

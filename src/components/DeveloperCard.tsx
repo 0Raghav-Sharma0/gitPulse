@@ -28,7 +28,7 @@ export function DeveloperCard({ username, name: initialName, avatar: initialAvat
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        const shouldFetch = !initialAvatar || !initialBio || !initialName || username === "403errors";
+        const shouldFetch = !initialAvatar || !initialBio || !initialName;
         if (!username || !shouldFetch) return;
 
         let cancelled = false;

@@ -8,14 +8,14 @@ describe("normalizeReadmeForPreview", () => {
     });
 
     it("moves badges that appear inline with the h1 to the next paragraph", () => {
-        const readme = "# RepoMind [![build](https://img.shields.io/badge/build-passing-brightgreen)]\ntext";
+        const readme = "# MyRepo [![build](https://img.shields.io/badge/build-passing-brightgreen)]\ntext";
         const normalized = normalizeReadmeForPreview(readme);
 
-        expect(normalized).toContain("# RepoMind\n\n[![build]");
+        expect(normalized).toContain("# MyRepo\n\n[![build]");
     });
 
     it("keeps markdown unchanged when there is no inline badge pattern", () => {
-        const readme = "# RepoMind\n\nSome plain description.";
+        const readme = "# MyRepo\n\nSome plain description.";
         expect(normalizeReadmeForPreview(readme)).toBe(readme);
     });
 });
