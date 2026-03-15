@@ -1,0 +1,21 @@
+/**
+ * Type definitions for streaming server action responses
+ */
+
+import type { ChatMessageBase } from "@/lib/chat-types";
+
+export type StreamUpdate =
+    | { type: "status"; message: string; progress: number }
+    | { type: "thought"; text: string }
+    | { type: "content"; text: string; append: boolean }
+    | { type: "files"; files: string[] }
+    | { type: "complete"; relevantFiles: string[] }
+    | { type: "error"; message: string };
+
+export type StreamingMessage = ChatMessageBase;
+
+export interface StreamingState {
+    status: string;
+    progress: number;
+    isStreaming: boolean;
+}

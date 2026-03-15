@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#FDFCFB"/>
+  <defs>
+    <linearGradient id="dot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9C79A"/>
+      <stop offset="100%" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <!-- Code brackets icon (centered, large) -->
+  <g transform="translate(600, 260)">
+    <circle cx="0" cy="0" r="80" fill="white" stroke="#1f2937" stroke-width="4"/>
+    <path d="M-28 -45 L-52 0 L-28 45 M28 -45 L52 0 L28 45" stroke="url(#dot)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <!-- GitPulse text -->
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="72" fill="#1f2937">GitPulse</text>
+  <text x="600" y="480" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="28" fill="#4b5563">Understand any codebase in seconds</text>
+</svg>

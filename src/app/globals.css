@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #FDFCFB;
+  --foreground: #2D2E33;
+  --foreground-muted: #5A5A5A;
+  --accent: #F9C79A;
+  --accent-amber: #F7AD33;
+  --accent-coral: #ED474A;
+  --card: #FEF9F2;
+  --dot-pattern: radial-gradient(#d1d1d1 1px, transparent 1px);
+  --dot-size: 24px 24px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-accent: var(--accent);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-coral: var(--accent-coral);
+  --color-card: var(--card);
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Light theme only - match sample page */
+.bg-app {
+  background-color: var(--background);
+  background-image: var(--dot-pattern);
+  background-size: var(--dot-size);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes spin-gradient {
+  to {
+    --angle: 1turn;
+  }
+}
+
+.conic-border-container {
+  position: relative;
+
+  border: 2px solid transparent;
+  /* uniform width */
+  isolation: isolate;
+}
+
+.conic-border-container::before {
+  content: " ";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border: inherit;
+  border-radius: inherit;
+  background-image: conic-gradient(from var(--angle), var(--accent) 0%, #1f2937 50%, var(--accent) 100%);
+  background-origin: border-box;
+  -webkit-mask:
+    linear-gradient(black, black) content-box,
+    linear-gradient(black, black);
+  mask: linear-gradient(black, black),
+    linear-gradient(black, black);
+  -webkit-mask-clip: content-box, border-box;
+  mask-clip: content-box, border-box;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin-gradient 3s linear infinite;
+}
+
+body {
+  background: var(--background);
+  background-image: var(--dot-pattern);
+  background-size: var(--dot-size);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+/* Chunky display style for hero/headlines (matches “Master Any Repo. Instantly.”) */
+.font-display {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}

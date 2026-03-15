@@ -1,0 +1,1409 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-07T04:06:52.450Z",
+  "signature": "68ee87307eae501e42d83b0d789fe84bf5075212952b6c91979f69cd80f24554",
+  "totals": {
+    "errors": 98,
+    "warnings": 67,
+    "problems": 165,
+    "filesWithIssues": 63
+  },
+  "entries": [
+    {
+      "file": "scripts/fetch-top-repos.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 41,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "scripts/fetch-top-repos.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 74,
+      "column": 29,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "scripts/fetch-top-repos.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 105,
+      "column": 29,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "scripts/fetch-top-repos.ts",
+      "ruleId": "prefer-const",
+      "line": 10,
+      "column": 17,
+      "severity": 2,
+      "messageHash": "e29603331823"
+    },
+    {
+      "file": "scripts/test-cache-compression.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 55,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "68015e2aa2f0"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 133,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 150,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 266,
+      "column": 10,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 402,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 460,
+      "column": 107,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 532,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 46,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "0be052ecbca4"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 260,
+      "column": 11,
+      "severity": 1,
+      "messageHash": "7c70a1ec7188"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 346,
+      "column": 11,
+      "severity": 1,
+      "messageHash": "a906569f1e52"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 376,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "2537cb8d13bf"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 387,
+      "column": 15,
+      "severity": 1,
+      "messageHash": "a906569f1e52"
+    },
+    {
+      "file": "src/app/actions.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 457,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "68015e2aa2f0"
+    },
+    {
+      "file": "src/app/admin/stats/AdminLoginPage.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 27,
+      "column": 18,
+      "severity": 1,
+      "messageHash": "3de6157042ab"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 7,
+      "column": 5,
+      "severity": 1,
+      "messageHash": "ab09036f3588"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 7,
+      "column": 12,
+      "severity": 1,
+      "messageHash": "a61d12577c3b"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 8,
+      "column": 20,
+      "severity": 1,
+      "messageHash": "08a2d63792a8"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 12,
+      "column": 43,
+      "severity": 1,
+      "messageHash": "71a694ef5da4"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 241,
+      "column": 93,
+      "severity": 1,
+      "messageHash": "ce9a3e3b28d7"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 51,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "2dcfb5f1b917"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 61,
+      "column": 17,
+      "severity": 2,
+      "messageHash": "997d114458e3"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 140,
+      "column": 89,
+      "severity": 2,
+      "messageHash": "f04c0a057cd2"
+    },
+    {
+      "file": "src/app/admin/stats/StatsDashboardClient.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 388,
+      "column": 41,
+      "severity": 2,
+      "messageHash": "5b320c184e84"
+    },
+    {
+      "file": "src/app/api/chat/profile/route.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 21,
+      "column": 33,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/api/chat/profile/route.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 37,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/api/chat/repo/route.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 29,
+      "column": 33,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/api/chat/repo/route.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 46,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/api/dashboard/scans/route.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 15,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "89f54b258d49"
+    },
+    {
+      "file": "src/app/api/dashboard/stats/route.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 34,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "89f54b258d49"
+    },
+    {
+      "file": "src/app/api/dashboard/stats/route.ts",
+      "ruleId": "prefer-const",
+      "line": 15,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "9064cf935b97"
+    },
+    {
+      "file": "src/app/api/dashboard/user-repos/route.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 11,
+      "column": 37,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/api/fix-mermaid/route.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 25,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 1,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "549bc84312d7"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 2,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "48efb26b7ee8"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 5,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "407f00d0b6ea"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 6,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "422f5df7901a"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 6,
+      "column": 19,
+      "severity": 1,
+      "messageHash": "927edbeab27c"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 6,
+      "column": 43,
+      "severity": 1,
+      "messageHash": "2a6c68bdfdfc"
+    },
+    {
+      "file": "src/app/chat/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 7,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "7e3bd7f3bcad"
+    },
+    {
+      "file": "src/app/dashboard/layout.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 12,
+      "column": 5,
+      "severity": 1,
+      "messageHash": "6b0c5e721427"
+    },
+    {
+      "file": "src/app/dashboard/layout.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 31,
+      "column": 19,
+      "severity": 1,
+      "messageHash": "216005eed35b"
+    },
+    {
+      "file": "src/app/dashboard/repos/page.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 78,
+      "column": 69,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/dashboard/repos/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 7,
+      "column": 72,
+      "severity": 1,
+      "messageHash": "48ba21d1bfd8"
+    },
+    {
+      "file": "src/app/dashboard/repos/page.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 97,
+      "column": 104,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/app/dashboard/starred/page.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 14,
+      "column": 39,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/dashboard/starred/page.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 45,
+      "column": 34,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/app/repo/[owner]/[repo]/page.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 119,
+      "column": 77,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/repo/[owner]/[repo]/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "f648474389ad"
+    },
+    {
+      "file": "src/app/repo/[owner]/[repo]/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 19,
+      "severity": 1,
+      "messageHash": "e985c81c103d"
+    },
+    {
+      "file": "src/app/repo/[owner]/[repo]/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 42,
+      "severity": 1,
+      "messageHash": "616339e22a64"
+    },
+    {
+      "file": "src/app/repo/[owner]/[repo]/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 42,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "89f54b258d49"
+    },
+    {
+      "file": "src/app/report/[scan_id]/components/ExportButtons.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 30,
+      "severity": 1,
+      "messageHash": "43184e98bc8b"
+    },
+    {
+      "file": "src/app/report/[scan_id]/components/ExportButtons.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 13,
+      "column": 39,
+      "severity": 1,
+      "messageHash": "0d6bf33c4dee"
+    },
+    {
+      "file": "src/app/report/[scan_id]/components/ExportButtons.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 14,
+      "column": 25,
+      "severity": 1,
+      "messageHash": "b0a3cd4aa916"
+    },
+    {
+      "file": "src/app/report/[scan_id]/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 25,
+      "severity": 1,
+      "messageHash": "499532cbf6c0"
+    },
+    {
+      "file": "src/app/report/[scan_id]/page.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 6,
+      "column": 11,
+      "severity": 1,
+      "messageHash": "3e57596c9b12"
+    },
+    {
+      "file": "src/app/report/[scan_id]/ReportContent.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 5,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "7836494825c9"
+    },
+    {
+      "file": "src/app/report/[scan_id]/ShareButton.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "0cf3b93d91a2"
+    },
+    {
+      "file": "src/app/sitemap.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 33,
+      "column": 43,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/topics/[topic]/page.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 25,
+      "column": 25,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/topics/[topic]/page.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 84,
+      "column": 39,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/app/topics/[topic]/page.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 79,
+      "column": 115,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/BentoFeatures.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 4,
+      "column": 36,
+      "severity": 1,
+      "messageHash": "6c5b74970d47"
+    },
+    {
+      "file": "src/components/BentoFeatures.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 130,
+      "column": 50,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/CAGComparison.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 57,
+      "column": 45,
+      "severity": 2,
+      "messageHash": "7caa0628ca1f"
+    },
+    {
+      "file": "src/components/CAGComparison.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 58,
+      "column": 45,
+      "severity": 2,
+      "messageHash": "d757f809adea"
+    },
+    {
+      "file": "src/components/CAGComparison.tsx",
+      "ruleId": "react-hooks/purity",
+      "line": 61,
+      "column": 50,
+      "severity": 2,
+      "messageHash": "eac39d4e033b"
+    },
+    {
+      "file": "src/components/CAGComparison.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 22,
+      "column": 114,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/ChatInput.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "16c7ed6fb843"
+    },
+    {
+      "file": "src/components/CodeBlock.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 15,
+      "column": 18,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/CodeBlock.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 7,
+      "column": 8,
+      "severity": 1,
+      "messageHash": "3d585baa4cc9"
+    },
+    {
+      "file": "src/components/CodeBlock.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 8,
+      "column": 8,
+      "severity": 1,
+      "messageHash": "7d92f93831b4"
+    },
+    {
+      "file": "src/components/ComingSoonOverlay.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 29,
+      "column": 27,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/ConfirmDialog.tsx",
+      "ruleId": "react-hooks/set-state-in-effect",
+      "line": 32,
+      "column": 9,
+      "severity": 2,
+      "messageHash": "3f812e4cf7f7"
+    },
+    {
+      "file": "src/components/CopyBadge.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 68,
+      "column": 21,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/components/CopyBadge.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 36,
+      "column": 86,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/CopyBadge.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 36,
+      "column": 125,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/Dashboard/WelcomeBanner.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 7,
+      "column": 57,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/DeveloperCard.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 69,
+      "column": 25,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/components/DeveloperCard.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 6,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "403b0a28a549"
+    },
+    {
+      "file": "src/components/DeveloperCard.tsx",
+      "ruleId": "react-hooks/exhaustive-deps",
+      "line": 51,
+      "column": 8,
+      "severity": 1,
+      "messageHash": "59721bdeef24"
+    },
+    {
+      "file": "src/components/DeveloperCard.tsx",
+      "ruleId": "react-hooks/set-state-in-effect",
+      "line": 35,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "0ea3f2b60f05"
+    },
+    {
+      "file": "src/components/EnhancedMarkdown.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 58,
+      "column": 18,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/EnhancedMarkdown.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 73,
+      "column": 44,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/FeatureTiles.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 17,
+      "column": 11,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/FeatureTiles.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 11,
+      "column": 5,
+      "severity": 1,
+      "messageHash": "595e3d026f28"
+    },
+    {
+      "file": "src/components/FilePreview.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 99,
+      "column": 27,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 66,
+      "column": 78,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/GitHubBadge.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 17,
+      "column": 45,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/GitHubBadge.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 18,
+      "column": 39,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/InstallPWA.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 24,
+      "column": 89,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/InstallPWA.tsx",
+      "ruleId": "react-hooks/set-state-in-effect",
+      "line": 20,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "caae4a57e312"
+    },
+    {
+      "file": "src/components/InteractiveDemo.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 290,
+      "column": 29,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/components/InteractiveDemo.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 326,
+      "column": 37,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/components/InteractiveDemo.tsx",
+      "ruleId": "react-hooks/set-state-in-effect",
+      "line": 109,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "76e3336c4bb2"
+    },
+    {
+      "file": "src/components/InteractiveDemo.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 139,
+      "column": 92,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/InteractiveDemo.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 139,
+      "column": 107,
+      "severity": 2,
+      "messageHash": "1c3839c03cb2"
+    },
+    {
+      "file": "src/components/InteractiveDemo.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 139,
+      "column": 128,
+      "severity": 2,
+      "messageHash": "1c3839c03cb2"
+    },
+    {
+      "file": "src/components/Mermaid.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 81,
+      "column": 39,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/Mermaid.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 131,
+      "column": 29,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/Mermaid.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 178,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/Mermaid.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 54,
+      "severity": 1,
+      "messageHash": "dd0d0178c3af"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 101,
+      "column": 29,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 22,
+      "column": 52,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 64,
+      "column": 52,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 74,
+      "column": 23,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 54,
+      "column": 22,
+      "severity": 1,
+      "messageHash": "68015e2aa2f0"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "react-hooks/exhaustive-deps",
+      "line": 27,
+      "column": 8,
+      "severity": 1,
+      "messageHash": "5afb12317359"
+    },
+    {
+      "file": "src/components/ProfileLoader.tsx",
+      "ruleId": "react-hooks/immutability",
+      "line": 26,
+      "column": 9,
+      "severity": 2,
+      "messageHash": "25f2ae2ead67"
+    },
+    {
+      "file": "src/components/ReasoningBlock.tsx",
+      "ruleId": "prefer-const",
+      "line": 67,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "c0ebad64a6a3"
+    },
+    {
+      "file": "src/components/RepoLayout.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 9,
+      "column": 15,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLayout.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 14,
+      "column": 15,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLayout.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 36,
+      "column": 56,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLayout.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 36,
+      "column": 82,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLayout.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 38,
+      "column": 63,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLayout.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 38,
+      "column": 89,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLoader.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 24,
+      "column": 46,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLoader.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 58,
+      "column": 47,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLoader.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 78,
+      "column": 23,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/RepoLoader.tsx",
+      "ruleId": "react-hooks/exhaustive-deps",
+      "line": 29,
+      "column": 8,
+      "severity": 1,
+      "messageHash": "40f064ac4c39"
+    },
+    {
+      "file": "src/components/RepoSidebar.tsx",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 27,
+      "column": 11,
+      "severity": 1,
+      "messageHash": "4a14a204e619"
+    },
+    {
+      "file": "src/components/SearchModal.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 9,
+      "column": 59,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/SearchModal.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 30,
+      "column": 60,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/SmartLink.tsx",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 16,
+      "column": 38,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/components/SmartLink.tsx",
+      "ruleId": "react-hooks/exhaustive-deps",
+      "line": 81,
+      "column": 8,
+      "severity": 1,
+      "messageHash": "52bb8ad32641"
+    },
+    {
+      "file": "src/components/SmartLink.tsx",
+      "ruleId": "react-hooks/set-state-in-effect",
+      "line": 25,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "e3de10206947"
+    },
+    {
+      "file": "src/components/WallOfLove.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 80,
+      "column": 29,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/components/WallOfLove.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 78,
+      "column": 83,
+      "severity": 2,
+      "messageHash": "1c3839c03cb2"
+    },
+    {
+      "file": "src/components/WallOfLove.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 78,
+      "column": 95,
+      "severity": 2,
+      "messageHash": "1c3839c03cb2"
+    },
+    {
+      "file": "src/components/WhatsNewBadge.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 22,
+      "column": 94,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/components/WhatsNewModal.tsx",
+      "ruleId": "react/no-unescaped-entities",
+      "line": 114,
+      "column": 94,
+      "severity": 2,
+      "messageHash": "4a5fcfbb4b1a"
+    },
+    {
+      "file": "src/lib/__tests__/chat-export.test.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 131,
+      "column": 15,
+      "severity": 1,
+      "messageHash": "c731952a7b3e"
+    },
+    {
+      "file": "src/lib/__tests__/domain.test.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 44,
+      "column": 74,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/__tests__/domain.test.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 49,
+      "column": 75,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/analytics.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 40,
+      "column": 15,
+      "severity": 1,
+      "messageHash": "940c5a867048"
+    },
+    {
+      "file": "src/lib/auth.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 54,
+      "column": 34,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/auth.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 57,
+      "column": 29,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/clipboard-utils.tsx",
+      "ruleId": "@next/next/no-img-element",
+      "line": 12,
+      "column": 28,
+      "severity": 1,
+      "messageHash": "8df1fdea6499"
+    },
+    {
+      "file": "src/lib/diagram-utils.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 125,
+      "column": 17,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/diagram-utils.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 134,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "82ba61f359c6"
+    },
+    {
+      "file": "src/lib/diagram-utils.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 187,
+      "column": 20,
+      "severity": 1,
+      "messageHash": "a715d2963c92"
+    },
+    {
+      "file": "src/lib/diagram-utils.ts",
+      "ruleId": "prefer-const",
+      "line": 164,
+      "column": 13,
+      "severity": 2,
+      "messageHash": "24b79a83e53f"
+    },
+    {
+      "file": "src/lib/file-filters.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 8,
+      "column": 7,
+      "severity": 1,
+      "messageHash": "f32116ed81e5"
+    },
+    {
+      "file": "src/lib/gemini-security.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 96,
+      "column": 74,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/gemini-security.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 137,
+      "column": 25,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/gemini-security.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 138,
+      "column": 43,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/gemini-security.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 186,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/gemini-security.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 258,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/generator.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 87,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "89f54b258d49"
+    },
+    {
+      "file": "src/lib/search-engine.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 65,
+      "column": 39,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/search-engine.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 78,
+      "column": 36,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/search-engine.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 91,
+      "column": 38,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/search-engine.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 104,
+      "column": 37,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/search-engine.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 118,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "68015e2aa2f0"
+    },
+    {
+      "file": "src/lib/search-engine.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 149,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "68015e2aa2f0"
+    },
+    {
+      "file": "src/lib/services/artifact-service.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 10,
+      "column": 10,
+      "severity": 1,
+      "messageHash": "10fab1dc132b"
+    },
+    {
+      "file": "src/lib/services/query-pipeline.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 188,
+      "column": 21,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/tokens.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 57,
+      "column": 41,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/tokens.ts",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "line": 74,
+      "column": 49,
+      "severity": 2,
+      "messageHash": "8c56c082496e"
+    },
+    {
+      "file": "src/lib/tokens.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 10,
+      "column": 14,
+      "severity": 1,
+      "messageHash": "89f54b258d49"
+    },
+    {
+      "file": "src/proxy.ts",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "line": 3,
+      "column": 15,
+      "severity": 1,
+      "messageHash": "5fcdb023a63e"
+    }
+  ],
+  "ruleCounts": {
+    "@typescript-eslint/no-explicit-any": 65,
+    "@typescript-eslint/no-unused-vars": 56,
+    "react/no-unescaped-entities": 16,
+    "react-hooks/purity": 7,
+    "@next/next/no-img-element": 7,
+    "react-hooks/set-state-in-effect": 5,
+    "prefer-const": 4,
+    "react-hooks/exhaustive-deps": 4,
+    "react-hooks/immutability": 1
+  },
+  "fileCounts": {
+    "src/app/actions.ts": 12,
+    "src/app/admin/stats/StatsDashboardClient.tsx": 9,
+    "src/app/chat/page.tsx": 7,
+    "src/components/ProfileLoader.tsx": 7,
+    "src/components/InteractiveDemo.tsx": 6,
+    "src/components/RepoLayout.tsx": 6,
+    "src/lib/search-engine.ts": 6,
+    "src/app/repo/[owner]/[repo]/page.tsx": 5,
+    "src/lib/gemini-security.ts": 5,
+    "scripts/fetch-top-repos.ts": 4,
+    "src/components/CAGComparison.tsx": 4,
+    "src/components/DeveloperCard.tsx": 4,
+    "src/components/Mermaid.tsx": 4,
+    "src/components/RepoLoader.tsx": 4,
+    "src/lib/diagram-utils.ts": 4,
+    "src/app/dashboard/repos/page.tsx": 3,
+    "src/app/report/[scan_id]/components/ExportButtons.tsx": 3,
+    "src/app/topics/[topic]/page.tsx": 3,
+    "src/components/CodeBlock.tsx": 3,
+    "src/components/CopyBadge.tsx": 3,
+    "src/components/SmartLink.tsx": 3,
+    "src/components/WallOfLove.tsx": 3,
+    "src/lib/tokens.ts": 3,
+    "src/app/api/chat/profile/route.ts": 2,
+    "src/app/api/chat/repo/route.ts": 2,
+    "src/app/api/dashboard/stats/route.ts": 2,
+    "src/app/dashboard/layout.tsx": 2,
+    "src/app/dashboard/starred/page.tsx": 2,
+    "src/app/report/[scan_id]/page.tsx": 2,
+    "src/components/BentoFeatures.tsx": 2,
+    "src/components/EnhancedMarkdown.tsx": 2,
+    "src/components/FeatureTiles.tsx": 2,
+    "src/components/GitHubBadge.tsx": 2,
+    "src/components/InstallPWA.tsx": 2,
+    "src/components/SearchModal.tsx": 2,
+    "src/lib/__tests__/domain.test.ts": 2,
+    "src/lib/auth.ts": 2,
+    "scripts/test-cache-compression.ts": 1,
+    "src/app/admin/stats/AdminLoginPage.tsx": 1,
+    "src/app/api/dashboard/scans/route.ts": 1,
+    "src/app/api/dashboard/user-repos/route.ts": 1,
+    "src/app/api/fix-mermaid/route.ts": 1,
+    "src/app/report/[scan_id]/ReportContent.tsx": 1,
+    "src/app/report/[scan_id]/ShareButton.tsx": 1,
+    "src/app/sitemap.ts": 1,
+    "src/components/ChatInput.tsx": 1,
+    "src/components/ComingSoonOverlay.tsx": 1,
+    "src/components/ConfirmDialog.tsx": 1,
+    "src/components/Dashboard/WelcomeBanner.tsx": 1,
+    "src/components/FilePreview.tsx": 1,
+    "src/components/Footer.tsx": 1,
+    "src/components/ReasoningBlock.tsx": 1,
+    "src/components/RepoSidebar.tsx": 1,
+    "src/components/WhatsNewBadge.tsx": 1,
+    "src/components/WhatsNewModal.tsx": 1,
+    "src/lib/__tests__/chat-export.test.ts": 1,
+    "src/lib/analytics.ts": 1,
+    "src/lib/clipboard-utils.tsx": 1,
+    "src/lib/file-filters.ts": 1,
+    "src/lib/generator.ts": 1,
+    "src/lib/services/artifact-service.ts": 1,
+    "src/lib/services/query-pipeline.ts": 1,
+    "src/proxy.ts": 1
+  }
+}
