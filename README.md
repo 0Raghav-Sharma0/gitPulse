@@ -37,8 +37,6 @@ Instead of manually exploring hundreds of files, developers can:
 
 All directly **inside the browser**.
 
-GitPulse performs analysis using **GitHub APIs + full-file context reasoning**, enabling deeper insights compared to traditional code search.
-
 ---
 
 # ✨ Core Features
@@ -75,7 +73,7 @@ A quick visual walkthrough of **GitPulse** and its capabilities.
 
 </div>
 
----
+<br>
 
 <div align="center">
 
@@ -84,31 +82,13 @@ A quick visual walkthrough of **GitPulse** and its capabilities.
 <tr>
 
 <td align="center">
-<img src="IMAGE_LINK_1" width="420"/>
-<br>
-<b>Landing Experience</b>
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021821.png" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Landing Experience</b>
 </td>
 
 <td align="center">
-<img src="IMAGE_LINK_2" width="420"/>
-<br>
-<b>Repository Chat</b>
-</td>
-
-</tr>
-
-<tr>
-
-<td align="center">
-<img src="IMAGE_LINK_3" width="420"/>
-<br>
-<b>Security Scan</b>
-</td>
-
-<td align="center">
-<img src="IMAGE_LINK_4" width="420"/>
-<br>
-<b>Architecture Diagrams</b>
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021913.png" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Repository Chat</b>
 </td>
 
 </tr>
@@ -116,15 +96,13 @@ A quick visual walkthrough of **GitPulse** and its capabilities.
 <tr>
 
 <td align="center">
-<img src="IMAGE_LINK_5" width="420"/>
-<br>
-<b>Repo Intelligence</b>
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021938.png" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Architecture Insights</b>
 </td>
 
 <td align="center">
-<img src="IMAGE_LINK_6" width="420"/>
-<br>
-<b>Developer Profile Analysis</b>
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.00.jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Security Scanning</b>
 </td>
 
 </tr>
@@ -132,15 +110,27 @@ A quick visual walkthrough of **GitPulse** and its capabilities.
 <tr>
 
 <td align="center">
-<img src="IMAGE_LINK_7" width="420"/>
-<br>
-<b>Dependency Visualization</b>
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(1).jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Developer Insights</b>
 </td>
 
 <td align="center">
-<img src="IMAGE_LINK_8" width="420"/>
-<br>
-<b>AI Repository Insights</b>
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(2).jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Dependency Visualization</b>
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(3).jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>AI Repository Understanding</b>
+</td>
+
+<td align="center">
+<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01.jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
+<br><b>Interactive Repo Insights</b>
 </td>
 
 </tr>
@@ -177,27 +167,13 @@ F --> J[Dependency Insights]
 
 ### Explanation
 
-1️⃣ A user submits a **GitHub repository or profile**.
+GitPulse analyzes repositories using **full-file context instead of fragmented code chunks**.
 
-2️⃣ GitPulse retrieves repository data through the **GitHub API**.
-
-3️⃣ The system builds a **file index and dependency graph**.
-
-4️⃣ Each file is analyzed using **full-file context parsing** instead of fragmented chunks.
-
-5️⃣ AI models analyze:
-
-* architecture patterns
-* module relationships
-* dependency flows
-* security risks
-
-6️⃣ The results are transformed into:
-
-* interactive chat answers
-* architecture diagrams
-* security reports
-* dependency insights
+1. User submits a repository
+2. GitHub API retrieves repository structure
+3. Files are indexed and parsed
+4. AI models analyze architecture and patterns
+5. Insights are generated for chat, diagrams, and security reports
 
 ---
 
@@ -225,60 +201,23 @@ Database --> KVCache
 
 **Frontend**
 
-Built using **Next.js + React**, providing UI for:
-
-* repo chat
-* diagrams
-* security reports
-* developer insights
-
----
+Next.js interface for interacting with repositories.
 
 **API Layer**
 
-Handles orchestration of:
+Handles repository fetching, AI orchestration, and caching.
 
-* repo fetching
-* AI prompts
-* analysis pipelines
-* caching
+**Repo Scanner**
 
----
-
-**Repository Scanner**
-
-Uses **GitHub API** to retrieve:
-
-* repository metadata
-* file structure
-* dependencies
-
----
+Retrieves files using GitHub APIs.
 
 **AI Engine**
 
-Gemini models analyze repository code to:
-
-* explain logic
-* generate diagrams
-* answer developer queries
-
----
+Uses Gemini to reason about repository structure.
 
 **Security Scanner**
 
-Performs static analysis to detect:
-
-* SQL injections
-* hardcoded secrets
-* unsafe code patterns
-* dependency vulnerabilities
-
----
-
-**Database + Cache**
-
-Prisma stores application data while **Vercel KV** provides caching to speed up repeated analysis.
+Performs static code analysis.
 
 ---
 
@@ -286,7 +225,7 @@ Prisma stores application data while **Vercel KV** provides caching to speed up 
 
 ### Prerequisites
 
-* Node.js **18+**
+* Node.js 18+
 * GitHub Token
 * Gemini API Key
 
@@ -296,9 +235,7 @@ Prisma stores application data while **Vercel KV** provides caching to speed up 
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/gitPulse.git
-
 cd gitPulse
-
 npm install
 ```
 
@@ -318,11 +255,11 @@ DATABASE_URL=
 
 ### Start Development Server
 
-```bash
+```
 npm run dev
 ```
 
-Open in browser:
+Open
 
 ```
 http://localhost:3000
@@ -330,26 +267,12 @@ http://localhost:3000
 
 ---
 
-# 🧪 Available Commands
-
-```
-npm run dev      # start development server
-npm run build    # production build
-npm run lint     # lint code
-npm run test     # run tests
-```
-
----
-
 # 🔮 Roadmap
-
-Planned improvements:
 
 * repository dependency graphs
 * pull request intelligence
-* advanced vulnerability scanning
 * multi-repo analysis
-* issue & discussion insights
+* deeper vulnerability scanning
 
 ---
 
@@ -359,6 +282,6 @@ Planned improvements:
 
 **Raghav Sharma**
 
-⭐ If you like the project, consider giving it a star!
+⭐ If you like this project, consider giving it a star!
 
 </div>
