@@ -114,11 +114,16 @@ export default function MyReposPage() {
                 )}
             </div>
 
-            <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-start gap-3">
-                <ShieldAlert className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <p className="text-blue-200/90 leading-relaxed text-sm">
-                    <strong className="text-blue-300 font-semibold">Your code is yours.</strong> We don&apos;t train on or share your repository data. Your scan findings are stored securely to provide your history, and processing is handled on our secure server infrastructure.
-                </p>
+            <div className="p-4 rounded-2xl border-2 border-amber-200 bg-amber-50/80 flex items-start gap-3 shadow-sm">
+                <div className="mt-0.5 flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 border border-amber-300">
+                    <ShieldAlert className="w-4 h-4 text-amber-700" />
+                </div>
+                <div className="space-y-1 text-sm">
+                    <p className="text-amber-900 font-semibold">Your code is yours.</p>
+                    <p className="text-amber-900/90 leading-relaxed">
+                        We don&apos;t train on or share your repository data. Your scan findings are stored securely to provide your history, and processing is handled on our secure server infrastructure.
+                    </p>
+                </div>
             </div>
 
             <div className="relative">
