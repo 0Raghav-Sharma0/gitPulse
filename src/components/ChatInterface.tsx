@@ -216,7 +216,8 @@ export function ChatInterface({ repoContext, onToggleSidebar, initialPrompt }: C
     }, [messages.length, input, loading, scanning]);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        // Use instant scrolling to avoid flicker/lag during streaming
+        messagesEndRef.current?.scrollIntoView();
     };
 
     useEffect(() => {
@@ -823,7 +824,7 @@ export function ChatInterface({ repoContext, onToggleSidebar, initialPrompt }: C
                                                     />
                                                 </button>
                                             )}
-                                            <div className="prose prose-sm max-w-none leading-relaxed break-words overflow-hidden w-full min-w-0 prose-p:text-gray-800 prose-li:text-gray-800 prose-strong:text-gray-900">
+                                            <div className="prose prose-sm max-w-none leading-relaxed wrap-break-word overflow-hidden w-full min-w-0 prose-p:text-gray-800 prose-li:text-gray-800 prose-strong:text-gray-900">
                                                 {/* Flash model loading dots */}
                                                 {msg.role === "model" && msg.modelUsed !== "thinking" && loading && msg.id === messages[messages.length - 1]?.id && !msg.content && !msg.scanStatus && (
                                                     <div className="flex items-center gap-2 py-1">

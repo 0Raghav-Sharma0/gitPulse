@@ -455,16 +455,16 @@ export function ReportContent({
         <div className="min-h-screen bg-[#FDFCFB] text-gray-900 p-4 md:p-8 selection:bg-amber-200/50">
             <div className="max-w-4xl mx-auto space-y-8">
                 <div data-testid="report-actions-navbar" className="print:hidden">
-                    <div className="rounded-2xl border border-white/10 bg-zinc-950/80 p-4 shadow-lg md:hidden">
+                    <div className="rounded-2xl border-2 border-gray-200 bg-white p-4 shadow-xl md:hidden">
                         <div className="flex items-center justify-between gap-3">
-                            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">
                                 <Shield className="w-3.5 h-3.5" />
                                 Report Actions
                             </span>
                             <button
                                 type="button"
                                 onClick={() => setIsMobileActionsOpen((current) => !current)}
-                                className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-zinc-900 p-2 text-zinc-300 transition-colors hover:bg-zinc-800"
+                                className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white p-2 text-gray-700 transition-colors hover:bg-gray-100"
                                 aria-expanded={isMobileActionsOpen}
                                 aria-controls="report-actions-mobile-menu"
                             >
@@ -535,11 +535,11 @@ export function ReportContent({
                         )}
                     </div>
 
-                    <div className="hidden md:block sticky top-0 z-50 rounded-2xl border border-white/10 bg-zinc-950/80 p-4 md:p-5 backdrop-blur-xl shadow-lg">
+                    <div className="hidden md:block sticky top-0 z-50 rounded-2xl border-2 border-gray-200 bg-white p-4 md:p-5 shadow-xl">
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
                                 <div className="flex flex-wrap items-center gap-2">
-                                    <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                                    <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">
                                         <Shield className="w-3.5 h-3.5" />
                                         Report Actions
                                     </span>
@@ -755,44 +755,44 @@ export function ReportContent({
                     })}
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-zinc-900/70 p-6">
+                <div className="rounded-2xl border-2 border-gray-200 bg-white p-6">
                     <div className="flex flex-wrap items-center justify-between gap-3">
-                        <h3 className="text-lg font-medium text-zinc-100">What Changed Since Last Scan</h3>
-                        <span className="rounded-full border border-white/10 bg-zinc-950 px-2.5 py-1 text-xs text-zinc-400">
+                        <h3 className="text-lg font-medium text-gray-900">What Changed Since Last Scan</h3>
+                        <span className="rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs text-gray-600">
                             {hasPreviousScan ? "Compared to previous scan" : "Baseline scan"}
                         </span>
                     </div>
-                    <p className="mt-2 text-sm text-zinc-400">
+                    <p className="mt-2 text-sm text-gray-600">
                         {hasPreviousScan
                             ? "Use this delta to prioritize newly introduced risk, then resolve historical findings."
                             : "No earlier scan found for this repository yet. This report is your baseline for future change tracking."}
                     </p>
                     <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                        <div className="rounded-xl border border-red-500/20 bg-red-500/10 p-4">
-                            <p className="text-xs uppercase tracking-wider text-red-300">New</p>
-                            <p className="mt-1 text-2xl font-bold text-white">{priorScanDiff.new}</p>
+                        <div className="rounded-xl border-2 border-red-200 bg-red-50 p-4">
+                            <p className="text-xs uppercase tracking-wider text-red-700">New</p>
+                            <p className="mt-1 text-2xl font-bold text-gray-900">{priorScanDiff.new}</p>
                         </div>
-                        <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-                            <p className="text-xs uppercase tracking-wider text-emerald-300">Resolved</p>
-                            <p className="mt-1 text-2xl font-bold text-white">{priorScanDiff.resolved}</p>
+                        <div className="rounded-xl border-2 border-emerald-200 bg-emerald-50 p-4">
+                            <p className="text-xs uppercase tracking-wider text-emerald-700">Resolved</p>
+                            <p className="mt-1 text-2xl font-bold text-gray-900">{priorScanDiff.resolved}</p>
                         </div>
-                        <div className="rounded-xl border border-zinc-500/20 bg-zinc-500/10 p-4">
-                            <p className="text-xs uppercase tracking-wider text-zinc-300">Unchanged</p>
-                            <p className="mt-1 text-2xl font-bold text-white">{priorScanDiff.unchanged}</p>
+                        <div className="rounded-xl border-2 border-gray-200 bg-gray-50 p-4">
+                            <p className="text-xs uppercase tracking-wider text-gray-700">Unchanged</p>
+                            <p className="mt-1 text-2xl font-bold text-gray-900">{priorScanDiff.unchanged}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="space-y-6">
-                    <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6 space-y-4">
+                    <div className="rounded-2xl border-2 border-gray-200 bg-white p-6 space-y-4">
                         <div className="flex flex-wrap items-center justify-between gap-3">
-                            <h3 className="text-lg font-medium text-zinc-100">Fix These First</h3>
-                            <span className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-zinc-400">
+                            <h3 className="text-lg font-medium text-gray-900">Fix These First</h3>
+                            <span className="rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs text-gray-600">
                                 Ranked by impact, confidence, and exploitability
                             </span>
                         </div>
                         {topFixesByFingerprint.length === 0 ? (
-                            <div className="rounded-xl border border-white/5 bg-zinc-950/60 p-4 text-sm text-zinc-400">
+                            <div className="rounded-xl border-2 border-gray-200 bg-gray-50 p-4 text-sm text-gray-600">
                                 No vulnerabilities to prioritize in this scan.
                             </div>
                         ) : (
@@ -823,13 +823,15 @@ export function ReportContent({
                         )}
                     </div>
 
-                    <h3 className="border-b border-white/10 pb-2 text-lg font-medium">Detailed Findings ({findingViews.length})</h3>
+                    <h3 className="border-b border-gray-200 pb-2 text-lg font-medium text-gray-900">
+                        Detailed Findings ({findingViews.length})
+                    </h3>
 
                     {findingViews.length === 0 ? (
-                        <div className="rounded-xl border border-white/5 bg-zinc-900/50 p-8 text-center">
-                            <CheckCircle className="mx-auto mb-4 h-12 w-12 text-green-500 opacity-50" />
-                            <h4 className="mb-1 font-medium text-zinc-300">No vulnerabilities found</h4>
-                            <p className="text-sm text-zinc-500">This repository looks clean based on the scan configuration.</p>
+                        <div className="rounded-xl border-2 border-gray-200 bg-gray-50 p-8 text-center">
+                            <CheckCircle className="mx-auto mb-4 h-12 w-12 text-emerald-500 opacity-80" />
+                            <h4 className="mb-1 font-medium text-gray-900">No vulnerabilities found</h4>
+                            <p className="text-sm text-gray-600">This repository looks clean based on the scan configuration.</p>
                         </div>
                     ) : (
                         findingViews.map((view) => {
@@ -998,7 +1000,7 @@ export function ReportContent({
             </div>
 
             {showFixPromptModal && (
-                <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
+                <div className="fixed inset-0 z-110 flex items-center justify-center p-4">
                     <div
                         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
                         onClick={closeFixPromptModal}
@@ -1047,7 +1049,7 @@ export function ReportContent({
             )}
 
             {showDeepScanRepoModal && (
-                <div className="fixed inset-0 z-[115] flex items-center justify-center p-4">
+                <div className="fixed inset-0 z-115 flex items-center justify-center p-4">
                     <div
                         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
                         onClick={() => {
@@ -1133,7 +1135,7 @@ export function ReportContent({
             )}
 
             {activeFalsePositiveView && (
-                <div className="fixed inset-0 z-[120] flex items-center justify-center p-4">
+                <div className="fixed inset-0 z-120 flex items-center justify-center p-4">
                     <div
                         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
                         onClick={() => {

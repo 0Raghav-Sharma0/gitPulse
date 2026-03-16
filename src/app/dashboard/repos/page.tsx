@@ -128,7 +128,7 @@ export default function MyReposPage() {
                     placeholder="Search your repositories by name or description..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-[#FEF9F2] border-2 border-black/5 shadow-[0_8px_24px_rgba(15,23,42,0.06)] rounded-xl pl-12 pr-4 py-4 text-gray-900 placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 transition-colors shadow-lg"
+                    className="w-full bg-[#FEF9F2] border-2 border-black/5 shadow-[0_8px_24px_rgba(15,23,42,0.06)] rounded-xl pl-12 pr-4 py-4 text-gray-900 placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 transition-colors"
                 />
             </div>
 
@@ -150,7 +150,7 @@ export default function MyReposPage() {
                     {filteredRepos.map(repo => (
                         <div
                             key={repo.full_name}
-                            className="p-6 bg-[#FEF9F2] border-2 border-black/5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] hover:border-white/10 rounded-2xl transition-all group flex flex-col justify-between"
+                            className="p-6 bg-[#FEF9F2] border-2 border-black/5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] hover:border-purple-400/40 rounded-2xl transition-all group flex flex-col justify-between"
                         >
                             <div>
                                 <div className="flex items-start justify-between mb-3">
@@ -168,7 +168,7 @@ export default function MyReposPage() {
                                 </p>
                             </div>
 
-                            <div className="flex items-center justify-between border-t border-white/5 pt-4 mt-auto">
+                            <div className="flex items-center justify-between border-t border-black/5 pt-4 mt-auto">
                                 <div className="flex items-center gap-4 text-xs text-gray-600">
                                     {repo.language && (
                                         <div className="flex items-center gap-1.5">
@@ -184,7 +184,7 @@ export default function MyReposPage() {
 
                                 <Link
                                     href={`/chat?q=${encodeURIComponent(repo.full_name)}`}
-                                    className="flex items-center gap-1.5 text-xs font-medium text-gray-900 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-colors group-hover:bg-purple-600 group-hover:text-gray-900"
+                                    className="flex items-center gap-1.5 text-xs font-medium text-gray-900 bg-white/80 hover:bg-purple-600 hover:text-gray-900 px-3 py-1.5 rounded-lg transition-colors group-hover:bg-purple-600"
                                 >
                                     <BookOpen className="w-3.5 h-3.5" />
                                     Analyze

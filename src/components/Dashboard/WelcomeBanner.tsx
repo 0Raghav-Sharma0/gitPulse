@@ -48,7 +48,7 @@ export default function WelcomeBanner({ user }: { user: WelcomeBannerUser }) {
                     <h1 className="text-3xl font-bold text-gray-900 mb-2">
                         Welcome back, {user.name?.split(' ')[0]}!
                     </h1>
-                    <div className="flex flex-wrap justify-center md:justify-start gap-4 text-zinc-400 text-sm">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4 text-gray-600 text-sm">
                         <div className="flex items-center gap-1.5">
                             <Calendar className="w-4 h-4 text-purple-400" />
                             <span>{date}</span>

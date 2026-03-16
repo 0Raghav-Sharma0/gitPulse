@@ -80,9 +80,9 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
                         </Link>
                     )}
                     {scans.length > 0 && (
-                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-zinc-400">
-                        {scans.length} {scans.length === 1 ? 'Scan' : 'Scans'}
-                    </span>
+                        <span className="px-3 py-1 bg-white text-gray-700 border border-gray-200 rounded-full text-xs">
+                            {scans.length} {scans.length === 1 ? "Scan" : "Scans"}
+                        </span>
                     )}
                 </div>
             </div>
@@ -113,34 +113,51 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
                             className="flex items-center justify-between p-6 hover:bg-white/5 transition-colors group"
                         >
                             <div className="flex items-center gap-4">
-                                <div className={`p-3 rounded-xl ${scan.summary.high > 0 ? 'bg-red-500/10 text-red-400' : 'bg-green-500/10 text-green-400'}`}>
+                                <div
+                                    className={`p-3 rounded-xl ${
+                                        scan.summary.high > 0
+                                            ? "bg-red-50 text-red-600 border border-red-200"
+                                            : "bg-emerald-50 text-emerald-600 border border-emerald-200"
+                                    }`}
+                                >
                                     {scan.summary.high > 0 ? <ShieldAlert className="w-6 h-6" /> : <ShieldCheck className="w-6 h-6" />}
                                 </div>
                                 <div>
                                     <div className="flex items-center gap-2 mb-1">
-                                        <h4 className="font-semibold text-white group-hover:text-purple-400 transition-colors">
+                                        <h4 className="font-semibold text-gray-900 group-hover:text-purple-500 transition-colors">
                                             {scan.owner}/{scan.repo}
                                         </h4>
-                                        <span className={`text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded border ${scan.depth === 'deep'
-                                                ? 'border-purple-500/30 text-purple-400 bg-purple-500/5'
-                                                : 'border-zinc-700 text-zinc-500 bg-zinc-800/50'
-                                            }`}>
+                                        <span
+                                            className={`text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded border ${
+                                                scan.depth === "deep"
+                                                    ? "border-purple-300 text-purple-700 bg-purple-50"
+                                                    : "border-gray-300 text-gray-700 bg-gray-50"
+                                            }`}
+                                        >
                                             {scan.depth}
                                         </span>
                                     </div>
-                                    <div className="flex items-center gap-3 text-xs text-zinc-500">
+                                    <div className="flex items-center gap-3 text-xs text-gray-600">
                                         <span>{new Date(scan.timestamp).toLocaleDateString()}</span>
-                                        <span className="w-1 h-1 rounded-full bg-zinc-800" />
+                                        <span className="w-1 h-1 rounded-full bg-gray-400" />
                                         <div className="flex gap-2">
-                                            {scan.summary.high > 0 && <span className="text-red-400">{scan.summary.high} High</span>}
-                                            {scan.summary.medium > 0 && <span className="text-yellow-400">{scan.summary.medium} Med</span>}
-                                            {scan.summary.low > 0 && <span className="text-blue-400">{scan.summary.low} Low</span>}
-                                            {scan.summary.total === 0 && <span className="text-green-400">Secure</span>}
+                                            {scan.summary.high > 0 && (
+                                                <span className="text-red-600">{scan.summary.high} High</span>
+                                            )}
+                                            {scan.summary.medium > 0 && (
+                                                <span className="text-amber-600">{scan.summary.medium} Med</span>
+                                            )}
+                                            {scan.summary.low > 0 && (
+                                                <span className="text-blue-600">{scan.summary.low} Low</span>
+                                            )}
+                                            {scan.summary.total === 0 && (
+                                                <span className="text-emerald-600 font-medium">Secure</span>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <ExternalLink className="w-5 h-5 text-zinc-700 group-hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-gray-900 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </Link>
                     ))}
                 </div>

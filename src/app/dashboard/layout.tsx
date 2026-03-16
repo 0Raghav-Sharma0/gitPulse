@@ -5,7 +5,6 @@ import {
     LayoutDashboard,
     History,
     Star,
-    Settings,
     ChevronLeft,
     Menu,
     LogOut,
@@ -23,7 +22,6 @@ const menuItems = [
     { icon: History, label: "Recent Scans", href: "/dashboard/scans" },
     { icon: BookOpen, label: "My Repos", href: "/dashboard/repos" },
     { icon: Star, label: "Starred Repos", href: "/dashboard/starred" },
-    { icon: Settings, label: "Settings", href: "/dashboard/settings" },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -63,7 +61,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     {!isCollapsed && (
                         <Link href="/" className="flex items-center gap-2 group">
                             <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <CodeIcon className="w-8 h-8 !bg-zinc-800 !shadow-none !border !border-zinc-600" />
+                                <CodeIcon className="w-8 h-8 bg-zinc-800! shadow-none! border! border-zinc-600!" />
                             </div>
                             <span className="font-bold text-xl tracking-tight">GitPulse</span>
                         </Link>
@@ -92,11 +90,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 {!isCollapsed && (
                                     <div className="flex items-center justify-between flex-1">
                                         <span className="font-medium">{item.label}</span>
-                                        {item.label === "Settings" && (
-                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-amber-100 text-amber-800 border border-amber-300 uppercase tracking-wider">
-                                                Soon
-                                            </span>
-                                        )}
                                     </div>
                                 )}
                             </Link>
@@ -140,14 +133,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsMobileOpen(false)}
-                            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] md:hidden"
+                            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-60 md:hidden"
                         />
                         <motion.aside
                             initial={{ x: "-100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "-100%" }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-200 z-[70] p-6 flex flex-col md:hidden shadow-xl"
+                            className="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-200 z-70 p-6 flex flex-col md:hidden shadow-xl"
                         >
                             <div className="flex items-center justify-between mb-8">
                                 <span className="font-bold text-xl">GitPulse</span>
@@ -167,11 +160,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                         <item.icon className="w-6 h-6" />
                                         <div className="flex items-center justify-between flex-1">
                                             <span className="font-medium text-lg">{item.label}</span>
-                                            {item.label === "Settings" && (
-                                                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-amber-100 text-amber-800 border border-amber-300 uppercase tracking-wider">
-                                                    Soon
-                                                </span>
-                                            )}
                                         </div>
                                     </Link>
                                 ))}
