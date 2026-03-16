@@ -6,7 +6,7 @@
 
 An **AI-powered platform for understanding GitHub repositories and developer profiles**.
 
-Chat with any repo, generate architecture diagrams, and run security scans — **without cloning the repository**.
+Chat with any repository, generate architecture insights, and run security scans — **without cloning the repo**.
 
 <br>
 
@@ -26,16 +26,18 @@ Chat with any repo, generate architecture diagrams, and run security scans — *
 
 # 🚀 What is GitPulse?
 
-GitPulse converts any GitHub repository into an **interactive AI-powered knowledge system**.
+GitPulse transforms any GitHub repository into an **interactive AI-powered knowledge system**.
 
-Instead of manually exploring hundreds of files, developers can:
+Instead of manually reading hundreds of files, developers can:
 
 * Ask questions about the codebase
 * Generate architecture diagrams
 * Identify security vulnerabilities
-* Understand dependencies and structure
+* Understand dependencies and project structure
 
 All directly **inside the browser**.
+
+GitPulse works without cloning repositories locally — it analyzes code using **GitHub APIs, full-file context reasoning, and AI models**.
 
 ---
 
@@ -69,70 +71,26 @@ All directly **inside the browser**.
 
 <div align="center">
 
-A quick visual walkthrough of **GitPulse** and its capabilities.
-
-</div>
-
-<br>
-
-<div align="center">
-
 <table>
 
 <tr>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021821.png" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Landing Experience</b>
-</td>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021913.png" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Repository Chat</b>
-</td>
-
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021821.png" width="400"/></td>
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021913.png" width="400"/></td>
 </tr>
 
 <tr>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021938.png" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Architecture Insights</b>
-</td>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.00.jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Security Scanning</b>
-</td>
-
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/Screenshot%202026-03-17%20021938.png" width="400"/></td>
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.00.jpeg" width="400"/></td>
 </tr>
 
 <tr>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(1).jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Developer Insights</b>
-</td>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(2).jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Dependency Visualization</b>
-</td>
-
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(1).jpeg" width="400"/></td>
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(2).jpeg" width="400"/></td>
 </tr>
 
 <tr>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(3).jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>AI Repository Understanding</b>
-</td>
-
-<td align="center">
-<img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01.jpeg" width="420" style="border-radius:12px;border:1px solid #ddd"/>
-<br><b>Interactive Repo Insights</b>
-</td>
-
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01%20(3).jpeg" width="400"/></td>
+<td><img src="https://github.com/0Raghav-Sharma0/gitPulse/blob/main/WhatsApp%20Image%202026-03-17%20at%2000.27.01.jpeg" width="400"/></td>
 </tr>
 
 </table>
@@ -141,39 +99,69 @@ A quick visual walkthrough of **GitPulse** and its capabilities.
 
 ---
 
-# 🧠 Repository Analysis Pipeline
+# 🧠 Repository Intelligence Pipeline
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-A[User Inputs GitHub Repo]
-B[GitHub API Fetch]
-C[Repository File Indexing]
-D[Full File Context Parser]
-E[AI Processing Layer]
-F[Insight Generation]
+A[User Inputs GitHub Repo] --> B[GitHub API Fetch]
 
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
+B --> C[Repository Structure Indexing]
 
-F --> G[Repo Chat]
-F --> H[Architecture Diagrams]
-F --> I[Security Scan]
-F --> J[Dependency Insights]
+C --> D[File Parsing Engine]
+
+D --> E[Dependency Graph Builder]
+
+E --> F[AI Context Engine]
+
+F --> G1[Chat With Repository]
+F --> G2[Architecture Diagrams]
+F --> G3[Security Analysis]
+F --> G4[Code Insights]
+
+G1 --> H[Interactive Responses]
+G2 --> H
+G3 --> H
+G4 --> H
 ```
 
 ### Explanation
 
-GitPulse analyzes repositories using **full-file context instead of fragmented code chunks**.
+The analysis pipeline works in multiple stages:
 
-1. User submits a repository
-2. GitHub API retrieves repository structure
-3. Files are indexed and parsed
-4. AI models analyze architecture and patterns
-5. Insights are generated for chat, diagrams, and security reports
+**1. Repository Fetch**
+
+GitPulse fetches repository files and metadata through the GitHub API.
+
+**2. File Indexing**
+
+All files are indexed and organized into a structure graph.
+
+**3. Context Parsing**
+
+Instead of chunking files like RAG systems, GitPulse reads **full files**, preserving context.
+
+**4. Dependency Graph Creation**
+
+Imports and module relationships are analyzed to understand system architecture.
+
+**5. AI Processing**
+
+Gemini models reason about:
+
+* repository architecture
+* code patterns
+* security vulnerabilities
+* dependency flows
+
+**6. Insight Generation**
+
+Results are converted into:
+
+* chat answers
+* diagrams
+* vulnerability reports
+* repo summaries
 
 ---
 
@@ -182,42 +170,65 @@ GitPulse analyzes repositories using **full-file context instead of fragmented c
 ```mermaid
 flowchart LR
 
-User --> Frontend
-Frontend --> API
+User --> UI
 
-API --> RepoScanner
-API --> AIEngine
-API --> SecurityScanner
+UI --> API
 
-RepoScanner --> GitHubAPI
-AIEngine --> Gemini
-SecurityScanner --> StaticAnalyzer
+API --> RepoFetcher
+API --> AnalysisEngine
+API --> SecurityEngine
+
+RepoFetcher --> GitHubAPI
+
+AnalysisEngine --> ContextParser
+AnalysisEngine --> GeminiAI
+
+SecurityEngine --> StaticAnalyzer
+SecurityEngine --> DependencyScanner
 
 API --> Database
-Database --> KVCache
+Database --> Cache
 ```
 
 ### Explanation
 
-**Frontend**
+**Frontend (Next.js)**
 
-Next.js interface for interacting with repositories.
+Handles:
+
+* UI interactions
+* repo chat interface
+* architecture visualization
+* security reports
+
+---
 
 **API Layer**
 
-Handles repository fetching, AI orchestration, and caching.
+Acts as the orchestration layer responsible for:
 
-**Repo Scanner**
+* repo fetching
+* triggering AI analysis
+* security scanning
+* caching results
 
-Retrieves files using GitHub APIs.
+---
 
-**AI Engine**
+**Analysis Engine**
 
-Uses Gemini to reason about repository structure.
+Processes repository code and generates insights using AI.
 
-**Security Scanner**
+---
 
-Performs static code analysis.
+**Security Engine**
+
+Runs static analysis to detect vulnerabilities and insecure patterns.
+
+---
+
+**Database & Cache**
+
+Prisma stores structured data while caching layers reduce repeated analysis time.
 
 ---
 
@@ -225,7 +236,7 @@ Performs static code analysis.
 
 ### Prerequisites
 
-* Node.js 18+
+* Node.js **18+**
 * GitHub Token
 * Gemini API Key
 
@@ -235,7 +246,9 @@ Performs static code analysis.
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/gitPulse.git
+
 cd gitPulse
+
 npm install
 ```
 
@@ -255,11 +268,11 @@ DATABASE_URL=
 
 ### Start Development Server
 
-```
+```bash
 npm run dev
 ```
 
-Open
+Open:
 
 ```
 http://localhost:3000
@@ -269,10 +282,13 @@ http://localhost:3000
 
 # 🔮 Roadmap
 
+Future improvements planned for GitPulse:
+
 * repository dependency graphs
 * pull request intelligence
 * multi-repo analysis
 * deeper vulnerability scanning
+* contributor insights
 
 ---
 
@@ -282,6 +298,6 @@ http://localhost:3000
 
 **Raghav Sharma**
 
-⭐ If you like this project, consider giving it a star!
+⭐ If you like the project, consider giving it a star!
 
 </div>
