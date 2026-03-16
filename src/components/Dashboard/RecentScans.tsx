@@ -53,7 +53,7 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
         return (
             <div className="rounded-3xl bg-[#FEF9F2] border-2 border-black/5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] p-12 flex flex-col items-center justify-center space-y-4">
                 <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent animate-spin rounded-full" />
-                <p className="text-zinc-500 animate-pulse">Fetching your history...</p>
+                <p className="text-gray-600 animate-pulse">Fetching your history...</p>
             </div>
         );
     }
@@ -74,7 +74,7 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
                     {showViewAll && (
                         <Link
                             href="/dashboard/scans"
-                            className="text-xs text-zinc-400 hover:text-white transition-colors"
+                            className="text-xs text-gray-500 hover:text-gray-900 transition-colors"
                         >
                             View all
                         </Link>
@@ -92,8 +92,8 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
                     <div className="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center mb-4 text-zinc-500">
                         <Search className="w-8 h-8" />
                     </div>
-                    <h3 className="text-white font-medium mb-1">No scans yet</h3>
-                    <p className="text-zinc-500 text-sm mb-6 max-w-[240px]">
+                    <h3 className="text-gray-900 font-medium mb-1">No scans yet</h3>
+                    <p className="text-gray-600 text-sm mb-6 max-w-[240px]">
                         Start exploring repositories to see them listed here.
                     </p>
                     <Link

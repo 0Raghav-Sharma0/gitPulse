@@ -67,8 +67,8 @@ export default function QuickStats() {
                         <Activity className="w-4 h-4 text-zinc-700 group-hover:text-zinc-500 transition-colors" />
                     </div>
                     <div>
-                        <p className="text-zinc-500 text-sm font-medium">{stat.label}</p>
-                        <p className="text-2xl font-bold text-white">{stat.value}</p>
+                        <p className="text-gray-700 text-sm font-medium">{stat.label}</p>
+                        <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                     </div>
                 </motion.div>
             ))}
@@ -79,8 +79,8 @@ export default function QuickStats() {
                 transition={{ delay: 0.3 }}
                 className="p-6 rounded-2xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/20"
             >
-                <h3 className="font-semibold text-white mb-2 italic">Pro Tip</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <h3 className="font-semibold text-gray-900 mb-2 italic">Pro Tip</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                     Try scanning a repo with <strong>Deep Scan</strong> enabled for better architectural insights and flowcharts.
                 </p>
             </motion.div>
