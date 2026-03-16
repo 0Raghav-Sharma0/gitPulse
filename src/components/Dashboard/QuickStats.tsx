@@ -42,7 +42,7 @@ export default function QuickStats() {
         return (
             <div className="grid grid-cols-1 gap-4">
                 {[1, 2, 3].map((i) => (
-                    <div key={i} className="p-6 rounded-2xl bg-zinc-900 border border-white/5 h-28 flex items-center justify-center">
+                    <div key={i} className="p-6 rounded-2xl bg-[#FEF9F2] border-2 border-black/5 shadow-[0_8px_24px_rgba(15,23,42,0.06)] h-28 flex items-center justify-center">
                         <Loader2 className="w-6 h-6 text-zinc-600 animate-spin" />
                     </div>
                 ))}
@@ -58,7 +58,7 @@ export default function QuickStats() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-6 rounded-2xl bg-zinc-900 border border-white/5 hover:border-white/10 transition-colors group"
+                    className="p-6 rounded-2xl bg-[#FEF9F2] border-2 border-black/5 shadow-[0_8px_24px_rgba(15,23,42,0.06)] hover:border-white/10 transition-colors group"
                 >
                     <div className="flex items-center justify-between mb-2">
                         <div className={`p-2 rounded-lg ${stat.bg}/10 ${stat.color}`}>

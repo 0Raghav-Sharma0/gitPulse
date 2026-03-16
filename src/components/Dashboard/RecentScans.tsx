@@ -51,7 +51,7 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
 
     if (loading) {
         return (
-            <div className="rounded-3xl bg-zinc-900 border border-white/5 p-12 flex flex-col items-center justify-center space-y-4">
+            <div className="rounded-3xl bg-[#FEF9F2] border-2 border-black/5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] p-12 flex flex-col items-center justify-center space-y-4">
                 <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent animate-spin rounded-full" />
                 <p className="text-zinc-500 animate-pulse">Fetching your history...</p>
             </div>
@@ -63,7 +63,7 @@ export default function RecentScans({ userId, limit, showViewAll = false }: { us
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="rounded-3xl bg-zinc-900 border border-white/5 overflow-hidden flex flex-col"
+            className="rounded-3xl bg-[#FEF9F2] border-2 border-black/5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] overflow-hidden flex flex-col"
         >
             <div className="p-6 border-b border-white/5 flex items-center justify-between">
                 <div className="flex items-center gap-2">

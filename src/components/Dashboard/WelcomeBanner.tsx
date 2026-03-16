@@ -21,7 +21,7 @@ export default function WelcomeBanner({ user }: { user: WelcomeBannerUser }) {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="relative overflow-hidden p-8 rounded-3xl bg-zinc-900 border border-white/5 group"
+            className="relative overflow-hidden p-8 rounded-3xl bg-[#FEF9F2] border-2 border-black/5 shadow-[0_10px_30px_rgba(15,23,42,0.06)] group"
         >
             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                 <Github className="w-32 h-32" />
@@ -45,7 +45,7 @@ export default function WelcomeBanner({ user }: { user: WelcomeBannerUser }) {
                 </div>
 
                 <div className="text-center md:text-left">
-                    <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/60 mb-2">
+                    <h1 className="text-3xl font-bold text-gray-900 mb-2">
                         Welcome back, {user.name?.split(' ')[0]}!
                     </h1>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 text-zinc-400 text-sm">
