@@ -1,8 +1,156 @@
 [
   {
+    "owner": "MetrolistGroup",
+    "repo": "Metrolist",
+    "stars": 8761,
+    "description": "YouTube Music client for Android",
+    "topics": [
+      "android",
+      "foss",
+      "innertube",
+      "jetpack-compose",
+      "kotlin",
+      "kotlin-android",
+      "material-design",
+      "material-ui",
+      "material3",
+      "music",
+      "music-player",
+      "music-player-foss",
+      "musicplayer",
+      "newpipe",
+      "newpipe-extractor",
+      "streaming-apps",
+      "youtube",
+      "youtube-music",
+      "youtube-music-client",
+      "ytmusic"
+    ],
+    "language": "Kotlin"
+  },
+  {
+    "owner": "gslege",
+    "repo": "CloudflareIP",
+    "stars": 369,
+    "description": "全自动优选CF的IP，包含美国US，日本JP，新加坡SG，德国DE，荷兰NL等cloudflare每天每小时自动优选IP，自动生成CF免费Vless节点。",
+    "topics": [
+      "clash",
+      "cloudflare",
+      "cloudflare-pages",
+      "cloudflare-workers",
+      "nodes",
+      "v2ray",
+      "vless"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "wemake-services",
+    "repo": "wemake-python-styleguide",
+    "stars": 2841,
+    "description": "The strictest and most opinionated python linter ever!",
+    "topics": [
+      "code-quality",
+      "flake8",
+      "flake8-plugin",
+      "hacktoberfest",
+      "linter",
+      "python",
+      "python3",
+      "styleguide",
+      "wemake",
+      "wemake-services"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "pytorch",
+    "repo": "pytorch",
+    "stars": 99468,
+    "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+    "topics": [
+      "autograd",
+      "deep-learning",
+      "gpu",
+      "machine-learning",
+      "neural-network",
+      "numpy",
+      "python",
+      "tensor"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "CriticalPathSecurity",
+    "repo": "Zeek-Intelligence-Feeds",
+    "stars": 398,
+    "description": "Zeek-Formatted Threat Intelligence Feeds",
+    "topics": [
+      "malware",
+      "phishing",
+      "threat-intelligence",
+      "threatintel",
+      "zeek",
+      "zeek-ids"
+    ],
+    "language": "Zeek"
+  },
+  {
+    "owner": "UI5",
+    "repo": "openui5",
+    "stars": 3279,
+    "description": "OpenUI5 lets you build enterprise-ready web applications, responsive to all devices, running on almost any browser of your choice.",
+    "topics": [
+      "css",
+      "featured",
+      "html",
+      "javascript",
+      "open-source",
+      "openui5"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "rust-lang",
+    "repo": "crates.io-index",
+    "stars": 701,
+    "description": "Registry index for crates.io",
+    "topics": [],
+    "language": "Tcl"
+  },
+  {
+    "owner": "mthcht",
+    "repo": "awesome-lists",
+    "stars": 1434,
+    "description": "Awesome Security lists for SOC/CERT/CTI",
+    "topics": [
+      "awesome-list",
+      "blueteam",
+      "blueteam-tools",
+      "cti",
+      "detection",
+      "detection-engineering",
+      "dfir",
+      "hacktools",
+      "incident-response",
+      "ioc",
+      "iocs",
+      "ir",
+      "ransomware",
+      "redteam",
+      "rmm",
+      "security",
+      "siem",
+      "soc",
+      "threat-hunting",
+      "threat-intelligence"
+    ],
+    "language": "YARA"
+  },
+  {
     "owner": "Surfboardv2ray",
     "repo": "TGParse",
-    "stars": 247,
+    "stars": 252,
     "description": "Get V2ray configs from various Telegram channels and split them by protocol - UDP Based Hysteria2 and TUIC included.",
     "topics": [
       "free-proxy",
@@ -24,249 +172,219 @@
     "language": "Python"
   },
   {
-    "owner": "openai",
-    "repo": "openai-agents-python",
-    "stars": 23390,
-    "description": "A lightweight, powerful framework for multi-agent workflows",
+    "owner": "mirkosertic",
+    "repo": "Bytecoder",
+    "stars": 943,
+    "description": "Framework to interpret and transpile JVM bytecode to JavaScript, OpenCL or WebAssembly.",
+    "topics": [
+      "bytecode",
+      "compiler",
+      "decompiler",
+      "java-bytecode",
+      "javascript",
+      "jvm-bytecode",
+      "kotlin",
+      "llvm",
+      "llvm-frontend",
+      "opencl",
+      "transpiler",
+      "webassembly"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "netdata",
+    "repo": "netdata",
+    "stars": 78616,
+    "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
+    "topics": [
+      "ai",
+      "alerting",
+      "cncf",
+      "data-visualization",
+      "database",
+      "devops",
+      "docker",
+      "grafana",
+      "influxdb",
+      "kubernetes",
+      "linux",
+      "machine-learning",
+      "mcp",
+      "mongodb",
+      "monitoring",
+      "mysql",
+      "netdata",
+      "observability",
+      "postgresql",
+      "prometheus"
+    ],
+    "language": "C"
+  },
+  {
+    "owner": "OpenFeign",
+    "repo": "feign",
+    "stars": 9781,
+    "description": "Feign makes writing java http clients easier",
+    "topics": [
+      "http-client",
+      "interface",
+      "java",
+      "jax-rs",
+      "okhttp3",
+      "slf4j"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "openagents-org",
+    "repo": "openagents",
+    "stars": 3320,
+    "description": "OpenAgents - AI Agent Networks for Open Collaboration",
     "topics": [
       "agents",
       "ai",
-      "framework",
+      "collaboration",
       "llm",
-      "openai",
+      "network"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "hello-world-1989",
+    "repo": "cn-news",
+    "stars": 382,
+    "description": "V2Ray Clash订阅链接, Outline, 大翻墙运动, 拆除防火墙,拆墙运动,李老师不是你老师 推文 每小时更新 , 完全免费vpn, 免费科学上网, 翻墙,科学上网,免费翻墙, 免费VPN,开源vpn, free vpn,好用VPN",
+    "topics": [
+      "anti-censorship",
+      "anticensorship",
+      "ban-gfw",
+      "blank-paper",
+      "clash",
+      "clash-meta",
+      "clashx",
+      "end-gfw",
+      "fanqiang",
+      "freefq",
+      "gfw",
+      "no-more-404",
+      "shadowshare",
+      "trojan",
+      "v2ray",
+      "v2rayfree",
+      "vmess",
+      "white-paper",
+      "whyyoutouzhele"
+    ],
+    "language": null
+  },
+  {
+    "owner": "freebsd",
+    "repo": "freebsd-src",
+    "stars": 9040,
+    "description": "The FreeBSD src tree publish-only repository. Experimenting with 'simple' pull requests....",
+    "topics": [],
+    "language": "C"
+  },
+  {
+    "owner": "CachyOS",
+    "repo": "kernel-patches",
+    "stars": 316,
+    "description": " Custom Linux kernel patches",
+    "topics": [
+      "arch",
+      "cachyos",
+      "kernel",
+      "kernel-patches",
+      "linux",
+      "linux-kernel",
+      "patches",
+      "performance",
+      "x86-64-v3"
+    ],
+    "language": null
+  },
+  {
+    "owner": "TomoeMami",
+    "repo": "S1PlainTextBackup",
+    "stars": 524,
+    "description": "纯文本格式的S1帖子备份",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "phishdestroy",
+    "repo": "destroylist",
+    "stars": 981,
+    "description": "Real-time phishing & scam domain blocklist — 130k+ curated threats, 888K+ community, free API, multiple formats",
+    "topics": [
+      "anti-phishing",
+      "blacklist",
+      "blocklist",
+      "crypto-scam",
+      "cybersecurity",
+      "dns-blocklist",
+      "domains",
+      "drainer",
+      "malware",
+      "osint",
+      "phishing",
+      "scam",
+      "security-tools",
+      "seed-phishing",
+      "threat-intelligence",
+      "web3-security"
+    ],
+    "language": "HTML"
+  },
+  {
+    "owner": "DiligentGraphics",
+    "repo": "DiligentEngine",
+    "stars": 4274,
+    "description": "A modern cross-platform low-level graphics library and rendering framework",
+    "topics": [
+      "3d-engine",
+      "d3d11",
+      "d3d12",
+      "directx",
+      "directx11",
+      "directx12",
+      "gamedev",
+      "graphics-engine",
+      "graphics-library",
+      "graphics-programming",
+      "ibl",
+      "opengl",
+      "opengl-es",
+      "pbr",
+      "ray-tracing",
+      "raytracing",
+      "renderer",
+      "rendering",
+      "vulkan",
+      "vulkan-game-engine"
+    ],
+    "language": "Batchfile"
+  },
+  {
+    "owner": "MemPalace",
+    "repo": "mempalace",
+    "stars": 49865,
+    "description": "The best-benchmarked open-source AI memory system. And it's free.",
+    "topics": [
+      "ai",
+      "chromadb",
+      "llm",
+      "mcp",
+      "memory",
       "python"
     ],
     "language": "Python"
   },
   {
-    "owner": "elizaOS",
-    "repo": "eliza",
-    "stars": 18216,
-    "description": "Autonomous agents for everyone",
-    "topics": [
-      "agent",
-      "agentic",
-      "ai",
-      "autonomous",
-      "chatbot",
-      "crypto",
-      "discord",
-      "eliza",
-      "elizaos",
-      "framework",
-      "plugins",
-      "rag",
-      "slack",
-      "swarm",
-      "telegram"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "eastreams",
-    "repo": "loong",
-    "stars": 619,
-    "description": "Lightweight, clear, and fully extensible AI agent infrastructure — learn easily, customize anything 🐉",
-    "topics": [
-      "agent",
-      "agentic-ai",
-      "agents",
-      "ai",
-      "assistant",
-      "framework",
-      "loongclaw",
-      "openclaw",
-      "rust",
-      "rust-lang"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "SoliSpirit",
-    "repo": "v2ray-configs",
-    "stars": 453,
-    "description": "V2Ray configs for multiple protocols and countries, updated every 15 minutes for fast, secure connections!",
-    "topics": [],
-    "language": null
-  },
-  {
-    "owner": "mlflow",
-    "repo": "mlflow",
-    "stars": 25448,
-    "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
-    "topics": [
-      "agentops",
-      "agents",
-      "ai",
-      "ai-governance",
-      "apache-spark",
-      "evaluation",
-      "langchain",
-      "llm-evaluation",
-      "llmops",
-      "machine-learning",
-      "ml",
-      "mlflow",
-      "mlops",
-      "model-management",
-      "observability",
-      "open-source",
-      "openai",
-      "prompt-engineering"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "dotnet",
-    "repo": "SqlClient",
-    "stars": 966,
-    "description": "Microsoft.Data.SqlClient provides database connectivity to SQL Server for .NET applications.",
-    "topics": [],
-    "language": "C#"
-  },
-  {
-    "owner": "openclaw",
-    "repo": "openclaw-windows-node",
-    "stars": 453,
-    "description": "Windows companion suite for OpenClaw - System Tray app, Shared library, Node, and PowerToys Command Palette extension",
-    "topics": [],
-    "language": "C#"
-  },
-  {
-    "owner": "gimli-rs",
-    "repo": "object",
-    "stars": 816,
-    "description": "A unified interface for reading and writing object file formats",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "Azure",
-    "repo": "azure-sdk-for-java",
-    "stars": 2561,
-    "description": "This repository is for active development of the Azure SDK for Java. For consumers of the SDK we recommend visiting our public developer docs at https://docs.microsoft.com/java/azure/ or our versioned developer docs at https://azure.github.io/azure-sdk-for-java. ",
-    "topics": [
-      "azure",
-      "azure-resources",
-      "azure-sdk",
-      "azure-services",
-      "hacktoberfest",
-      "java",
-      "media"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "Noah-Wu66",
-    "repo": "Vectaix-AI",
-    "stars": 207,
-    "description": null,
-    "topics": [],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "stephenschoettler",
-    "repo": "hermes-lcm",
-    "stars": 215,
-    "description": "Lossless Context Management plugin for Hermes Agent — DAG-based context engine that never loses a message",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "nodejs",
-    "repo": "undici",
-    "stars": 7517,
-    "description": "An HTTP/1.1 client, written from scratch for Node.js",
-    "topics": [
-      "client",
-      "http",
-      "nodejs"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "perixtar",
-    "repo": "2026-Tech-OA-by-FastPrep",
-    "stars": 2810,
-    "description": "List of Tech Company OAs. Save your time from finding them all over the internet.",
-    "topics": [
-      "fulltime",
-      "internship",
-      "interview-preparation",
-      "interview-questions",
-      "online-assessments",
-      "university"
-    ],
-    "language": null
-  },
-  {
-    "owner": "spool-lab",
-    "repo": "spool",
-    "stars": 292,
-    "description": "Search your Claude Code sessions, Codex history, GitHub stars, and 50+ sources — locally, instantly. Your AI agents can search too.",
-    "topics": [
-      "ai-agents",
-      "claude-code",
-      "codex",
-      "developer-tools",
-      "electron",
-      "full-text-search",
-      "local-first",
-      "macos",
-      "mcp",
-      "open-source",
-      "personal-knowledge",
-      "privacy",
-      "productivity",
-      "search-engine"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "agentscope-ai",
-    "repo": "QwenPaw",
-    "stars": 15637,
-    "description": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
-    "topics": [
-      "agent",
-      "agentscope",
-      "agentscope-runtime",
-      "llm-tools",
-      "llms",
-      "skills"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "adcontextprotocol",
-    "repo": "adcp",
-    "stars": 210,
-    "description": "Docs and reference implementation for the Ad Context Protocol",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "MhdiTaheri",
-    "repo": "V2rayCollector",
-    "stars": 277,
-    "description": "This script is designed to retrieve configuration details for various VPN protocols (VLESS, VMess, Shadowsocks, and Trojan) from a list of Telegram channel URLs provided within the script. It uses cURL to fetch content and regular expressions to extract the configurations.",
-    "topics": [
-      "config",
-      "hysteria",
-      "php",
-      "server",
-      "subscription",
-      "tuic",
-      "v2ray",
-      "vless",
-      "vmess"
-    ],
-    "language": "PHP"
-  },
-  {
     "owner": "shaoyouvip",
     "repo": "free",
-    "stars": 617,
+    "stars": 648,
     "description": "周润发公益免费v2ray节点订阅、翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/trojan节点、蓝灯、谷歌商店、翻墙梯子、v2ray节点、免费节点、免费v2ray节点、最新公益免费v2ray节点订阅地址、免费v2ray节点每日更新、免费v2ray/clash/singbox节点",
     "topics": [
       "fanqiang",
@@ -283,2169 +401,79 @@
     "language": null
   },
   {
-    "owner": "KUN1007",
-    "repo": "kun-touchgal-next",
-    "stars": 576,
-    "description": "TouchGAL是立足于分享快乐的一站式Galgame文化社区, 为Gal爱好者提供一片净土!",
-    "topics": [
-      "argon2",
-      "aws-s3",
-      "cloudflare-workers",
-      "eslint",
-      "jwt",
-      "milkdown",
-      "nextjs",
-      "nextjs-15",
-      "nextui",
-      "postcss",
-      "postgresql",
-      "prettier",
-      "prisma",
-      "react-19",
-      "redis",
-      "tailwindcss-v4",
-      "turbopack",
-      "zod",
-      "zustand"
-    ],
-    "language": "TypeScript"
+    "owner": "wmpeng",
+    "repo": "codingplan",
+    "stars": 223,
+    "description": "提供国内主流 AI 平台的 Coding Plan套餐对比，智谱、Kimi、MiniMax、阿里云百炼、字节火山方舟、百度千帆",
+    "topics": [],
+    "language": "HTML"
   },
   {
-    "owner": "librefang",
-    "repo": "librefang",
-    "stars": 225,
-    "description": "LibreFang is an open-source agent operating system written in Rust. Live demo: https://flyio.librefang.ai",
+    "owner": "bagisto",
+    "repo": "bagisto",
+    "stars": 26567,
+    "description": "Free and open source laravel eCommerce platform",
     "topics": [
-      "openclaw",
-      "openfang",
-      "zeroclaw"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "koala73",
-    "repo": "worldmonitor",
-    "stars": 49371,
-    "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
-    "topics": [
-      "ai",
-      "dashboard",
-      "geopolitics",
-      "monitoring",
-      "news",
-      "opensource",
-      "osint",
-      "palantir",
-      "situation"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "ulsklyc",
-    "repo": "oikos",
-    "stars": 339,
-    "description": "Self-hosted family planner - tasks, calendars, shopping, meals, budget. Your data, your server.  ",
-    "topics": [
-      "docker",
-      "family",
-      "family-planner",
-      "home-automation",
+      "b2b-ecommerce",
+      "blockchain-ecommerce",
+      "ecommerce",
+      "ecommerce-framework",
+      "ecommerce-platform",
+      "hacktoberfest",
+      "headless-commerce",
+      "laravel",
+      "laravel-application",
+      "laravel-ecommerce",
+      "laravel-package",
+      "multi-tenancy-plugin",
+      "multi-tenant",
+      "multi-vendor-ecommerce",
+      "multivendor-ecommerce",
+      "nft-marketplace",
       "open-source",
-      "planner-app",
-      "privacy-first",
-      "progressive-web-app",
-      "pwa",
-      "self-hosted",
-      "selfhosted",
-      "selfhosted-apps"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "max-sixty",
-    "repo": "worktrunk",
-    "stars": 4630,
-    "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
-    "topics": [
-      "agents",
-      "claude-code",
-      "codex",
-      "developer-tools",
-      "git",
-      "worktrees"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "warp-tech",
-    "repo": "warpgate",
-    "stars": 6824,
-    "description": "Fully transparent SSH, HTTPS, Kubernetes, MySQL and Postgres bastion/PAM that doesn't need additional client-side software",
-    "topics": [
-      "bastion",
-      "bastion-host",
-      "https",
-      "https-proxy",
-      "infrastructure",
-      "kubectl",
-      "kubernetes",
-      "mysql",
-      "mysql-proxy",
-      "pam",
-      "postgresql-proxy",
-      "privileged-access-management",
-      "proxy",
-      "rust",
-      "ssh",
-      "ssh-server"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "ROCm",
-    "repo": "HIPIFY",
-    "stars": 687,
-    "description": "HIPIFY: Convert CUDA to Portable C++ Code",
-    "topics": [
-      "cuda2hip",
-      "hipify",
-      "hipify-clang",
-      "hipify-perl"
-    ],
-    "language": "C++"
-  },
-  {
-    "owner": "milady-ai",
-    "repo": "milady",
-    "stars": 386,
-    "description": "terminally online",
-    "topics": [
-      "agent",
-      "agent-skills",
-      "agents",
-      "autonomous-agents",
-      "clawd",
-      "clawdbot",
-      "clawdbot-plugin",
-      "eliza",
-      "elizaos",
-      "openclaw",
-      "openclaw-skills"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "NousResearch",
-    "repo": "hermes-agent",
-    "stars": 102971,
-    "description": "The agent that grows with you",
-    "topics": [
-      "ai",
-      "ai-agent",
-      "ai-agents",
-      "anthropic",
-      "chatgpt",
-      "claude",
-      "claude-code",
-      "clawdbot",
-      "codex",
-      "hermes",
-      "hermes-agent",
-      "llm",
-      "moltbot",
-      "nous-research",
-      "openai",
-      "openclaw"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "Mic92",
-    "repo": "dotfiles",
-    "stars": 740,
-    "description": "My NixOS dotfiles",
-    "topics": [
-      "build-with-buildbot",
-      "hacktoberfest",
-      "nix-flake",
-      "nixos-configuration",
-      "nixos-dotfiles"
-    ],
-    "language": "Nix"
-  },
-  {
-    "owner": "instancio",
-    "repo": "instancio",
-    "stars": 1132,
-    "description": "A library that creates fully populated objects for your unit tests.",
-    "topics": [
-      "data-generator",
-      "java",
-      "junit",
-      "junit-jupiter",
-      "random",
-      "random-generation",
-      "test-automation",
-      "test-data-generator",
-      "test-framework",
-      "testing",
-      "unit-testing"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "rust-lang",
-    "repo": "crates.io-index",
-    "stars": 699,
-    "description": "Registry index for crates.io",
-    "topics": [],
-    "language": "Tcl"
-  },
-  {
-    "owner": "home-assistant",
-    "repo": "frontend",
-    "stars": 5415,
-    "description": ":lollipop: Frontend for Home Assistant",
-    "topics": [
-      "frontend",
-      "hacktoberfest",
-      "home-assistant",
-      "home-automation",
-      "lit-element",
-      "polymer",
-      "webcomponents"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "easylist",
-    "repo": "easylist",
-    "stars": 2958,
-    "description": "EasyList filter subscription (EasyList, EasyPrivacy, EasyList Cookie, Fanboy's Social/Annoyances/Notifications Blocking List)",
-    "topics": [
-      "adblock",
-      "adblock-list",
-      "adblock-plus",
-      "adblocker",
-      "adblocking",
-      "easylist",
-      "filterlist",
-      "ublock",
-      "ublock-origin"
-    ],
-    "language": "Adblock Filter List"
-  },
-  {
-    "owner": "qingchencloud",
-    "repo": "clawpanel",
-    "stars": 2442,
-    "description": "🦞 OpenClaw & Hermes Agent 多引擎 AI 管理面板 — 内置 AI 助手（工具调用 + 图片识别 + 多模态），一键安装 | Tauri v2 跨平台桌面应用 | 11 种语言",
-    "topics": [
-      "admin-panel",
-      "ai-agent",
-      "ai-assistant",
-      "ai-chat",
-      "ai-tools",
-      "chatgpt",
-      "cross-platform",
-      "deepseek",
-      "desktop-app",
-      "hermes-agent",
-      "llm",
-      "management-panel",
-      "multi-engine",
-      "openclaw",
-      "openclaw-panel",
-      "rust",
-      "tauri",
-      "tauri-v2",
-      "tool-calling",
-      "vite"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "vitejs",
-    "repo": "vite",
-    "stars": 80008,
-    "description": "Next generation frontend tooling. It's fast!",
-    "topics": [
-      "build-tool",
-      "dev-server",
-      "frontend",
-      "hmr",
-      "vite"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "yeasy",
-    "repo": "docker_practice",
-    "stars": 25982,
-    "description": "最新Docker容器技术，从真实案例中学习最佳实践！| Learn and understand Docker&Container technologies, with real DevOps practice!",
-    "topics": [
-      "book",
-      "cloud-computing",
-      "container",
-      "devops",
-      "docker",
-      "kubernetes",
-      "linux",
-      "mesos",
-      "spark",
-      "swarm",
-      "virtualization"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "CocoaPods",
-    "repo": "Specs",
-    "stars": 6813,
-    "description": "The CocoaPods Master Repo",
-    "topics": [],
-    "language": null
-  },
-  {
-    "owner": "Auto-Explore",
-    "repo": "GitComet",
-    "stars": 353,
-    "description": "GitComet is fastest open source user interface for GIT workflows",
-    "topics": [
-      "developer-tools",
-      "git",
-      "git-client",
-      "gpui",
-      "rust"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "gaoyangz77",
-    "repo": "rivonclaw",
-    "stars": 254,
-    "description": "RivonClaw is an easy-mode runtime and UI layer built on top of OpenClaw, designed to turn long-lived AI agents into personal digital butlers. Instead of configuring skills or workflows, users interact through natural-language rules and feedback, allowing a single agent to evolve, adapt, and better understand its owner over time.",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "MetaMask",
-    "repo": "eth-phishing-detect",
-    "stars": 1272,
-    "description": "Utility for detecting phishing domains targeting Web3 users",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "browserwing",
-    "repo": "browserwing",
-    "stars": 1215,
-    "description": "BrowserWing turns your browser actions into MCP commands Or Claude Skill, allowing AI agents to control browsers efficiently and reliably. Say goodbye to slow, token-heavy LLM interactions — let agents call commands directly for faster automation. Perfect for AI-driven tasks, browser automation, and boosting productivity.",
-    "topics": [
-      "aibrowser",
-      "golang",
-      "llm",
-      "react"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "TheSpeedX",
-    "repo": "PROXY-List",
-    "stars": 5472,
-    "description": "Get PROXY List  that gets updated everyday",
-    "topics": [
-      "anonymity",
-      "anonymous",
-      "elite",
-      "free",
-      "free-proxy",
-      "hacking",
-      "http",
-      "https-proxy",
-      "proxy",
-      "proxy-list",
-      "socker",
-      "socks",
-      "socks-proxy",
-      "socks4-proxy",
-      "socks5-proxy",
-      "speedx",
-      "vpn"
-    ],
-    "language": null
-  },
-  {
-    "owner": "rilldata",
-    "repo": "rill",
-    "stars": 2561,
-    "description": "The fastest business intelligence tool for humans and agents.",
-    "topics": [
-      "ai",
-      "ai-chatbot",
-      "bi",
-      "business-analytics",
-      "csv",
-      "data",
-      "data-analysis",
-      "data-visualization",
-      "dataviz",
-      "duckdb",
-      "gen-ai",
-      "golang",
-      "parquet",
-      "parquet-tools",
-      "parquet-viewer",
-      "s3",
-      "sql",
-      "sql-editor",
-      "sveltekit"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "LiberatedPixelCup",
-    "repo": "Universal-LPC-Spritesheet-Character-Generator",
-    "stars": 1228,
-    "description": "Character Generator based on Universal-LPC-Spritesheet",
-    "topics": [],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "ultraworkers",
-    "repo": "claw-code",
-    "stars": 186414,
-    "description": "The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars ⭐. Join Discord: https://discord.gg/5TUQKqFWd Built in Rust using oh-my-codex.",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "opentabs-dev",
-    "repo": "opentabs",
-    "stars": 385,
-    "description": "Browser automation clicks buttons. OpenTabs calls APIs.",
-    "topics": [
-      "ai-agents",
-      "browser-automation",
-      "chrome",
-      "chrome-extension",
-      "claude-code",
-      "mcp",
-      "mcp-server",
-      "open-source",
-      "opencode",
-      "plugins",
-      "typescript"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "xiaoji235",
-    "repo": "airport-free",
-    "stars": 487,
-    "description": "Free nodes, automatically renews subscription every 3hours",
-    "topics": [
-      "clash",
-      "v2ray"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "archlinuxcn",
-    "repo": "repo",
-    "stars": 1820,
-    "description": "Arch Linux CN Repository",
-    "topics": [
-      "archlinux",
-      "archlinuxcn",
-      "packages",
-      "repository"
-    ],
-    "language": "Shell"
-  },
-  {
-    "owner": "google",
-    "repo": "alioth",
-    "stars": 347,
-    "description": "Experimental Type-2 hypervisor, written from scratch in Rust, runs on Linux and macOS.",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "phodal",
-    "repo": "routa",
-    "stars": 706,
-    "description": "Build Your Agent Team for Real-World AI Development - Workspace-first multi-agent coordination platform for AI development, with shared Specs, Kanban orchestration, and MCP/ACP/   A2A support across web and desktop.",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "bivlked",
-    "repo": "amneziawg-installer",
-    "stars": 306,
-    "description": "One-command install script for self-hosted AmneziaWG 2.0 VPN — Ubuntu & Debian, DPI bypass, traffic obfuscation, auto-hardening, client management",
-    "topics": [
-      "amneziawg",
-      "anti-censorship",
-      "arm64",
-      "automation",
-      "bash",
-      "debian",
-      "dpi-bypass",
-      "installer",
-      "linux",
-      "privacy",
-      "raspberry-pi",
-      "security",
-      "self-hosted",
-      "server",
-      "shell-script",
-      "traffic-obfuscation",
-      "ubuntu",
-      "vpn",
-      "vpn-server",
-      "wireguard"
-    ],
-    "language": "Shell"
-  },
-  {
-    "owner": "f-droid",
-    "repo": "fdroiddata",
-    "stars": 316,
-    "description": "Data for the main F-Droid repository.",
-    "topics": [
-      "android",
-      "apps",
-      "fdroid"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "sinelaw",
-    "repo": "fresh",
-    "stars": 6862,
-    "description": "Terminal based IDE & text editor: easy, powerful and fast",
-    "topics": [
-      "ide",
-      "terminal-based",
-      "text-editor"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "OpenHands",
-    "repo": "software-agent-sdk",
-    "stars": 659,
-    "description": "A clean, modular SDK for building AI agents with OpenHands V1.",
-    "topics": [
-      "agent",
-      "sdk"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "voicepaw",
-    "repo": "so-vits-svc-fork",
-    "stars": 9288,
-    "description": "so-vits-svc fork with realtime support, improved interface and more features.",
-    "topics": [
-      "contentvec",
-      "deep-learning",
-      "gan",
-      "hubert",
-      "lightning",
-      "pytorch",
-      "pytorch-lightning",
-      "realtime",
-      "so-vits-svc",
-      "softvc",
-      "sovits",
-      "speech-synthesis",
-      "vits",
-      "voice-changer",
-      "voice-conversion"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "lingdojo",
-    "repo": "kana-dojo",
-    "stars": 2101,
-    "description": "Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel. Beginner-friendly with plenty of good first issues - all contributions are welcome!",
-    "topics": [
-      "beginner",
-      "beginner-friendly",
-      "contribute",
-      "contribution",
-      "contributions-welcome",
-      "first-contributions",
-      "first-timers-only",
-      "good-first-contribution",
-      "good-first-issue",
-      "good-first-pr",
-      "hacktoberfest",
-      "help-wanted",
-      "japanese",
-      "japanese-language",
-      "language-learning",
-      "learn-japanese",
-      "nextjs",
-      "open-source",
-      "react",
-      "up-for-grabs"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "danielroe",
-    "repo": "beasties",
-    "stars": 634,
-    "description": "A library to inline your app's critical CSS and lazy-load the rest.",
-    "topics": [
-      "critical-css",
-      "css",
-      "inlining-critical-fonts",
-      "vite",
-      "vite-plugin",
-      "webpack",
-      "webpack-plugin"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt-modules",
-    "repo": "turnstile",
-    "stars": 292,
-    "description": "🔥 Cloudflare Turnstile integration for Nuxt",
-    "topics": [
-      "captcha",
-      "cloudflare",
-      "hacktoberfest",
-      "nuxt",
-      "recaptcha",
-      "turnstile"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "onestardao",
-    "repo": "WFGY",
-    "stars": 1718,
-    "description": "WFGY is an open-source AI Troubleshooting Atlas for RAG, agents, and real-world AI workflows. Includes the 16-problem map, Global Debug Card, and WFGY 4.0. ⭐ Star to help more builders find this repo.",
-    "topics": [
-      "ai-agents",
-      "alignment",
-      "debugging",
-      "evaluation",
-      "graphrag",
-      "hallucination",
-      "information-retrieval",
-      "knowledge-graph",
-      "llm",
-      "rag",
-      "reasoning",
-      "retrieval-augmented-generation"
-    ],
-    "language": "Jupyter Notebook"
-  },
-  {
-    "owner": "apache",
-    "repo": "polaris",
-    "stars": 1905,
-    "description": "Apache Polaris, the interoperable, open source catalog for Apache Iceberg",
-    "topics": [
-      "apache",
-      "catalog",
-      "iceberg",
-      "lakehouse",
-      "metadata",
-      "opencatalog",
-      "polaris"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "MoganLab",
-    "repo": "mogan",
-    "stars": 555,
-    "description": "Mogan STEM Suite (based on GNU TeXmacs): Enjoy exploring science and technology!",
-    "topics": [
-      "beamer",
-      "codeeditor",
-      "cpp",
-      "editor",
-      "emcc",
-      "made-on-earth",
-      "mathematics",
-      "qt",
-      "scheme",
-      "texmacs",
-      "wasm",
-      "xmake"
-    ],
-    "language": "Scheme"
-  },
-  {
-    "owner": "ailyProject",
-    "repo": "aily-builder",
-    "stars": 539,
-    "description": "Faster Arduino compilation CLI. Arduino快速编译工具，小项目提速50%，大项目提速80%! 时间就是金钱，我的朋友!",
-    "topics": [
-      "arduino",
-      "avr",
-      "esp32"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "martinpaljak",
-    "repo": "GlobalPlatformPro",
-    "stars": 883,
-    "description": "Manage applets and keys on JavaCard-s like a pro 🌐 🔐",
-    "topics": [
-      "cli",
-      "globalplatform",
-      "java",
-      "javacard",
-      "sdk",
-      "smartcard"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "avoidwork",
-    "repo": "filesize.js",
-    "stars": 1699,
-    "description": "A lightweight, high-performance file size utility that converts bytes to human-readable strings. Zero dependencies. 100% test coverage.",
-    "topics": [
-      "bits",
-      "bytes",
-      "file",
-      "filesize",
-      "filesystem",
-      "iec",
-      "jedec",
-      "simple",
-      "size",
-      "size-calculation"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "danielroe",
-    "repo": "nuxt-workers",
-    "stars": 441,
-    "description": "SSR-safe, zero-config Web Workers integration for Nuxt.",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt-modules",
-    "repo": "ionic",
-    "stars": 453,
-    "description": "Batteries-included, zero-config Ionic integration for Nuxt",
-    "topics": [
-      "android",
-      "hacktoberfest",
-      "ionic",
-      "ios",
-      "mobile",
-      "nuxt",
-      "nuxt-module"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "lxc",
-    "repo": "incus",
-    "stars": 5217,
-    "description": "Powerful system container and virtual machine manager ",
-    "topics": [
-      "cloud",
-      "containers",
-      "hacktoberfest",
-      "virtual-machines"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "Bush2021",
-    "repo": "edge_installer",
-    "stars": 289,
-    "description": "Use GitHub Actions to automatically get Microsoft Edge offline installation package",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "mmpx12",
-    "repo": "proxy-list",
-    "stars": 422,
-    "description": "Free proxies (few vpn and tor exit nodes) from various sources update hourly.",
-    "topics": [],
-    "language": null
-  },
-  {
-    "owner": "OpenIndiana",
-    "repo": "oi-userland",
-    "stars": 260,
-    "description": "Unified build system for OpenIndiana distribution components",
-    "topics": [
-      "illumos",
-      "openindiana",
-      "operating-system",
-      "solaris"
-    ],
-    "language": "Makefile"
-  },
-  {
-    "owner": "hykilpikonna",
-    "repo": "hyfetch",
-    "stars": 1970,
-    "description": "🏳️‍🌈 🏳️‍⚧️ Neofetch with LGBTQ+ pride flags!",
-    "topics": [
-      "hyfetch",
-      "neofetch",
-      "neowofetch",
-      "screenfetch"
-    ],
-    "language": "Shell"
-  },
-  {
-    "owner": "HKUDS",
-    "repo": "OpenHarness",
-    "stars": 10482,
-    "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "openclaw",
-    "repo": "openclaw",
-    "stars": 360722,
-    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
-    "topics": [
-      "ai",
-      "assistant",
-      "crustacean",
-      "molty",
-      "openclaw",
-      "own-your-data",
-      "personal"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "SecObserve",
-    "repo": "SecObserve",
-    "stars": 250,
-    "description": "SecObserve is an open source vulnerability and license management system for software development teams and cloud environments. It supports a variety of open source vulnerability scanners and integrates easily into CI/CD pipelines.",
-    "topics": [
-      "devsecops",
-      "license-management",
-      "security-automation",
-      "security-tools",
-      "shiftleft",
-      "vulnerability-management"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "apache",
-    "repo": "avro",
-    "stars": 3263,
-    "description": "Apache Avro is a data serialization system.",
-    "topics": [
-      "avro",
-      "bigdata",
-      "c",
-      "cplusplus",
-      "csharp",
-      "dotnet",
-      "java",
-      "perl",
+      "opensource-ecommerce",
       "php",
-      "python",
-      "ruby"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "dataease",
-    "repo": "SQLBot",
-    "stars": 5954,
-    "description": "🔥 基于大模型和 RAG 的智能问数系统，对话式数据分析神器。Text-to-SQL Generation via LLMs using RAG.",
-    "topics": [
-      "chatbi",
-      "deepseek",
-      "llm",
-      "nl2sql",
-      "rag",
-      "sqlbot",
-      "text-to-sql",
-      "text2sql"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "felixonmars",
-    "repo": "dnsmasq-china-list",
-    "stars": 6033,
-    "description": "Chinese-specific configuration to improve your favorite DNS server. Best partner for chnroutes.",
-    "topics": [],
-    "language": "Ruby"
-  },
-  {
-    "owner": "403errors",
-    "repo": "repomind",
-    "stars": 240,
-    "description": "An open-source, AI-powered application using Agentic CAG to chat with any public GitHub repository or developer profile, offering deep code analysis, visual architecture maps and security audits",
-    "topics": [
-      "ai",
-      "architecture-diagrams",
-      "cag",
-      "code-analysis",
-      "code-search",
-      "coding-assistant",
-      "developer-tools",
-      "gemini",
-      "github-api",
-      "github-profile-analyzer",
-      "llm",
-      "mermaid",
-      "nextjs",
-      "open-source",
-      "rag",
-      "repomind",
-      "repository-analysis",
-      "security-scanner",
-      "typescript",
-      "vulnerability-scanner"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "wikimedia",
-    "repo": "operations-puppet",
-    "stars": 270,
-    "description": "Wikimedia Foundation operates some of the largest collaborative projects in the world. This is the Puppet repo for our servers. This repository is a mirror; see https://www.mediawiki.org/wiki/Developer_access for contributing.",
-    "topics": [
-      "mirror",
-      "puppet"
-    ],
-    "language": "Puppet"
-  },
-  {
-    "owner": "code-charity",
-    "repo": "youtube",
-    "stars": 4317,
-    "description": "Open YouTube / Video browser-extension [top~1] Enrich your experience&choice!🧰250+tweaks & smart features📌set&forget📌  - Longest-standing. Join🧩us?👨‍👩‍👧‍👧  ⋮ {playback|discovery|extra player buttons|quality|codec|full tab|full screen|no distraction|shorts}",
-    "topics": [
-      "addon",
-      "chrome-extension",
-      "css3",
-      "entertainment",
-      "extension",
-      "playback-speed",
-      "player",
-      "productivity",
-      "subtitles",
-      "video",
-      "webextension",
-      "youtube",
-      "youtube-api",
-      "youtube-channel",
-      "youtube-player",
-      "youtube-playlist"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "danez",
-    "repo": "grunt-webpack",
-    "stars": 265,
-    "description": "Integrate webpack into your grunt build process",
-    "topics": [
-      "grunt",
-      "grunt-webpack",
-      "plugin",
-      "webpack"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "chenxuuu",
-    "repo": "llcom",
-    "stars": 1166,
-    "description": "🛠功能强大的串口工具。支持Lua自动化处理、串口调试、WinUSB、串口曲线、TCP测试、MQTT测试、编码转换、乱码恢复等功能",
-    "topics": [
-      "com",
-      "encoding-decoding",
-      "ipv6-support",
-      "libusb",
-      "lua",
-      "mqtt-client",
-      "rs232",
-      "serial-port",
-      "serial-port-monitor",
-      "ssl-server",
-      "tcp-client",
-      "tcp-server",
-      "udp-client",
-      "udp-server",
-      "winusb"
-    ],
-    "language": "C#"
-  },
-  {
-    "owner": "GeForceLegend",
-    "repo": "Minecraft-3D-Default",
-    "stars": 450,
-    "description": "A Minecraft default-look resourcepack with 3D models.",
-    "topics": [
-      "minecraft",
-      "minecraft-java-edition",
-      "optifine",
-      "resourcepack"
-    ],
-    "language": null
-  },
-  {
-    "owner": "campfirein",
-    "repo": "byterover-cli",
-    "stars": 4584,
-    "description": "ByteRover CLI (brv) - The portable memory layer for  autonomous coding agents (formerly Cipher)",
-    "topics": [
-      "agent",
-      "ai",
-      "autonomous-agents",
-      "cli",
-      "coding-assistant",
-      "context-memory",
-      "developer-tools",
-      "knowledge-management",
-      "llm",
-      "mcp",
-      "memory",
-      "typescript",
-      "vibe-coding"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "vChewing",
-    "repo": "vChewing-macOS",
-    "stars": 444,
-    "description": "唯音輸入法 macOS 版，恐怕是截至目前為止在功能多樣性方面最強的第三方免費 macOS 系統專用輸入法，採純 Swift 語言寫就。唯音的著力點是盡可能在力所能及的範圍內將整個產品的功能做得更好用，搭配特製的簡體中文與繁體中文專用辭庫。是純粹的簡體中文注音輸入法（也內贈原生繁體中文輸入模式），更具諸多唯音特色功能。目前研發管理工作均在 AtomGit 進行。",
-    "topics": [
-      "ime",
-      "macos"
-    ],
-    "language": "C"
-  },
-  {
-    "owner": "multica-ai",
-    "repo": "multica",
-    "stars": 16995,
-    "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "NixOS",
-    "repo": "nixpkgs",
-    "stars": 24346,
-    "description": "Nix Packages collection & NixOS",
-    "topics": [
-      "hacktoberfest",
-      "linux",
-      "nix",
-      "nixos",
-      "nixpkgs"
-    ],
-    "language": "Nix"
-  },
-  {
-    "owner": "skbkontur",
-    "repo": "retail-ui",
-    "stars": 266,
-    "description": "Kontur UI design system",
-    "topics": [
-      "components",
-      "design-system",
-      "kontur-ui",
-      "react",
-      "skbkontur",
-      "uikit"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "GenieFramework",
-    "repo": "Genie.jl",
-    "stars": 2399,
-    "description": "🧞The highly productive Julia web framework",
-    "topics": [
-      "framework",
-      "full-stack",
-      "julia",
-      "low-code",
-      "mvc",
-      "orm",
-      "reactive",
-      "vuejs",
-      "web",
-      "webframework"
-    ],
-    "language": "Julia"
-  },
-  {
-    "owner": "stacklok",
-    "repo": "toolhive",
-    "stars": 1725,
-    "description": "ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers.",
-    "topics": [
-      "ai",
-      "ai-security",
-      "aicodeassistant",
-      "golang",
-      "kubernetes",
-      "mcp",
-      "mcp-security",
-      "mcp-servers",
-      "mcp-tools",
-      "model-context-protocol",
-      "security"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "zeroclaw-labs",
-    "repo": "zeroclaw",
-    "stars": 30348,
-    "description": "Fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM — deploy anywhere, swap anything 🦀",
-    "topics": [
-      "agent",
-      "agentic",
-      "ai",
-      "infra",
-      "ml",
-      "openclaw",
-      "os",
-      "zeroclaw"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "GerritCodeReview",
-    "repo": "gerrit",
-    "stars": 1170,
-    "description": "Gerrit Code Review - (mirror of https://gerrit.googlesource.com/gerrit)",
-    "topics": [
-      "codereview",
-      "gerrit"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "juspay",
-    "repo": "hyperswitch",
-    "stars": 42483,
-    "description": "An open source payments switch written in Rust to make payments fast, reliable and affordable",
-    "topics": [
-      "beginner-friendly",
-      "featured",
-      "finance",
-      "hacktoberfest",
-      "high-performance",
-      "open-source",
-      "orchestration",
-      "payments",
-      "postgresql",
-      "redis",
-      "restful-api",
-      "rust",
-      "sdk",
-      "works-with-react"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "openclaw",
-    "repo": "skills",
-    "stars": 4208,
-    "description": "All versions of all skills that are on clawhub.com archived",
-    "topics": [
-      "archive",
-      "backup",
-      "clawhub",
-      "openclaw",
-      "skill"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "canonical",
-    "repo": "operator",
-    "stars": 260,
-    "description": "Pure Python framework for writing Juju charms.",
-    "topics": [
-      "charms",
-      "juju",
-      "python"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "openjdk",
-    "repo": "mobile",
-    "stars": 210,
-    "description": "https://openjdk.org/projects/mobile",
-    "topics": [
-      "java",
-      "jvm",
-      "mobile",
-      "openjdk"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "openjdk",
-    "repo": "leyden",
-    "stars": 217,
-    "description": "https://openjdk.org/projects/leyden",
-    "topics": [],
-    "language": "Java"
-  },
-  {
-    "owner": "powerfullz",
-    "repo": "override-rules",
-    "stars": 329,
-    "description": "powerfullz 的 Mihomo/Substore 覆写规则。",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "openjdk",
-    "repo": "wakefield",
-    "stars": 226,
-    "description": "https://openjdk.org/projects/wakefield",
-    "topics": [],
-    "language": "Java"
-  },
-  {
-    "owner": "Aryan-Raj3112",
-    "repo": "episteme",
-    "stars": 470,
-    "description": "A native Android document reader application built with Kotlin and Jetpack Compose.",
-    "topics": [
-      "android",
-      "ebook",
-      "epub",
-      "foss",
-      "jetpack-compose",
-      "kotlin",
-      "opensource",
-      "pdf",
-      "reader"
-    ],
-    "language": "Kotlin"
-  },
-  {
-    "owner": "BasedHardware",
-    "repo": "omi",
-    "stars": 11333,
-    "description": "AI that sees your screen, listens to your conversations and tells you what to do",
-    "topics": [
-      "ai",
-      "app",
-      "bci",
-      "c",
-      "flutter",
-      "friend",
-      "mobile",
-      "necklace",
-      "nextjs",
-      "omi",
-      "personas",
-      "python",
-      "smartglasses",
-      "summary",
-      "transcription",
-      "wearable"
-    ],
-    "language": "Dart"
-  },
-  {
-    "owner": "microsoft",
-    "repo": "Multi-Agent-Custom-Automation-Engine-Solution-Accelerator",
-    "stars": 780,
-    "description": "The Multi-Agent Custom Automation Engine Solution Accelerator is an AI-driven system that manages a group of AI agents to accomplish tasks based on user input. Powered by Microsoft Agent Framework, Azure Foundry, Azure Cosmos DB, and infrastructure services, it provides a reference application, allowing you to hit the ground running.",
-    "topics": [
-      "ai-azd-templates",
-      "azd-templates"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "caidaoli",
-    "repo": "ccLoad",
-    "stars": 275,
-    "description": null,
-    "topics": [],
-    "language": "Go"
-  },
-  {
-    "owner": "m4b",
-    "repo": "goblin",
-    "stars": 1463,
-    "description": "An impish, cross-platform binary parsing crate, written in Rust",
-    "topics": [
-      "archive",
-      "binary-analysis",
-      "cross-platform",
-      "elf",
-      "mach",
-      "pe",
-      "reverse-engineering"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "chainguard-images",
-    "repo": "images",
-    "stars": 667,
-    "description": "Public Chainguard Images",
-    "topics": [
-      "apko",
-      "audit",
-      "chainguard",
-      "chainguard-images",
-      "melange",
-      "no-ghaudit-branch-protections",
-      "oci",
-      "oci-image",
-      "wolfi"
-    ],
-    "language": "HCL"
-  },
-  {
-    "owner": "openjdk",
-    "repo": "jdk",
-    "stars": 22791,
-    "description": "JDK main-line development https://openjdk.org/projects/jdk",
-    "topics": [
-      "java",
-      "jvm",
-      "openjdk"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "cloudflare",
-    "repo": "workers-sdk",
-    "stars": 3986,
-    "description": "⛅️ Home to Wrangler, the CLI for Cloudflare Workers®",
-    "topics": [
-      "cli",
-      "cloudflare",
-      "cloudflare-workers",
-      "javascript",
-      "serverless",
-      "wasm"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "vm0-ai",
-    "repo": "vm0",
-    "stars": 1067,
-    "description": "the easiest way to run natural language-described workflows automatically",
-    "topics": [
-      "agentic-workflow",
-      "ai-agent",
-      "ai-runtime",
-      "ai-sandbox",
-      "claude-code",
-      "dev-tools",
-      "sandbox"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "helmholtz-analytics",
-    "repo": "heat",
-    "stars": 233,
-    "description": "Distributed tensors and Machine Learning framework with GPU and MPI acceleration in Python",
-    "topics": [
-      "array-api",
-      "data-analytics",
-      "data-processing",
-      "data-science",
-      "distributed",
-      "gpu",
-      "hpc",
-      "machine-learning",
-      "massive-datasets",
-      "mpi",
-      "mpi4py",
-      "multi-gpu",
-      "multi-node-cluster",
-      "numpy",
-      "parallelism",
-      "python",
-      "pytorch",
-      "tensors"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "scummvm",
-    "repo": "scummvm",
-    "stars": 2677,
-    "description": "ScummVM main repository",
-    "topics": [
-      "adventure-engine",
-      "adventure-games",
-      "multiplatform",
-      "rpg-engine"
-    ],
-    "language": "C++"
-  },
-  {
-    "owner": "Lifailon",
-    "repo": "rudocs",
-    "stars": 591,
-    "description": "Large base of notes on PowerShell, Linux and DevOps tools in ru language (cheat sheets and documentation).",
-    "topics": [
-      "active-directory",
-      "api",
-      "cheatsheet",
-      "database",
-      "devops",
-      "devops-tools",
-      "docker",
-      "documentation",
-      "exchange",
-      "influxdb",
-      "linux",
-      "network",
-      "powershell",
-      "selenium",
-      "sql-query",
-      "syntax",
-      "vmware",
-      "windows",
-      "winforms",
-      "wmi"
-    ],
-    "language": "PowerShell"
-  },
-  {
-    "owner": "Hack23",
-    "repo": "cia",
-    "stars": 218,
-    "description": "Citizen Intelligence Agency. Open-source intelligence platform analyzing Swedish political activities using AI and data visualization. Tracks politicians, government institutions, and parliamentary data, offering detailed insights, performance metrics, and advanced analytics.",
-    "topics": [
-      "ai",
-      "civic-tech",
-      "css",
-      "data-analysis",
-      "data-visualization",
-      "goverment",
-      "government-data",
-      "java",
-      "ministries",
-      "open-data",
-      "osint",
-      "parliament-charts",
-      "parliamentary-monitoring",
-      "political-analysis",
-      "political-parties",
-      "politics",
-      "riksdagen",
-      "sverigesriksdag",
-      "sweden",
-      "sweden-data"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "hacs",
-    "repo": "default",
-    "stars": 567,
-    "description": "The home of the default HACS repositories.",
-    "topics": [
-      "hacktoberfest"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "ghzserg",
-    "repo": "zmod",
-    "stars": 326,
-    "description": "Adventurer 5M / 5M Pro / AD5X ZMOD",
-    "topics": [
-      "ad5m",
-      "ad5mpro",
-      "ad5x",
-      "firmware",
-      "flashforge"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "AdguardTeam",
-    "repo": "FiltersRegistry",
-    "stars": 335,
-    "description": "Known filters subscriptions transformed for better compatibility with AdGuard",
-    "topics": [
-      "adguard",
-      "filters",
-      "filters-metadata",
-      "filters-subscriptions"
-    ],
-    "language": "Adblock Filter List"
-  },
-  {
-    "owner": "open-metadata",
-    "repo": "OpenMetadata",
-    "stars": 11209,
-    "description": "OpenMetadata is a unified metadata platform for data discovery, data observability, and data governance powered by a central metadata repository, in-depth column level lineage, and seamless team collaboration.",
-    "topics": [
-      "data-catalog",
-      "data-collaboration",
-      "data-contracts",
-      "data-discovery",
-      "data-governance",
-      "data-lineage",
-      "data-observability",
-      "data-profiling",
-      "data-quality",
-      "data-quality-checks",
-      "data-validation",
-      "datadiscovery",
-      "dataengineering",
-      "dataquality",
-      "hacktoberfest",
-      "mcp",
-      "mcp-server",
-      "metadata",
-      "metadata-management",
-      "snowflake"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "enonic",
-    "repo": "xp",
-    "stars": 209,
-    "description": "Enonic XP",
-    "topics": [
-      "cms",
-      "java",
-      "typescript"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "mnfst",
-    "repo": "awesome-free-llm-apis",
-    "stars": 2807,
-    "description": "Permanent Free LLM API List (API Keys) 😎🔑",
-    "topics": [
-      "ai-agents",
-      "anthropic",
-      "gemini",
-      "llm",
-      "llm-router",
-      "llm-routing",
-      "ollama",
-      "openai",
-      "openclaw",
-      "openclaw-plugin",
-      "router"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "oss-review-toolkit",
-    "repo": "ort",
-    "stars": 1986,
-    "description": "A suite of tools to automate software compliance checks.",
-    "topics": [
-      "compliance",
-      "copyright",
-      "cra",
-      "cyclonedx",
-      "dependencies",
-      "dependency-graph",
-      "dora",
-      "hacktoberfest",
-      "license",
-      "license-management",
-      "open-source-licensing",
-      "ospo",
-      "oss-compliance",
-      "package-manager",
-      "sbom",
-      "sbom-generator",
-      "sca",
-      "spdx"
-    ],
-    "language": "Kotlin"
-  },
-  {
-    "owner": "MrAntares",
-    "repo": "roBrowserLegacy",
-    "stars": 299,
-    "description": "This is a continuation of the original robrowser. All credits to the original creators and the new ones :)",
-    "topics": [],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "gptme",
-    "repo": "gptme",
-    "stars": 4273,
-    "description": "Your agent in your terminal, equipped with local tools: writes code, uses the terminal, browses the web. Make your own persistent autonomous agent on top!",
-    "topics": [
-      "agent",
-      "agents",
-      "ai-agents",
-      "ai-assistant",
-      "anthropic",
-      "chatbot",
-      "chatgpt",
-      "cli",
-      "code-generation",
-      "llamacpp",
-      "llm",
-      "llm-agent",
-      "llm-apps",
-      "openai",
-      "openrouter",
-      "rag"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "SofusA",
-    "repo": "qobuz-player",
-    "stars": 212,
-    "description": "Tui, web and rfid player for Qobuz",
-    "topics": [
-      "music",
-      "qobuz",
-      "rfid",
-      "rust",
-      "tui"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "ZeroPointSix",
-    "repo": "outlookEmailPlus",
-    "stars": 906,
-    "description": " Outlookmail Plus: Designed Specifically for Registration  |  Outlookmail Plus：专为注册而生  |  ",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "heygen-com",
-    "repo": "hyperframes",
-    "stars": 7114,
-    "description": "Write HTML. Render video. Built for agents.",
-    "topics": [
-      "ai",
-      "animation",
-      "ffmpeg",
-      "framework",
-      "gsap",
-      "html",
-      "mcp",
-      "puppeteer",
-      "rendering",
-      "typescript",
-      "video"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "Roave",
-    "repo": "BetterReflection",
-    "stars": 1237,
-    "description": ":crystal_ball: Better Reflection is a reflection API that aims to improve and provide more features than PHP's built-in reflection API.",
-    "topics": [
-      "hacktoberfest"
+      "php-ecommerce"
     ],
     "language": "PHP"
   },
   {
-    "owner": "SimplifyJobs",
-    "repo": "New-Grad-Positions",
-    "stars": 16737,
-    "description": "A collection of full time roles in SWE, Quant, and PM for new grads.",
-    "topics": [
-      "applications",
-      "coderquad",
-      "college",
-      "fulltime",
-      "hacktoberfest",
-      "jobs",
-      "newgrad",
-      "position",
-      "posting",
-      "university"
-    ],
-    "language": null
-  },
-  {
-    "owner": "Aryagm",
-    "repo": "dflash-mlx",
-    "stars": 328,
-    "description": "Exact speculative decoding on Apple Silicon, powered by MLX.",
+    "owner": "olliw42",
+    "repo": "mLRS",
+    "stars": 550,
+    "description": "2.4 GHz & 915/868 MHz & 433 MHz/70 cm LoRa based telemetry and radio link for remote controlled vehicles",
     "topics": [],
-    "language": "Python"
+    "language": "C"
   },
   {
-    "owner": "keleus",
-    "repo": "BewlyCat",
-    "stars": 3228,
-    "description": "BewlyCat——基于BewlyBewly开发的Bilibili拓展",
+    "owner": "mkshare3",
+    "repo": "mkshare3.github.io",
+    "stars": 244,
+    "description": "每日分享免费节点、免费机场、ssr节点、v2ray节点、v2ray订阅、clash节点、clash订阅、shadowrocket订阅、Quantumult X订阅、Clash .NET订阅、小火箭节点、小猫咪节点、免费翻墙、免费科学上网、免费梯子、免费trojan节点、蓝灯、谷歌商店、翻墙梯子、安卓VPN、iphone翻墙节点、iphone vpn、一键翻墙浏览器、节点分享、免费SSR、蓝灯、谷歌商店、V2ary免费节点、代理、proxy代理科学上网、TG代理、电报代理、Telegram代理、ip加速、翻墙软件、socks5、破解VPN、机场推荐、节点订阅、破解VPN、ChatGPT",
     "topics": [
-      "bewlybewly",
-      "bili",
-      "bilibili"
-    ],
-    "language": "Vue"
-  },
-  {
-    "owner": "NVIDIA",
-    "repo": "cuda-quantum",
-    "stars": 1005,
-    "description": "C++ and Python support for the CUDA Quantum programming model for heterogeneous quantum-classical workflows",
-    "topics": [
-      "cpp",
-      "hacktoberfest",
-      "python",
-      "quantum",
-      "quantum-algorithms",
-      "quantum-computing",
-      "quantum-machine-learning",
-      "quantum-programming-language",
-      "unitaryhack"
-    ],
-    "language": "C++"
-  },
-  {
-    "owner": "SimplifyJobs",
-    "repo": "Summer2026-Internships",
-    "stars": 44216,
-    "description": "Collection of Summer 2026 tech internships!",
-    "topics": [
-      "internships",
-      "interview-preparation",
-      "jobs",
-      "university"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "shanselman",
-    "repo": "winget-tui",
-    "stars": 220,
-    "description": "A terminal UI for Windows Package Manager (winget) - search, install, upgrade, and manage packages",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "apecloud",
-    "repo": "ApeRAG",
-    "stars": 1145,
-    "description": "ApeRAG: Production-ready GraphRAG with multi-modal indexing, AI agents, MCP support, and scalable K8s deployment",
-    "topics": [
-      "agents",
-      "context-engineering",
-      "graphrag",
-      "knowledge-graph",
-      "mcp"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "LanRhyme",
-    "repo": "MicYou",
-    "stars": 1085,
-    "description": "MicYou is a powerful tool that turns your Android device into a high-quality wireless microphone for your PC.",
-    "topics": [],
-    "language": "Kotlin"
-  },
-  {
-    "owner": "macports",
-    "repo": "macports-ports",
-    "stars": 1758,
-    "description": "The MacPorts ports tree",
-    "topics": [
-      "command-line",
-      "macos",
-      "macosx",
-      "macports",
-      "package-manager",
-      "ports"
-    ],
-    "language": "Tcl"
-  },
-  {
-    "owner": "WLget",
-    "repo": "V2Ray_configs_64",
-    "stars": 236,
-    "description": "翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/Clash/trojan节点",
-    "topics": [
-      "clash",
-      "proxy",
-      "shadowsocks",
-      "ssr",
-      "trojan",
-      "v2ray",
-      "vmess",
-      "vpn"
-    ],
-    "language": null
-  },
-  {
-    "owner": "stablyai",
-    "repo": "orca",
-    "stars": 1397,
-    "description": "Orca is the next-gen IDE for building with coding agents",
-    "topics": [
-      "claude-code",
-      "cli",
-      "codex",
-      "cursor-agent",
-      "ghostty",
-      "opencode",
-      "orchestration",
-      "parallel-agents",
-      "pi",
-      "terminal",
-      "worktrees"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "kopia",
-    "repo": "kopia",
-    "stars": 13040,
-    "description": "Cross-platform backup tool for Windows, macOS & Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.",
-    "topics": [
-      "backup",
-      "cloud",
-      "deduplication",
-      "encryption",
-      "google-cloud-storage"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "vercel-labs",
-    "repo": "portless",
-    "stars": 7162,
-    "description": "Replace port numbers with stable, named local URLs. For humans and agents.",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "junkai-li",
-    "repo": "NetCoreKevin",
-    "stars": 446,
-    "description": "基于NET搭建-AI知识库智能体-现代化Saas企业级前后端分离架构：前端Vue3、IDS4单点登录、多缓存、自动任务、分布式、一库多租户、日志、授权和鉴权、CAP集成事件、SignalR、领域事件、MCP协议服务、IOC模块化注入、自动任务、多短信集成、AI、AgentFramework智能体、AISemanticKernel集成、RAG检索增强、本地离线AI模型调用、API多版本、单元测试、RabbitMQ、Skills技能使用、AI知识库、AI联网搜索",
-    "topics": [],
-    "language": "C#"
-  },
-  {
-    "owner": "kubb-labs",
-    "repo": "kubb",
-    "stars": 1690,
-    "description": "🧩 The Ultimate Toolkit for Generating Type-Safe API Clients, Hooks, and Validators.",
-    "topics": [
-      "axios",
-      "claude",
-      "codegen",
-      "faker",
-      "kubb",
-      "mcp",
-      "msw",
-      "openapi",
-      "plugin-manager",
-      "react",
-      "react-query",
-      "solid",
-      "svelte",
-      "swagger",
-      "swr",
-      "typescript",
-      "vue",
-      "zod",
-      "zodios"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "renmu123",
-    "repo": "biliLive-tools",
-    "stars": 1298,
-    "description": "直播一站式处理工具，支持直播录制&视频处理&弹幕处理&录播姬自动上传",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "Alvin9999-newpac",
-    "repo": "fanqiang",
-    "stars": 1437,
-    "description": "免费翻墙、免费科学上网、翻墙翻墙、科学上网、Mac/iOS/安卓翻墙、翻墙翻墙、自由上网、 一键翻墙浏览器、免费shadowsocks/ss/ssr/v2ray/hysteria/hysteria2/vmess/vless/reality/goflyway账号/节点、fanqiang、翻墙翻墙、科学上网、翻墙翻墙翻墙翻墙翻墙翻墙翻墙、 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙翻墙翻墙翻墙",
-    "topics": [
-      "clash",
+      "chatgpt",
+      "clash-for-android",
+      "clash-for-windows",
+      "clash-meta",
+      "clash-verge",
+      "clash-verge-rev",
+      "clashx",
+      "clashxpro",
       "fanqiang",
-      "hysteria2",
-      "kexueshangwang",
-      "reality",
-      "sing-box",
-      "ss",
-      "ssr",
-      "v2ray",
-      "vless",
-      "youtube"
+      "shadowrocket",
+      "shadowsocks",
+      "tizi",
+      "trojan",
+      "v2rayn",
+      "v2rayng",
+      "vpn-client"
     ],
-    "language": "Shell"
-  },
-  {
-    "owner": "helmfile",
-    "repo": "vals",
-    "stars": 748,
-    "description": "Helm-like configuration values loader with support for various sources",
-    "topics": [],
-    "language": "Go"
-  },
-  {
-    "owner": "InternLM",
-    "repo": "xtuner",
-    "stars": 5123,
-    "description": "A Next-Generation Training Engine Built for Ultra-Large MoE Models",
-    "topics": [
-      "agent",
-      "deepseek-v3",
-      "gpt-oss",
-      "intern-s1",
-      "internvl",
-      "kimi-k2",
-      "llm",
-      "multimodal",
-      "qwen3-moe",
-      "qwen3-vl",
-      "reinforcement-learning"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "semantic-release",
-    "repo": "env-ci",
-    "stars": 239,
-    "description": "Get environment variables exposed by CI services",
-    "topics": [
-      "appveyor",
-      "bamboo",
-      "bitbucket",
-      "bitrise",
-      "buddy",
-      "buildkite",
-      "ci",
-      "circleci",
-      "cirrus-ci",
-      "codeship",
-      "continuous-integration",
-      "drone",
-      "environment",
-      "gitlab",
-      "jenkins",
-      "semaphore",
-      "shippable",
-      "travis",
-      "vsts",
-      "wercker"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "oxc-project",
-    "repo": "oxc",
-    "stars": 20765,
-    "description": "⚓ A collection of high-performance JavaScript tools.",
-    "topics": [
-      "compiler",
-      "javascript",
-      "linter",
-      "minifier",
-      "parser",
-      "transpiler",
-      "typescript"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "openai",
-    "repo": "codex",
-    "stars": 76396,
-    "description": "Lightweight coding agent that runs in your terminal",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "nuxt",
-    "repo": "nuxt",
-    "stars": 60078,
-    "description": "The Full-Stack Vue Framework.",
-    "topics": [
-      "csr",
-      "framework",
-      "full-stack",
-      "hacktoberfest",
-      "hybrid",
-      "node",
-      "nuxt",
-      "server-rendering",
-      "ssg",
-      "ssr",
-      "static-site-generator",
-      "universal",
-      "vue"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt",
-    "repo": "test-utils",
-    "stars": 439,
-    "description": "🧪 Test utilities for Nuxt",
-    "topics": [
-      "hacktoberfest",
-      "nuxt",
-      "nuxtjs",
-      "test-utilities",
-      "test-utils",
-      "testing"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt-modules",
-    "repo": "sanity",
-    "stars": 260,
-    "description": "Sanity integration for Nuxt",
-    "topics": [
-      "cms",
-      "hacktoberfest",
-      "module",
-      "nuxt",
-      "nuxt-module",
-      "sanity",
-      "sanity-io"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt",
-    "repo": "fonts",
-    "stars": 588,
-    "description": "Plug-and-play web font optimization and configuration for Nuxt apps.",
-    "topics": [
-      "cls",
-      "css",
-      "fonts",
-      "nuxt",
-      "nuxt-module",
-      "performance",
-      "web-vitals"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt-modules",
-    "repo": "fontaine",
-    "stars": 435,
-    "description": "🔤 Font metric overrides to reduce CLS",
-    "topics": [
-      "cls",
-      "hacktoberfest",
-      "nuxt",
-      "nuxt-module",
-      "performance",
-      "web-vitals"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt-modules",
-    "repo": "partytown",
-    "stars": 357,
-    "description": "Partytown integration for Nuxt. Run third-party scripts from a web worker.",
-    "topics": [
-      "nuxt",
-      "nuxt-module",
-      "partytown",
-      "performance",
-      "web-worker"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt-modules",
-    "repo": "color-mode",
-    "stars": 1211,
-    "description": "Dark and Light mode with auto detection made easy with Nuxt 🌗",
-    "topics": [
-      "color-scheme",
-      "dark-mode",
-      "dark-theme",
-      "nuxt-module"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt",
-    "repo": "a11y",
-    "stars": 225,
-    "description": "Nuxt module to provide accessibility hinting and utilities.",
-    "topics": [
-      "a11y",
-      "accessibility",
-      "nuxt",
-      "nuxt-module"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "nuxt",
-    "repo": "hackernews",
-    "stars": 1434,
-    "description": "HackerNews clone built with Nuxt.",
-    "topics": [
-      "isomorphic",
-      "nuxt",
-      "nuxt-template",
-      "nuxthub",
-      "pwa",
-      "ssr",
-      "universal",
-      "vue",
-      "vue-router",
-      "vuex",
-      "web-app"
-    ],
-    "language": "Vue"
+    "language": null
   },
   {
     "owner": "langgenius",
     "repo": "dify",
-    "stars": 138375,
+    "stars": 139265,
     "description": "Production-ready platform for agentic workflow development.",
     "topics": [
       "agent",
@@ -2472,69 +500,1434 @@
     "language": "TypeScript"
   },
   {
-    "owner": "ggml-org",
-    "repo": "llama.cpp",
-    "stars": 105099,
-    "description": "LLM inference in C/C++",
+    "owner": "zqfang",
+    "repo": "GSEApy",
+    "stars": 696,
+    "description": "Gene Set Enrichment Analysis in Python",
     "topics": [
-      "ggml"
+      "enrichment-analysis",
+      "gsea",
+      "python3",
+      "rust"
     ],
-    "language": "C++"
+    "language": "Python"
   },
   {
-    "owner": "moonrepo",
-    "repo": "moon",
-    "stars": 3802,
-    "description": "A build system and monorepo management tool for the web ecosystem, written in Rust.",
+    "owner": "MhdiTaheri",
+    "repo": "V2rayCollector",
+    "stars": 281,
+    "description": "This script is designed to retrieve configuration details for various VPN protocols (VLESS, VMess, Shadowsocks, and Trojan) from a list of Telegram channel URLs provided within the script. It uses cURL to fetch content and regular expressions to extract the configurations.",
     "topics": [
-      "build-system",
-      "build-tool",
-      "bun",
-      "ci-cd",
-      "deno",
-      "golang",
-      "javascript",
-      "monorepo",
-      "monorepo-tooling",
+      "config",
+      "hysteria",
+      "php",
+      "server",
+      "subscription",
+      "tuic",
+      "v2ray",
+      "vless",
+      "vmess"
+    ],
+    "language": "PHP"
+  },
+  {
+    "owner": "murraco",
+    "repo": "jekyll-theme-minimal-resume",
+    "stars": 555,
+    "description": "Simple Jekyll theme for a minimal resume website: https://jekyll-theme-minimal-resume.netlify.app",
+    "topics": [
+      "cv",
+      "jekyll",
+      "jekyll-theme",
+      "minimal",
+      "minimal-cv",
+      "minimal-resume",
+      "personal",
+      "resume",
+      "template"
+    ],
+    "language": "SCSS"
+  },
+  {
+    "owner": "getpaseo",
+    "repo": "paseo",
+    "stars": 4685,
+    "description": "Orchestrate coding agents remotely from your phone, desktop and CLI",
+    "topics": [
+      "ade",
+      "agents",
+      "claude-code",
+      "codex",
+      "copilot",
+      "developer-tools",
+      "gemini",
+      "mobile",
+      "opencode",
+      "orchestration",
+      "pi"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "perrymanuk",
+    "repo": "hashi-homelab",
+    "stars": 364,
+    "description": "small lightweight homelab based on nomad and consul from hashicorp",
+    "topics": [],
+    "language": "HCL"
+  },
+  {
+    "owner": "openclaw",
+    "repo": "clawsweeper",
+    "stars": 1053,
+    "description": "ClawSweeper scans all issues and PRs and suggest what we can close, and why. It runs every PR / Issue once a week.",
+    "topics": [],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "okx",
+    "repo": "agent-trade-kit",
+    "stars": 239,
+    "description": "OKX trading MCP server — connect AI agents to spot, swap, futures, options & grid bots via the Model Context Protocol.  ",
+    "topics": [
+      "ai-agent",
+      "crypto-trading",
+      "mcp",
+      "model-context-protocol",
+      "okx",
+      "typescript"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "easylist",
+    "repo": "easylist",
+    "stars": 2966,
+    "description": "EasyList filter subscription (EasyList, EasyPrivacy, EasyList Cookie, Fanboy's Social/Annoyances/Notifications Blocking List)",
+    "topics": [
+      "adblock",
+      "adblock-list",
+      "adblock-plus",
+      "adblocker",
+      "adblocking",
+      "easylist",
+      "filterlist",
+      "ublock",
+      "ublock-origin"
+    ],
+    "language": "Adblock Filter List"
+  },
+  {
+    "owner": "stablyai",
+    "repo": "orca",
+    "stars": 1721,
+    "description": "Orca is the next-gen IDE for building with coding agents",
+    "topics": [
+      "claude-code",
+      "cli",
+      "codex",
+      "cursor-agent",
+      "ghostty",
+      "opencode",
+      "orchestration",
+      "parallel-agents",
+      "pi",
+      "terminal",
+      "worktrees"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "openclaw",
+    "repo": "openclaw",
+    "stars": 364867,
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+    "topics": [
+      "ai",
+      "assistant",
+      "crustacean",
+      "molty",
+      "openclaw",
+      "own-your-data",
+      "personal"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "SAP",
+    "repo": "spartacus",
+    "stars": 777,
+    "description": "Spartacus is a lean, Angular-based JavaScript storefront for SAP Commerce Cloud that communicates exclusively through the Commerce REST API.",
+    "topics": [
+      "commerce-cloud",
+      "open-source"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "EvoMap",
+    "repo": "evolver",
+    "stars": 6973,
+    "description": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai",
+    "topics": [
+      "a2a",
+      "agent-evolution",
+      "agent-framework",
+      "agent-protocol",
+      "ai-agent",
+      "auditable-ai",
+      "autonomous-agent",
+      "cli",
+      "evomap",
+      "gep",
+      "llm-agent",
+      "mcp",
+      "memory-system",
       "nodejs",
-      "python",
-      "ruby",
+      "prompt-engineering",
+      "prompt-governance",
+      "self-evolution",
+      "self-evolving",
+      "skill-library",
+      "skills"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "csstools",
+    "repo": "cssdb",
+    "stars": 543,
+    "description": "A database of staged CSS features",
+    "topics": [
+      "css"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "marcelscruz",
+    "repo": "public-apis",
+    "stars": 8792,
+    "description": "A collaborative list of public APIs for developers",
+    "topics": [
+      "apis",
+      "awesome",
+      "awesome-list",
+      "hacktoberfest",
+      "lists",
+      "open-source",
+      "public-api",
+      "public-apis",
+      "resources"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "mosa",
+    "repo": "MOSA-Project",
+    "stars": 434,
+    "description": "Managed Operating System Alliance Project",
+    "topics": [],
+    "language": "C#"
+  },
+  {
+    "owner": "conan-io",
+    "repo": "conan-center-index",
+    "stars": 1158,
+    "description": "Recipes for the ConanCenter repository",
+    "topics": [
+      "conan",
+      "conan-center",
+      "conan-index",
+      "conan-packages",
+      "conan-recipe",
+      "cpp",
+      "cpp-library",
+      "dependencies",
+      "hacktoberfest",
+      "package-management",
+      "package-manager"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "stalwartlabs",
+    "repo": "stalwart",
+    "stars": 12522,
+    "description": "All-in-one Mail & Collaboration server. Secure, scalable and fluent in every protocol (IMAP, JMAP, SMTP, CalDAV, CardDAV, WebDAV).",
+    "topics": [
+      "caldav",
+      "carddav",
+      "imap",
+      "jmap",
+      "mail",
+      "pop3",
       "rust",
-      "task-runner",
-      "typescript",
-      "workspace"
+      "server",
+      "smtp",
+      "webdav"
     ],
     "language": "Rust"
   },
   {
-    "owner": "elk-zone",
-    "repo": "elk",
-    "stars": 5994,
-    "description": "A nimble Mastodon web client",
+    "owner": "xiaoji235",
+    "repo": "airport-free",
+    "stars": 489,
+    "description": "Free nodes, automatically renews subscription every 3hours",
     "topics": [
-      "mastodon",
-      "mastodon-client",
-      "nuxt-app"
+      "clash",
+      "v2ray"
     ],
-    "language": "Vue"
+    "language": "Python"
   },
   {
-    "owner": "SonarSource",
-    "repo": "SonarJS",
-    "stars": 1225,
-    "description": "SonarSource Static Analyzer for JavaScript and TypeScript",
+    "owner": "PostHog",
+    "repo": "posthog",
+    "stars": 33945,
+    "description": "🦔 PostHog is an all-in-one developer platform for building successful products. We offer product analytics, web analytics, session replay, error tracking, feature flags, experimentation, surveys, data warehouse, a CDP, and an AI product assistant to help debug your code, ship features faster, and keep all your usage and customer data in one stack.",
     "topics": [
-      "code-quality",
+      "ab-testing",
+      "ai-analytics",
+      "analytics",
+      "cdp",
+      "data-warehouse",
+      "experiments",
+      "feature-flags",
       "javascript",
-      "language-team",
-      "sonarcloud",
-      "sonarqube",
-      "static-analysis",
-      "static-analyzer",
-      "static-code-analysis",
+      "product-analytics",
+      "python",
+      "react",
+      "session-replay",
+      "surveys",
+      "typescript",
+      "web-analytics"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "barry-far",
+    "repo": "V2ray-Config",
+    "stars": 1595,
+    "description": "Free V2ray Configs, Updating Every 15 minutes. 🚀🌐",
+    "topics": [
+      "free",
+      "iran",
+      "v2ray",
+      "v2ray-config",
+      "v2ray-core",
+      "v2ray-subscriber",
+      "v2ray-ws-tls",
+      "v2rayn",
+      "v2rayng",
+      "vpn",
+      "vpn-key",
+      "vpn-service",
+      "womenlifefreedom"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "bramstroker",
+    "repo": "homeassistant-powercalc",
+    "stars": 1465,
+    "description": "Custom component to calculate estimated power consumption of lights and other appliances",
+    "topics": [
+      "consumption",
+      "energy-monitor",
+      "hacktoberfest",
+      "hacs",
+      "home-assistant",
+      "homeassistant",
+      "metering",
+      "power",
+      "virtual-sensors"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "vllm-project",
+    "repo": "vllm",
+    "stars": 78259,
+    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+    "topics": [
+      "amd",
+      "blackwell",
+      "cuda",
+      "deepseek",
+      "deepseek-v3",
+      "gpt",
+      "gpt-oss",
+      "inference",
+      "kimi",
+      "llama",
+      "llm",
+      "llm-serving",
+      "model-serving",
+      "moe",
+      "openai",
+      "pytorch",
+      "qwen",
+      "qwen3",
+      "tpu",
+      "transformer"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "is-cool-me",
+    "repo": "register",
+    "stars": 221,
+    "description": "Free subdomains for personal sites, open-source projects, and more.",
+    "topics": [
+      "cloudflare",
+      "dns",
+      "domain",
+      "domains",
+      "free",
+      "free-domain",
+      "free-domains",
+      "free-subdomain",
+      "free-subdomains",
+      "github-pages",
+      "subdomain",
+      "subdomains",
+      "website"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "code-yeongyu",
+    "repo": "oh-my-openagent",
+    "stars": 54349,
+    "description": "omo; the best agent harness - previously oh-my-opencode",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "amp",
+      "anthropic",
+      "chatgpt",
+      "claude",
+      "claude-code",
+      "claude-skills",
+      "cursor",
+      "gemini",
+      "ide",
+      "openai",
+      "opencode",
+      "orchestration",
+      "tui",
       "typescript"
     ],
     "language": "TypeScript"
+  },
+  {
+    "owner": "diegosouzapw",
+    "repo": "OmniRoute",
+    "stars": 3531,
+    "description": "OmniRoute is an AI gateway for multi-provider LLMs: an OpenAI-compatible endpoint with smart routing, load balancing, retries, and fallbacks. Add policies, rate limits, caching, and observability for reliable, cost-aware inference.",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "TheSpeedX",
+    "repo": "PROXY-List",
+    "stars": 5499,
+    "description": "Get PROXY List  that gets updated everyday",
+    "topics": [
+      "anonymity",
+      "anonymous",
+      "elite",
+      "free",
+      "free-proxy",
+      "hacking",
+      "http",
+      "https-proxy",
+      "proxy",
+      "proxy-list",
+      "socker",
+      "socks",
+      "socks-proxy",
+      "socks4-proxy",
+      "socks5-proxy",
+      "speedx",
+      "vpn"
+    ],
+    "language": null
+  },
+  {
+    "owner": "OpenAEV-Platform",
+    "repo": "openaev",
+    "stars": 1670,
+    "description": "Open Adversarial Exposure Validation Platform",
+    "topics": [
+      "adversary-emulation",
+      "adversary-exposure-validation",
+      "aev",
+      "attack-simulation",
+      "breach-simulator",
+      "cybersecurity",
+      "purple-team"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "oxc-project",
+    "repo": "oxc",
+    "stars": 20881,
+    "description": "⚓ A collection of high-performance JavaScript tools.",
+    "topics": [
+      "compiler",
+      "javascript",
+      "linter",
+      "minifier",
+      "parser",
+      "transpiler",
+      "typescript"
+    ],
+    "language": "Rust"
+  },
+  {
+    "owner": "Soju06",
+    "repo": "codex-lb",
+    "stars": 932,
+    "description": "Codex/ChatGPT multiple account load balancer & proxy with usage tracking, dashboard, and OpenCode-compatible endpoints",
+    "topics": [
+      "api-proxy",
+      "chatgpt",
+      "codex",
+      "dashboard",
+      "fastapi",
+      "load-balancer",
+      "multiple-accounts",
+      "oauth",
+      "openai",
+      "openclaw",
+      "opencode",
+      "python",
+      "rate-limit",
+      "sqlalchemy",
+      "usage-tracking"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "vm0-ai",
+    "repo": "vm0",
+    "stars": 1071,
+    "description": "the easiest way to run natural language-described workflows automatically",
+    "topics": [
+      "agentic-workflow",
+      "ai-agent",
+      "ai-runtime",
+      "ai-sandbox",
+      "claude-code",
+      "dev-tools",
+      "sandbox"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "mohanson",
+    "repo": "gameboy",
+    "stars": 1424,
+    "description": "Full featured Cross-platform GameBoy emulator by Rust. Forever boys!.",
+    "topics": [
+      "emulator",
+      "gameboy",
+      "rust"
+    ],
+    "language": "Rust"
+  },
+  {
+    "owner": "getsentry",
+    "repo": "sentry",
+    "stars": 43703,
+    "description": "Developer-first error tracking and performance monitoring",
+    "topics": [
+      "apm",
+      "crash-reporting",
+      "crash-reports",
+      "csp-report",
+      "devops",
+      "django",
+      "error-logging",
+      "error-monitoring",
+      "fair-source",
+      "hacktoberfest",
+      "monitor",
+      "monitoring",
+      "python",
+      "sentry",
+      "tag-production"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "tokio-rs",
+    "repo": "toasty",
+    "stars": 2300,
+    "description": "An async ORM for Rust",
+    "topics": [],
+    "language": "Rust"
+  },
+  {
+    "owner": "luohy15",
+    "repo": "y-agent",
+    "stars": 211,
+    "description": "A deceptively simple agent app",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "KDE",
+    "repo": "kdenlive",
+    "stars": 4956,
+    "description": "Free and open source video editor, based on MLT Framework and KDE Frameworks",
+    "topics": [],
+    "language": "C++"
+  },
+  {
+    "owner": "Tencent",
+    "repo": "tinker",
+    "stars": 17651,
+    "description": "Tinker is a hot-fix solution library for Android, it supports dex, library and resources update without reinstall apk.",
+    "topics": [
+      "android",
+      "dynamic",
+      "hotfix",
+      "wechat"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "rui314",
+    "repo": "mold",
+    "stars": 16437,
+    "description": "mold: A Modern Linker 🦠",
+    "topics": [],
+    "language": "C++"
+  },
+  {
+    "owner": "stoatchat",
+    "repo": "stoatchat",
+    "stars": 2988,
+    "description": "The software powering Stoat",
+    "topics": [
+      "api",
+      "mongodb",
+      "redis",
+      "revolt",
+      "revolt-chat",
+      "revoltchat",
+      "rust",
+      "stoat",
+      "stoat-chat",
+      "stoatchat"
+    ],
+    "language": "Rust"
+  },
+  {
+    "owner": "pengzhanbo",
+    "repo": "vuepress-theme-plume",
+    "stars": 460,
+    "description": "A vuepress theme.  Simple, feature-rich,  document & blog",
+    "topics": [
+      "blog-theme",
+      "blogging",
+      "documentation-generator",
+      "vuepress",
+      "vuepress-blog",
+      "vuepress-theme",
+      "vuepress2"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "f-droid",
+    "repo": "fdroiddata",
+    "stars": 317,
+    "description": "Data for the main F-Droid repository.",
+    "topics": [
+      "android",
+      "apps",
+      "fdroid"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "atsign-foundation",
+    "repo": "noports",
+    "stars": 280,
+    "description": "Connect to any device with no external listening ports open",
+    "topics": [
+      "atsign",
+      "dart",
+      "hacktoberfest",
+      "ssh"
+    ],
+    "language": "Dart"
+  },
+  {
+    "owner": "redis",
+    "repo": "redis",
+    "stars": 74027,
+    "description": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server, and document and vector query engine.",
+    "topics": [
+      "cache",
+      "caching",
+      "database",
+      "distributed-systems",
+      "in-memory",
+      "in-memory-database",
+      "json",
+      "key-value",
+      "key-value-store",
+      "message-broker",
+      "message-queue",
+      "no-sql",
+      "nosql",
+      "open-source",
+      "real-time",
+      "realtime",
+      "redis",
+      "time-series",
+      "vector-databases",
+      "vector-search"
+    ],
+    "language": "C"
+  },
+  {
+    "owner": "openai",
+    "repo": "codex",
+    "stars": 78139,
+    "description": "Lightweight coding agent that runs in your terminal",
+    "topics": [],
+    "language": "Rust"
+  },
+  {
+    "owner": "mtgred",
+    "repo": "netrunner",
+    "stars": 960,
+    "description": null,
+    "topics": [],
+    "language": "Clojure"
+  },
+  {
+    "owner": "hongbo-miao",
+    "repo": "hongbomiao.com",
+    "stars": 294,
+    "description": "A personal research and development (R&D) lab that facilitates the sharing of knowledge.",
+    "topics": [
+      "aerospace",
+      "autonomy",
+      "cloud-native",
+      "computational-fluid-dynamics",
+      "computer-vision",
+      "distributed-tracing",
+      "embedded",
+      "graphql",
+      "high-performance-computing",
+      "infrastructure-as-code",
+      "kubernetes",
+      "llm",
+      "machine-learning",
+      "matlab",
+      "mlops",
+      "neural-network",
+      "robot-operating-system",
+      "rust",
+      "service-mesh",
+      "transformer"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "alibaba",
+    "repo": "OpenSandbox",
+    "stars": 10277,
+    "description": "Secure, Fast, and Extensible Sandbox runtime for AI agents.",
+    "topics": [
+      "ai",
+      "ai-agent",
+      "ai-infra",
+      "kubernetes",
+      "sandbox"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "martinpaljak",
+    "repo": "GlobalPlatformPro",
+    "stars": 885,
+    "description": "Manage applets and keys on JavaCard-s like a pro 🌐 🔐",
+    "topics": [
+      "cli",
+      "globalplatform",
+      "java",
+      "javacard",
+      "sdk",
+      "smartcard"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "Yeraze",
+    "repo": "meshmonitor",
+    "stars": 451,
+    "description": "Web tool for monitoring a Meshtastic Node Deployment over TCP/HTTP",
+    "topics": [
+      "meshtastic"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "verl-project",
+    "repo": "verl",
+    "stars": 20945,
+    "description": "verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework ",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "flagos-ai",
+    "repo": "FlagGems",
+    "stars": 972,
+    "description": "FlagGems is an operator library for large language models implemented in the Triton Language.",
+    "topics": [
+      "pytorch",
+      "triton",
+      "triton-kernels"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "onestardao",
+    "repo": "WFGY",
+    "stars": 1731,
+    "description": "WFGY is an open-source AI Troubleshooting Atlas for RAG, agents, and real-world AI workflows. Includes the 16-problem map, Global Debug Card, and WFGY 4.0. ⭐ Star to help more builders find this repo.",
+    "topics": [
+      "ai-agents",
+      "alignment",
+      "debugging",
+      "evaluation",
+      "graphrag",
+      "hallucination",
+      "information-retrieval",
+      "knowledge-graph",
+      "llm",
+      "rag",
+      "reasoning",
+      "retrieval-augmented-generation"
+    ],
+    "language": "Jupyter Notebook"
+  },
+  {
+    "owner": "qdrant",
+    "repo": "go-client",
+    "stars": 325,
+    "description": "Go client for Qdrant vector search engine",
+    "topics": [],
+    "language": "Go"
+  },
+  {
+    "owner": "NixOS",
+    "repo": "nixpkgs",
+    "stars": 24461,
+    "description": "Nix Packages collection & NixOS",
+    "topics": [
+      "hacktoberfest",
+      "linux",
+      "nix",
+      "nixos",
+      "nixpkgs"
+    ],
+    "language": "Nix"
+  },
+  {
+    "owner": "google",
+    "repo": "adk-python",
+    "stars": 19297,
+    "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+    "topics": [
+      "agent",
+      "agentic",
+      "agentic-ai",
+      "agents",
+      "agents-sdk",
+      "ai",
+      "ai-agents",
+      "aiagentframework",
+      "genai",
+      "genai-chatbot",
+      "llm",
+      "llms",
+      "multi-agent",
+      "multi-agent-systems",
+      "multi-agents",
+      "multi-agents-collaboration"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "PointCloudLibrary",
+    "repo": "pcl",
+    "stars": 10966,
+    "description": "Point Cloud Library (PCL)",
+    "topics": [
+      "c-plus-plus",
+      "computer-vision",
+      "cpp",
+      "pcl",
+      "point-cloud",
+      "pointcloud"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "nix-community",
+    "repo": "NUR",
+    "stars": 1825,
+    "description": "Nix User Repository: User contributed nix packages [maintainer=@Pandapip1]",
+    "topics": [
+      "nix-packages",
+      "nixpkgs",
+      "nur",
+      "overlays"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "linuxdeepin",
+    "repo": "dde-file-manager",
+    "stars": 410,
+    "description": "File manager for deepin desktop environment.",
+    "topics": [
+      "dde",
+      "deepin",
+      "qt5"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "hotyue",
+    "repo": "IP-Sentinel",
+    "stars": 470,
+    "description": "IP-Sentinel 是一款轻量化、模块化的分布式 VPS 资产养护系统，通过地理位置信号锚定与高拟真本土流量注入，精准解决 IP 定位偏移及风控分过高的痛点，并配合 Telegram 实现全球多节点“低功耗、拟真、无人值守”的自动化资产养护。",
+    "topics": [],
+    "language": "Shell"
+  },
+  {
+    "owner": "CocoaPods",
+    "repo": "Specs",
+    "stars": 6814,
+    "description": "The CocoaPods Master Repo",
+    "topics": [],
+    "language": null
+  },
+  {
+    "owner": "kubernetes-sigs",
+    "repo": "kueue",
+    "stars": 2466,
+    "description": "Kubernetes-native Job Queueing",
+    "topics": [
+      "k8s",
+      "k8s-sig-scheduling",
+      "kubernetes"
+    ],
+    "language": "Go"
+  },
+  {
+    "owner": "403errors",
+    "repo": "repomind",
+    "stars": 241,
+    "description": "An open-source, AI-powered application using Agentic CAG to chat with any public GitHub repository or developer profile, offering deep code analysis, visual architecture maps and security audits",
+    "topics": [
+      "ai",
+      "architecture-diagrams",
+      "cag",
+      "code-analysis",
+      "code-search",
+      "coding-assistant",
+      "developer-tools",
+      "gemini",
+      "github-api",
+      "github-profile-analyzer",
+      "llm",
+      "mermaid",
+      "nextjs",
+      "open-source",
+      "rag",
+      "repomind",
+      "repository-analysis",
+      "security-scanner",
+      "typescript",
+      "vulnerability-scanner"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "lynx-family",
+    "repo": "lynx",
+    "stars": 14807,
+    "description": "Empower the Web community and invite more to build across platforms.",
+    "topics": [
+      "cross-platform",
+      "lynx",
+      "lynxjs"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "mlflow",
+    "repo": "mlflow",
+    "stars": 25579,
+    "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
+    "topics": [
+      "agentops",
+      "agents",
+      "ai",
+      "ai-governance",
+      "apache-spark",
+      "evaluation",
+      "langchain",
+      "llm-evaluation",
+      "llmops",
+      "machine-learning",
+      "ml",
+      "mlflow",
+      "mlops",
+      "model-management",
+      "observability",
+      "open-source",
+      "openai",
+      "prompt-engineering"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "MetaMask",
+    "repo": "eth-phishing-detect",
+    "stars": 1274,
+    "description": "Utility for detecting phishing domains targeting Web3 users",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "Belphemur",
+    "repo": "node-json-db",
+    "stars": 832,
+    "description": "A simple \"database\" that use JSON file for Node.JS.",
+    "topics": [
+      "database",
+      "datapath",
+      "javascript",
+      "json",
+      "typescript"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "remotion-dev",
+    "repo": "remotion",
+    "stars": 44752,
+    "description": "🎥      Make videos programmatically with React",
+    "topics": [
+      "javascript",
+      "react",
+      "video"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "qiantongtech",
+    "repo": "qData",
+    "stars": 408,
+    "description": "qData is an open-source, all-in-one data middle platform that supports core capabilities including data infrastructure, data governance, data development, monitoring & alerting, data services, and data visualization.",
+    "topics": [
+      "big-data",
+      "data-development",
+      "data-governance",
+      "data-middle-platform",
+      "data-platform"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "multica-ai",
+    "repo": "multica",
+    "stars": 21606,
+    "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "Graylog2",
+    "repo": "graylog2-server",
+    "stars": 8021,
+    "description": "Free and open log management",
+    "topics": [
+      "amqp",
+      "gelf",
+      "graylog",
+      "hacktoberfest",
+      "kafka",
+      "log-analysis",
+      "log-collector",
+      "log-management",
+      "log-viewer",
+      "logging",
+      "logging-server",
+      "secure-logging",
+      "security",
+      "siem",
+      "syslog"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "kort0881",
+    "repo": "telegram-proxy-collector",
+    "stars": 443,
+    "description": "🛡️ Автоматический сборщик MTProto прокси с уникальной фильтрацией. Отделяет \"золотые\" прокси (Fake-TLS под Yandex/VK/GosUslugi) от обычных. Обновляется каждый час.  Tags (теги): telegram-proxy, mtproto, censorship-circumvention, python, proxy-scraper, russia-bypass, fake-tls",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "n8n-io",
+    "repo": "n8n",
+    "stars": 185737,
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "topics": [
+      "ai",
+      "apis",
+      "automation",
+      "cli",
+      "data-flow",
+      "development",
+      "integration-framework",
+      "integrations",
+      "ipaas",
+      "low-code",
+      "low-code-platform",
+      "mcp",
+      "mcp-client",
+      "mcp-server",
+      "n8n",
+      "no-code",
+      "self-hosted",
+      "typescript",
+      "workflow",
+      "workflow-automation"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "cyhhao",
+    "repo": "vibe-remote",
+    "stars": 413,
+    "description": "Your AI agent army, commanded from Slack/Discord/Telegram/Wechat/Lark. Stream Claude Code, OpenCode, or Codex in real-time — from anywhere.",
+    "topics": [
+      "agent",
+      "ai",
+      "ai-agents",
+      "chatops",
+      "claude",
+      "claude-code",
+      "codex",
+      "devtools",
+      "discord-bot",
+      "lark-bot",
+      "llm",
+      "opencode",
+      "slack-bot",
+      "vibe-coding",
+      "wechat"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "datahub-project",
+    "repo": "datahub",
+    "stars": 11846,
+    "description": "The Context Platform for your Data and AI Stack",
+    "topics": [
+      "agent-platform",
+      "context-management",
+      "data-catalog",
+      "data-discovery",
+      "data-governance",
+      "data-observability",
+      "datahub",
+      "metadata"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "KellerJordan",
+    "repo": "modded-nanogpt",
+    "stars": 5133,
+    "description": "NanoGPT (124M) in 2 minutes",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "Mr-Quin",
+    "repo": "danmaku-anywhere",
+    "stars": 496,
+    "description": "一个可以给几乎任何视频网站添加弹幕的开源软件 | An open source solution to add danmaku to almost every video website",
+    "topics": [
+      "browser-extension",
+      "danmaku",
+      "danmu",
+      "plex",
+      "userscript",
+      "webapp"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "livekit",
+    "repo": "agents-js",
+    "stars": 809,
+    "description": "Build realtime multimodal AI agents with Node.js",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "marketcalls",
+    "repo": "openalgo",
+    "stars": 1731,
+    "description": "Open Source Algo Trading Platform for Everyone",
+    "topics": [
+      "algorithmic-trading",
+      "algotrading",
+      "amibroker",
+      "chartink",
+      "flask",
+      "metatrader",
+      "openalgo",
+      "python",
+      "quantative-trading",
+      "quantitative-finance",
+      "reactjs",
+      "self-hosting",
+      "sqlite",
+      "stock-market",
+      "stocks",
+      "trade-automation",
+      "trading-bot",
+      "tradingview"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "NangoHQ",
+    "repo": "nango",
+    "stars": 7195,
+    "description": "Build product integrations with AI.",
+    "topics": [
+      "access-token",
+      "api",
+      "api-client",
+      "api-integration",
+      "api-integrations",
+      "integrations",
+      "oauth",
+      "oauth1",
+      "oauth2",
+      "product-integration",
+      "refresh-token",
+      "unified-api"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "elizaOS",
+    "repo": "eliza",
+    "stars": 18250,
+    "description": "Autonomous agents for everyone",
+    "topics": [
+      "agent",
+      "agentic",
+      "ai",
+      "autonomous",
+      "chatbot",
+      "crypto",
+      "discord",
+      "eliza",
+      "elizaos",
+      "framework",
+      "plugins",
+      "rag",
+      "slack",
+      "swarm",
+      "telegram"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "rsim",
+    "repo": "oracle-enhanced",
+    "stars": 563,
+    "description": "Oracle enhaced adapter for ActiveRecord",
+    "topics": [],
+    "language": "Ruby"
+  },
+  {
+    "owner": "Alvin9999-newpac",
+    "repo": "fanqiang",
+    "stars": 1545,
+    "description": "免费翻墙、免费科学上网、翻墙翻墙、科学上网、Mac/iOS/安卓翻墙、翻墙翻墙、自由上网、 一键翻墙浏览器、免费shadowsocks/ss/ssr/v2ray/hysteria/hysteria2/vmess/vless/reality/goflyway账号/节点、fanqiang、翻墙翻墙、科学上网、翻墙翻墙翻墙翻墙翻墙翻墙翻墙、 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网 翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙科学上网翻墙翻墙翻墙翻墙",
+    "topics": [
+      "clash",
+      "fanqiang",
+      "hysteria2",
+      "kexueshangwang",
+      "reality",
+      "sing-box",
+      "ss",
+      "ssr",
+      "v2ray",
+      "vless",
+      "youtube"
+    ],
+    "language": "Shell"
+  },
+  {
+    "owner": "Homebrew",
+    "repo": "homebrew-cask",
+    "stars": 21978,
+    "description": "🍻 A CLI workflow for the administration of macOS applications distributed as binaries",
+    "topics": [
+      "cask",
+      "hacktoberfest",
+      "homebrew"
+    ],
+    "language": "Ruby"
+  },
+  {
+    "owner": "muchdogesec",
+    "repo": "awesome_threat_intel_blogs",
+    "stars": 532,
+    "description": "A curated list of Awesome Threat Intelligence Blogs",
+    "topics": [
+      "atom",
+      "cybersecurity",
+      "infosec",
+      "rss",
+      "threat-intel",
+      "threat-intelligence"
+    ],
+    "language": null
+  },
+  {
+    "owner": "ofdrw",
+    "repo": "ofdrw",
+    "stars": 1770,
+    "description": "OFD Reader & Writer 开源的OFD处理库，支持文档生成、数字签名、文档保护、文档合并、转换、导出等功能，文档格式遵循《GB/T 33190-2016 电子文件存储与交换格式版式文档》。",
+    "topics": [],
+    "language": "Java"
+  },
+  {
+    "owner": "koala73",
+    "repo": "worldmonitor",
+    "stars": 52771,
+    "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+    "topics": [
+      "ai",
+      "dashboard",
+      "geopolitics",
+      "monitoring",
+      "news",
+      "opensource",
+      "osint",
+      "palantir",
+      "situation"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "CherryHQ",
+    "repo": "cherry-studio",
+    "stars": 44509,
+    "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
+    "topics": [
+      "agency-agents",
+      "ai-agent",
+      "claude-code",
+      "codex",
+      "open-cli",
+      "openclaw",
+      "opencode",
+      "skills",
+      "superpowers",
+      "vibe-coding"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "golbin",
+    "repo": "hop",
+    "stars": 1082,
+    "description": null,
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "rianadon",
+    "repo": "Cosmos-Keyboards",
+    "stars": 626,
+    "description": "Taking Keyboards to the Final Frontier",
+    "topics": [
+      "cad",
+      "ergonomic-keyboard",
+      "mechanical-keyboard"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "wmbusmeters",
+    "repo": "wmbusmeters",
+    "stars": 1258,
+    "description": "Read the wired or wireless mbus protocol to acquire utility meter readings.",
+    "topics": [
+      "amb8465",
+      "daemon",
+      "im871a",
+      "iu891a",
+      "mbus",
+      "meter",
+      "raspberry-pi",
+      "receiver",
+      "rtl-sdr",
+      "rtlsdr-dongle",
+      "utility-meters",
+      "wireless-mbus",
+      "wireless-mbus-protocol",
+      "wmbus",
+      "wmbus-dongle"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "ComposioHQ",
+    "repo": "awesome-codex-skills",
+    "stars": 2170,
+    "description": "A curated list of practical Codex skills for automating workflows across the Codex CLI and API.",
+    "topics": [
+      "awesome",
+      "awesome-lists",
+      "awesome-resources",
+      "codex",
+      "codex-cli",
+      "codex-skills",
+      "coding-agent-skills",
+      "coding-agents",
+      "gpt-5-1-codex",
+      "gpt-5-codex",
+      "llm",
+      "skills"
+    ],
+    "language": "Python"
   },
   {
     "owner": "0xDanielLopez",
@@ -2555,17 +1948,74 @@
     "language": null
   },
   {
-    "owner": "vczh-libraries",
-    "repo": "GacUI",
-    "stars": 2620,
-    "description": "Native C++ UI library, cross-platform, MVVM and data binding, XML description, multi-language, core/renderer cross-process separation, etc",
+    "owner": "getsentry",
+    "repo": "sentry-electron",
+    "stars": 256,
+    "description": "The official Sentry SDK for Electron",
+    "topics": [
+      "crash-reporting",
+      "electron",
+      "error-monitoring",
+      "error-reporting",
+      "hacktoberfest",
+      "javascript",
+      "node",
+      "sdk",
+      "sentry",
+      "sentry-client",
+      "tag-production",
+      "team-web-frontend"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "TeamGalacticraft",
+    "repo": "Galacticraft",
+    "stars": 577,
+    "description": "The classic space mod, rewritten for modern versions of Minecraft.",
+    "topics": [
+      "fabricmc",
+      "fabricmc-mod",
+      "galacticraft",
+      "minecraft"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "ultraworkers",
+    "repo": "claw-code",
+    "stars": 188660,
+    "description": "The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars ⭐. Join Discord: https://discord.gg/5TUQKqFWd Built in Rust using oh-my-codex.",
     "topics": [],
-    "language": "C++"
+    "language": "Rust"
+  },
+  {
+    "owner": "tolinkshare2",
+    "repo": "tolinkshare2.github.io",
+    "stars": 382,
+    "description": "🚀 免费节点,🚀免费节点订阅,🚀v2ray免费节点,ssr免费节点订阅,clash免费节点订阅,免费梯子,免费翻墙,免费科学上网,免费ss/v2ray/trojan节点,谷歌商店,翻墙梯子,ChatGPT,Shadowrocket,Quantumult X",
+    "topics": [
+      "android-vpn",
+      "clash",
+      "fanqiang",
+      "iphone-vpn",
+      "quantumult",
+      "shadowrocket",
+      "shadowshare",
+      "shadowsocks",
+      "ss",
+      "ssr",
+      "trojan",
+      "v2ray",
+      "vless",
+      "vpn"
+    ],
+    "language": null
   },
   {
     "owner": "superset-sh",
     "repo": "superset",
-    "stars": 9815,
+    "stars": 10043,
     "description": "Code Editor for the AI Agents Era - Run an army of Claude Code, Codex, etc. on your machine",
     "topics": [
       "agentic-ai",
@@ -2592,66 +2042,163 @@
     "language": "TypeScript"
   },
   {
-    "owner": "hello-world-1989",
-    "repo": "cn-news",
-    "stars": 377,
-    "description": "V2Ray Clash订阅链接, Outline, 大翻墙运动, 拆除防火墙,拆墙运动,李老师不是你老师 推文 每小时更新 , 完全免费vpn, 免费科学上网, 翻墙,科学上网,免费翻墙, 免费VPN,开源vpn, free vpn,好用VPN",
+    "owner": "ZHangZHengEric",
+    "repo": "Sage",
+    "stars": 1259,
+    "description": "Multi-Agent System Framework For Complex Tasks",
     "topics": [
-      "anti-censorship",
-      "anticensorship",
-      "ban-gfw",
-      "blank-paper",
-      "clash",
-      "clash-meta",
-      "clashx",
-      "end-gfw",
-      "fanqiang",
-      "freefq",
-      "gfw",
-      "no-more-404",
-      "shadowshare",
-      "trojan",
-      "v2ray",
-      "v2rayfree",
-      "vmess",
-      "white-paper",
-      "whyyoutouzhele"
+      "agents",
+      "ai",
+      "llm",
+      "manus",
+      "muilt-agents",
+      "workflow"
     ],
-    "language": null
+    "language": "Python"
   },
   {
-    "owner": "microsoft",
-    "repo": "presidio",
-    "stars": 7662,
-    "description": "An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.",
+    "owner": "takram-design-engineering",
+    "repo": "three-geospatial",
+    "stars": 1370,
+    "description": "Geospatial Rendering in Three.js",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "langfuse",
+    "repo": "langfuse",
+    "stars": 26134,
+    "description": "🪢 Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 ",
     "topics": [
-      "anonymization",
-      "data-anonymization",
-      "data-masking",
-      "data-obfuscation",
-      "data-privacy",
-      "data-redaction",
-      "de-identification",
-      "guardrails",
-      "image-redactor",
-      "named-entity-recognition",
-      "nlp",
-      "personally-identifiable-information",
-      "phi",
-      "pii",
-      "pii-detection",
-      "privacy",
-      "python",
-      "sensitive-data",
-      "spacy",
-      "transformers"
+      "analytics",
+      "autogen",
+      "evaluation",
+      "langchain",
+      "large-language-models",
+      "llama-index",
+      "llm",
+      "llm-evaluation",
+      "llm-observability",
+      "llmops",
+      "monitoring",
+      "observability",
+      "open-source",
+      "openai",
+      "playground",
+      "prompt-engineering",
+      "prompt-management",
+      "self-hosted",
+      "ycombinator"
     ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "Mic92",
+    "repo": "dotfiles",
+    "stars": 743,
+    "description": "My NixOS dotfiles",
+    "topics": [
+      "build-with-buildbot",
+      "hacktoberfest",
+      "nix-flake",
+      "nixos-configuration",
+      "nixos-dotfiles"
+    ],
+    "language": "Nix"
+  },
+  {
+    "owner": "aphrodite-engine",
+    "repo": "aphrodite-engine",
+    "stars": 1711,
+    "description": "Large-scale LLM inference engine",
+    "topics": [
+      "api-rest",
+      "cuda",
+      "inference-engine",
+      "inferentia",
+      "intel",
+      "lora",
+      "machine-learning",
+      "rocm",
+      "speculative-decoding",
+      "tpu"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "external-secrets",
+    "repo": "external-secrets",
+    "stars": 6571,
+    "description": "External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.",
+    "topics": [
+      "external-secrets",
+      "hacktoberfest",
+      "kubernetes",
+      "kubernetes-secrets",
+      "secrets-manager"
+    ],
+    "language": "Go"
+  },
+  {
+    "owner": "razzmatazz",
+    "repo": "csharp-language-server",
+    "stars": 886,
+    "description": "Roslyn-based LSP server for C#",
+    "topics": [
+      "csharp",
+      "lsp-server"
+    ],
+    "language": "F#"
+  },
+  {
+    "owner": "HaveAGitGat",
+    "repo": "Tdarr_Plugins",
+    "stars": 209,
+    "description": "Tdarr Plugins",
+    "topics": [],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "titanwings",
+    "repo": "colleague-skill",
+    "stars": 16705,
+    "description": "将冰冷的离别化为温暖的 Skill，欢迎加入数字生命1.0！Transforming cold farewells into warm skills? It's giving rebirth era. Welcome to Digital Life 1.0. 🫶",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "CeuiLiSA",
+    "repo": "Pixiv-Shaft",
+    "stars": 7007,
+    "description": "Pixiv第三方Android客户端",
+    "topics": [
+      "android-app",
+      "google-play",
+      "material-ui",
+      "pixiv"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "fmz200",
+    "repo": "wool_scripts",
+    "stars": 4910,
+    "description": "收集一些Loon、Surge、QuantumultX、ShadowRocket、Egern的配置与去广告规则。",
+    "topics": [],
+    "language": "Vim Snippet"
+  },
+  {
+    "owner": "radixark",
+    "repo": "miles",
+    "stars": 1157,
+    "description": "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+    "topics": [],
     "language": "Python"
   },
   {
     "owner": "zloi-user",
     "repo": "hideip.me",
-    "stars": 458,
+    "stars": 457,
     "description": "  proxy list that updates every 10 minutes",
     "topics": [
       "free-proxies",
@@ -2678,165 +2225,536 @@
     "language": null
   },
   {
-    "owner": "TomoeMami",
-    "repo": "S1PlainTextBackup",
-    "stars": 524,
-    "description": "纯文本格式的S1帖子备份",
+    "owner": "julianpoy",
+    "repo": "RecipeSage",
+    "stars": 863,
+    "description": "A Collaborative Recipe Keeper, Meal Planner, and Shopping List Organizer in PWA form.",
     "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "apache",
+    "repo": "calcite",
+    "stars": 5113,
+    "description": "Apache Calcite",
+    "topics": [
+      "big-data",
+      "calcite",
+      "geospatial",
+      "hadoop",
+      "java",
+      "sql"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "woocommerce",
+    "repo": "woocommerce-ios",
+    "stars": 356,
+    "description": "WooCommerce iOS app",
+    "topics": [
+      "ios",
+      "mobile-app",
+      "swift",
+      "woocommerce"
+    ],
+    "language": "Swift"
+  },
+  {
+    "owner": "freee",
+    "repo": "freee-mcp",
+    "stars": 421,
+    "description": "Model Context Protocol (MCP) server for freee API integration",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "AstrBotDevs",
+    "repo": "AstrBot",
+    "stars": 30753,
+    "description": "AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "topics": [
+      "agent",
+      "ai",
+      "chatbot",
+      "chatgpt",
+      "discord",
+      "docker",
+      "gemini",
+      "gpt",
+      "llama",
+      "llm",
+      "mcp",
+      "openai",
+      "python",
+      "qq",
+      "qqbot",
+      "telegram"
+    ],
     "language": "Python"
   },
   {
-    "owner": "rust-lang",
-    "repo": "rustup",
-    "stars": 6847,
-    "description": "The Rust toolchain installer",
-    "topics": [
-      "hacktoberfest",
-      "rust",
-      "rustlang",
-      "toolchain"
-    ],
-    "language": "Rust"
-  },
-  {
-    "owner": "ml-explore",
-    "repo": "mlx",
-    "stars": 25571,
-    "description": "MLX: An array framework for Apple silicon",
-    "topics": [
-      "mlx"
-    ],
-    "language": "C++"
-  },
-  {
-    "owner": "claude-code-best",
-    "repo": "claude-code",
-    "stars": 16400,
-    "description": "原汁原昧 Claude Code 可运行,可构建, 可调试版; Typescript 类型全修复; 企业级可靠性; 安全无毒, lock 文件保真, 可直接 bun i; bun run dev 启动",
-    "topics": [],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "uBlockOrigin",
-    "repo": "uAssets",
-    "stars": 5655,
-    "description": "Filter lists for uBlock Origin & uBlock Origin Lite",
-    "topics": [],
-    "language": "Adblock Filter List"
-  },
-  {
-    "owner": "fastapi",
-    "repo": "full-stack-fastapi-template",
-    "stars": 42736,
-    "description": "Full stack, modern web application template. Using FastAPI, React, SQLModel, PostgreSQL, Docker, GitHub Actions, automatic HTTPS and more.",
-    "topics": [
-      "backend",
-      "chakra-ui",
-      "docker",
-      "fastapi",
-      "frontend",
-      "json",
-      "json-schema",
-      "jwt",
-      "letsencrypt",
-      "openapi",
-      "postgresql",
-      "python",
-      "react",
-      "sqlmodel",
-      "swagger",
-      "tanstack-query",
-      "tanstack-router",
-      "traefik",
-      "typescript"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "Homebrew",
-    "repo": "homebrew-cask",
-    "stars": 21963,
-    "description": "🍻 A CLI workflow for the administration of macOS applications distributed as binaries",
-    "topics": [
-      "cask",
-      "hacktoberfest",
-      "homebrew"
-    ],
-    "language": "Ruby"
-  },
-  {
-    "owner": "gronxb",
-    "repo": "hot-updater",
-    "stars": 1421,
-    "description": "A self-hostable OTA update solution for React Native (Alternative to CodePush)",
-    "topics": [
-      "expo",
-      "plugin-system",
-      "react-native",
-      "react-native-codepush",
-      "react-native-ota",
-      "self-hosted",
-      "supabase"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "jason5ng32",
-    "repo": "OhEarningsCal",
-    "stars": 486,
-    "description": "使用日历软件订阅美股的财报日期",
+    "owner": "cmliu",
+    "repo": "WorkerVless2sub",
+    "stars": 5788,
+    "description": "自动化批量替换生成优选线路 VMess / VLESS / Trojan 节点的 优选订阅生成器",
     "topics": [],
     "language": "JavaScript"
   },
   {
-    "owner": "AnalyseDeCircuit",
-    "repo": "oxideterm",
-    "stars": 563,
-    "description": "All-in-one terminal workspace — local shells, SSH, SFTP, remote IDE, AI agent, and file manager in a single native binary. Built with Tauri 2 and pure Rust SSH (no OpenSSL). Smart reconnect, MCP, RAG, plugins, 30+ themes, 11 languages.",
+    "owner": "marcelscruz",
+    "repo": "dev-resources",
+    "stars": 1275,
+    "description": "A collaborative list of resources for developers",
     "topics": [
-      "agent",
-      "bring-your-own-key",
-      "filemanager",
-      "launchpad",
+      "assets",
+      "awesome",
+      "awesome-list",
+      "courses",
+      "design",
+      "dev-resources",
+      "development",
+      "hacktoberfest",
+      "information",
+      "infrastructure",
+      "jobs",
+      "programming",
+      "public-apis",
+      "resources",
+      "tools"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "mezzio",
+    "repo": "mezzio",
+    "stars": 390,
+    "description": "PSR-15 Middleware Microframework",
+    "topics": [
+      "middleware",
+      "middleware-framework",
+      "psr-15"
+    ],
+    "language": "PHP"
+  },
+  {
+    "owner": "ebrasha",
+    "repo": "free-v2ray-public-list",
+    "stars": 677,
+    "description": "A simple and always-updated list of free, working V2Ray servers. including SS, SSR, Trojan, VLESS, and VMess. Just copy, paste, and connect — no signup, no payment, no nonsense. Updated every 15 minutes. Also on Telegram: https://t.me/AbdalV2rayBot",
+    "topics": [
+      "abdal",
+      "bulk-connection",
+      "ebrasha",
+      "free-v2ray",
+      "gfw-china",
+      "proxy",
+      "shadowsocks",
+      "shadowsocksr",
+      "ss",
+      "trojan",
+      "tuic",
+      "v2ray",
+      "v2ray-config",
+      "v2ray-list",
+      "v2ray-subscriber",
+      "vless",
+      "vmess",
+      "xray",
+      "xray-core"
+    ],
+    "language": null
+  },
+  {
+    "owner": "kornia",
+    "repo": "kornia",
+    "stars": 11184,
+    "description": "🐍 Geometric Computer Vision Library for Spatial AI",
+    "topics": [
+      "artificial-intelligence",
+      "computer-vision",
+      "deep-learning",
+      "hacktoberfest",
+      "image-processing",
+      "machine-learning",
+      "neural-network",
+      "python",
+      "pytorch",
+      "robotics",
+      "spatial-ai"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "MCPJam",
+    "repo": "inspector",
+    "stars": 1885,
+    "description": "Development platform to debug, chat, inspect, and evaluate MCP servers, MCP apps, and ChatGPT apps.",
+    "topics": [
+      "anthropic",
+      "chatgpt",
+      "cicd",
+      "debugger",
+      "evals",
+      "evaluation",
+      "inspector",
       "mcp",
-      "rag",
-      "react",
-      "redb",
-      "russh",
-      "rust",
-      "sftp",
+      "mcp-apps",
+      "mcp-clients",
+      "mcp-inspector",
+      "mcp-server",
+      "mcp-tools",
+      "modelcontextprotocol",
+      "oauth",
+      "oauth2",
+      "openai",
+      "openai-apps-sdk",
+      "opensource",
+      "tracing"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "connectbot",
+    "repo": "connectbot",
+    "stars": 3187,
+    "description": "ConnectBot is the first SSH client for Android.",
+    "topics": [
+      "android",
+      "connectbot",
+      "java",
+      "ssh",
       "ssh-client",
-      "tauri",
+      "ssh2"
+    ],
+    "language": "Kotlin"
+  },
+  {
+    "owner": "WLget",
+    "repo": "V2Ray_configs_64",
+    "stars": 239,
+    "description": "翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/Clash/trojan节点",
+    "topics": [
+      "clash",
+      "proxy",
+      "shadowsocks",
+      "ssr",
+      "trojan",
+      "v2ray",
+      "vmess",
+      "vpn"
+    ],
+    "language": null
+  },
+  {
+    "owner": "B-M-Capital-Research",
+    "repo": "honeclaw",
+    "stars": 304,
+    "description": "HoneClaw (Hone-Financial) is dedicated to being a professional investment assistant that truly understands you.",
+    "topics": [],
+    "language": "Rust"
+  },
+  {
+    "owner": "edwardkim",
+    "repo": "rhwp",
+    "stars": 2657,
+    "description": "아래한글 hwp viewer and editor by rust and wasm",
+    "topics": [],
+    "language": "Rust"
+  },
+  {
+    "owner": "dataflint",
+    "repo": "spark",
+    "stars": 446,
+    "description": "Drop-in replacement for Apache Spark UI",
+    "topics": [
+      "apache-spark",
+      "big-data",
+      "data-pipeline",
+      "data-pipelines",
+      "databricks",
+      "dataproc",
+      "emr",
+      "etl",
+      "observability",
+      "optimization",
+      "spark-operator"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "omry",
+    "repo": "omegaconf",
+    "stars": 2384,
+    "description": "Flexible Python configuration system. The last one you will ever need.",
+    "topics": [
+      "configuration-files",
+      "configuration-loader",
+      "python",
+      "python-types",
+      "schema-validator",
+      "yaml",
+      "yaml-configuration"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "lingeringsound",
+    "repo": "10007_auto",
+    "stars": 579,
+    "description": "ZH: 自动更新去广告的hosts ，En: Automatically update ad hosts",
+    "topics": [
+      "adclose",
+      "adguard-blocklist",
+      "adguard-blocklists",
+      "adguard-home-blocklist",
+      "hosts"
+    ],
+    "language": "Shell"
+  },
+  {
+    "owner": "woocommerce",
+    "repo": "woocommerce",
+    "stars": 10270,
+    "description": "A customizable, open-source ecommerce platform built on WordPress. Build any commerce solution you can imagine.",
+    "topics": [
+      "automattic",
+      "ecommerce",
+      "ecommerce-platform",
+      "hacktoberfest",
+      "php",
+      "reactjs",
+      "woocommerce",
+      "wordpress"
+    ],
+    "language": "PHP"
+  },
+  {
+    "owner": "tstack",
+    "repo": "lnav",
+    "stars": 10211,
+    "description": "Log file navigator",
+    "topics": [
+      "command-line-tool",
+      "less",
+      "log-analysis",
+      "log-monitor",
+      "log-viewer",
+      "log-visualization",
+      "logging",
+      "more",
+      "pager",
+      "tail",
       "terminal",
-      "terminal-emulator",
-      "terminal-emulators",
-      "tool-calling",
-      "typescript",
-      "wslg",
-      "xterm-js"
+      "terminal-pager",
+      "tui"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "blueberrycongee",
+    "repo": "termcanvas",
+    "stars": 247,
+    "description": "An infinite canvas desktop app for visually managing terminals",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "git-for-windows",
+    "repo": "git-sdk-64",
+    "stars": 225,
+    "description": "A Git repository mirroring the current 64-bit Git for Windows SDK",
+    "topics": [],
+    "language": "C"
+  },
+  {
+    "owner": "lightpanda-io",
+    "repo": "browser",
+    "stars": 29456,
+    "description": "Lightpanda: the headless browser designed for AI and automation",
+    "topics": [
+      "browser",
+      "browser-automation",
+      "cdp",
+      "headless",
+      "playwright",
+      "puppeteer",
+      "zig"
+    ],
+    "language": "Zig"
+  },
+  {
+    "owner": "jlcodes99",
+    "repo": "cockpit-tools",
+    "stars": 5744,
+    "description": " 🚀 通用 AI IDE 账号管理工具：支持 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro / Cursor / Gemini-cli / CodeBuddy，多账号切换、配额监控、自动唤醒与多开实例管理。 🚀 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro / Cursor / Gemini-cli / CodeBuddy, with multi-account switching, quota monitoring, wake-up automation, and multi-insta",
+    "topics": [
+      "account-manager",
+      "ai",
+      "antigravity",
+      "codebuddy",
+      "codex",
+      "cursor",
+      "github-copilot",
+      "kiro",
+      "windsurf"
     ],
     "language": "Rust"
   },
   {
-    "owner": "projectdiscovery",
-    "repo": "subfinder",
-    "stars": 13459,
-    "description": "Fast passive subdomain enumeration tool.",
+    "owner": "Xinyuan-LilyGO",
+    "repo": "T-Embed",
+    "stars": 240,
+    "description": null,
+    "topics": [],
+    "language": "C"
+  },
+  {
+    "owner": "tdeekens",
+    "repo": "flopflip",
+    "stars": 412,
+    "description": "🎚Flip or flop features in your React application in real-time backed by flag provider of your choice 🚦",
     "topics": [
-      "bugbounty",
-      "hacking",
+      "continous-delivery",
+      "feature-flags",
+      "feature-toggles",
       "hacktoberfest",
-      "osint",
-      "reconnaissance",
-      "subdomain-enumeration",
-      "subdomains"
+      "javascript",
+      "launchdarkly",
+      "lerna",
+      "react",
+      "recompose",
+      "redux",
+      "rollup",
+      "splitio"
     ],
-    "language": "Go"
+    "language": "JavaScript"
+  },
+  {
+    "owner": "openmemind",
+    "repo": "memind",
+    "stars": 551,
+    "description": "Self-evolving cognitive memory and context engine for AI agents in Java. Empowering 24/7 proactive agents like OpenClaw with understanding and SOTA performance.",
+    "topics": [
+      "ai",
+      "ai-agent",
+      "ai-agents",
+      "ai-memory",
+      "context-engineering",
+      "java",
+      "memory",
+      "openclaw",
+      "spring-ai"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "Athou",
+    "repo": "commafeed",
+    "stars": 3513,
+    "description": "Google Reader inspired self-hosted personal RSS reader.",
+    "topics": [
+      "java",
+      "rss",
+      "rss-reader",
+      "self-hosted",
+      "web-application"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "dotnet",
+    "repo": "runtime",
+    "stars": 17847,
+    "description": ".NET is a cross-platform runtime for cloud, mobile, desktop, and IoT apps.",
+    "topics": [
+      "dotnet",
+      "hacktoberfest",
+      "help-wanted"
+    ],
+    "language": "C#"
+  },
+  {
+    "owner": "AdguardTeam",
+    "repo": "AdguardFilters",
+    "stars": 4253,
+    "description": "AdGuard Content Blocking Filters",
+    "topics": [
+      "adblock",
+      "adguard",
+      "filter-list",
+      "open-source",
+      "ublock"
+    ],
+    "language": "Adblock Filter List"
+  },
+  {
+    "owner": "OpenMS",
+    "repo": "OpenMS",
+    "stars": 587,
+    "description": "The codebase of the OpenMS project",
+    "topics": [
+      "3-clause-bsd",
+      "algorithms",
+      "analyses",
+      "c-plus-plus",
+      "hacktoberfest",
+      "linux",
+      "macos",
+      "mass-spectrometry",
+      "metabolomics",
+      "ms-data",
+      "openms",
+      "proteomics",
+      "windows"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "activepieces",
+    "repo": "activepieces",
+    "stars": 21920,
+    "description": "AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows & AI Agents • MCPs for AI Agents",
+    "topics": [
+      "ai-agent",
+      "ai-agent-tools",
+      "ai-agents",
+      "ai-agents-framework",
+      "mcp",
+      "mcp-server",
+      "mcp-tools",
+      "mcps",
+      "n8n-alternative",
+      "no-code-automation",
+      "workflow",
+      "workflow-automation",
+      "workflows"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "eerimoq",
+    "repo": "moblin",
+    "stars": 615,
+    "description": "Moblin, a free iOS app for IRL streaming.",
+    "topics": [],
+    "language": "Swift"
+  },
+  {
+    "owner": "chromium",
+    "repo": "chromium",
+    "stars": 23530,
+    "description": "The official GitHub mirror of the Chromium source",
+    "topics": [
+      "browser",
+      "chromium"
+    ],
+    "language": "C++"
   },
   {
     "owner": "peasoft",
     "repo": "NoMoreWalls",
-    "stars": 3184,
+    "stars": 3196,
     "description": "自动抓取合并互联网上的公开节点。",
     "topics": [
       "bypass-gfw",
@@ -2863,422 +2781,515 @@
     "language": "Python"
   },
   {
-    "owner": "wso2",
-    "repo": "product-apim",
-    "stars": 978,
-    "description": "Welcome to the WSO2 API Manager source code! For info on working with the WSO2 API Manager repository and contributing code, click the link below.",
-    "topics": [
-      "api-gateway",
-      "api-management",
-      "apis",
-      "gateway",
-      "microservices",
-      "rest",
-      "synapse"
-    ],
-    "language": "Java"
-  },
-  {
-    "owner": "unjs",
-    "repo": "unifont",
-    "stars": 265,
-    "description": "Framework agnostic tools for accessing data from font CDNs and providers",
-    "topics": [
-      "font",
-      "performance"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "danielroe",
-    "repo": "roe.dev",
-    "stars": 276,
-    "description": "This is the code and content for my personal website, built in Nuxt.",
+    "owner": "sergiodxa",
+    "repo": "remix-i18next",
+    "stars": 718,
+    "description": "The easiest way to translate your React Router framework mode apps",
     "topics": [],
     "language": "TypeScript"
   },
   {
-    "owner": "unjs",
-    "repo": "magic-regexp",
-    "stars": 4324,
-    "description": "A compiled-away, type-safe, readable RegExp alternative",
+    "owner": "imanghafoori1",
+    "repo": "laravel-microscope",
+    "stars": 1493,
+    "description": "Fearless refactoring, it does a lot of smart checks to find certain errors.",
     "topics": [
-      "hacktoberfest",
-      "regex",
-      "regexp",
-      "regular-expression",
-      "typescript"
+      "laravel"
     ],
+    "language": "PHP"
+  },
+  {
+    "owner": "Ninja-Squad",
+    "repo": "ngx-valdemort",
+    "stars": 205,
+    "description": "Simpler, cleaner Angular validation error messages",
+    "topics": [],
     "language": "TypeScript"
   },
   {
-    "owner": "ccfos",
-    "repo": "nightingale",
-    "stars": 12969,
-    "description": "Nightingale is to monitoring and alerting what Grafana is to visualization.",
+    "owner": "webadderallorg",
+    "repo": "Recordly",
+    "stars": 10618,
+    "description": "Create polished screen recordings for free. An open-source alternative to Screen Studio.",
     "topics": [
-      "alerting",
-      "ccf",
-      "metrics",
-      "monitoring",
-      "nightingale",
-      "observability",
-      "open-falcon",
-      "time-series",
-      "tsdb"
+      "electron",
+      "free",
+      "linux",
+      "macos",
+      "open-source",
+      "screen-recorder",
+      "screen-studio",
+      "windows"
     ],
-    "language": "Go"
-  },
-  {
-    "owner": "terrapkg",
-    "repo": "packages",
-    "stars": 423,
-    "description": "Monorepo for Terra Packages",
-    "topics": [
-      "fedora",
-      "rpm"
-    ],
-    "language": "HCL"
-  },
-  {
-    "owner": "wes-lin",
-    "repo": "Cloud189Checkin",
-    "stars": 671,
-    "description": "天翼网盘自动签到",
-    "topics": [
-      "189cloud"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "thebrowsercompany",
-    "repo": "swift-build",
-    "stars": 385,
-    "description": "Swift toolchain builds by The Browser Company",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "OpenTTD",
-    "repo": "OpenTTD",
-    "stars": 7801,
-    "description": "OpenTTD is an open source simulation game based upon Transport Tycoon Deluxe",
-    "topics": [
-      "game",
-      "isometric",
-      "openttd",
-      "sandbox",
-      "simulation"
-    ],
-    "language": "C++"
-  },
-  {
-    "owner": "alibaba",
-    "repo": "OpenSandbox",
-    "stars": 10107,
-    "description": "Secure, Fast, and Extensible Sandbox runtime for AI agents.",
-    "topics": [
-      "ai",
-      "ai-agent",
-      "ai-infra",
-      "kubernetes",
-      "sandbox"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "pingdotgg",
-    "repo": "t3code",
-    "stars": 9988,
-    "description": null,
-    "topics": [],
     "language": "TypeScript"
   },
   {
     "owner": "microsoft",
-    "repo": "Conversation-Knowledge-Mining-Solution-Accelerator",
-    "stars": 439,
-    "description": "This solution accelerator leverages Microsoft Foundry, Azure Content Understanding, Azure OpenAI Service, and Foundry IQ to enable organizations to derive insights from volumes of conversational data using generative AI. It offers key phrase extraction, topic modeling, and interactive chat experiences through an intuitive web interface.",
+    "repo": "winget-pkgs",
+    "stars": 10526,
+    "description": "The Microsoft community Windows Package Manager manifest repository",
     "topics": [
-      "ai-azd-templates",
-      "azd-templates"
+      "hacktoberfest"
     ],
-    "language": "Python"
+    "language": null
   },
   {
-    "owner": "slackhq",
-    "repo": "foundry",
-    "stars": 474,
-    "description": "Gradle and IntelliJ build tooling used in Slack's Android repo",
-    "topics": [
-      "android",
-      "gradle",
-      "intellij",
-      "intellij-plugin",
-      "java",
-      "kotlin"
-    ],
-    "language": "Kotlin"
-  },
-  {
-    "owner": "Olshansk",
-    "repo": "rss-feeds",
-    "stars": 505,
-    "description": "Generate RSS feeds for all the blogs that don't have one",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "manaflow-ai",
-    "repo": "cmux",
-    "stars": 14824,
-    "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
-    "topics": [
-      "amp",
-      "claude-code",
-      "codex",
-      "gemini",
-      "ghostty",
-      "opencode",
-      "terminal",
-      "tmux"
-    ],
-    "language": "Swift"
-  },
-  {
-    "owner": "moltar",
-    "repo": "typescript-runtime-type-benchmarks",
-    "stars": 817,
-    "description": "📊 Benchmark Comparison of Packages with Runtime Validation and TypeScript Support",
-    "topics": [
-      "benchmark",
-      "benchmarks",
-      "decoders",
-      "json",
-      "runtypes",
-      "types",
-      "typescript",
-      "typescript-support",
-      "validation",
-      "validation-library"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "DaoCloud",
-    "repo": "DaoCloud-docs",
-    "stars": 202,
-    "description": "DaoCloud Enterprise 5.0 Documentation",
+    "owner": "uccl-project",
+    "repo": "uccl",
+    "stars": 1327,
+    "description": "UCCL is an efficient communication library for GPUs, covering collectives, P2P (e.g., KV cache transfer, RL weight transfer), and EP (e.g., GPU-driven)",
     "topics": [
       "ai",
-      "arm64",
-      "cloud-native",
-      "daocloud",
-      "giscus",
-      "go",
-      "istio",
-      "k8s",
-      "kubernetes",
+      "allreduce",
+      "amd",
+      "broadcom",
+      "collective",
+      "cuda",
+      "gpu",
+      "hpc",
+      "kvcache",
       "llm",
-      "microservice",
-      "mkdocs",
-      "mkdocs-material",
-      "multi-cloud",
-      "paas",
-      "platform-engineering",
-      "prometheus",
-      "utterances",
-      "x86-64"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "NSPC911",
-    "repo": "rovr",
-    "stars": 357,
-    "description": "A post-modern terminal file manager.",
-    "topics": [
-      "developer-tools",
-      "file-explorer",
-      "file-manager",
-      "filesystem",
-      "hacktoberfest",
-      "linux",
-      "macos",
-      "python",
-      "terminal",
-      "textual",
-      "tui",
-      "tui-py",
-      "windows"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "sibbl",
-    "repo": "hass-lovelace-kindle-screensaver",
-    "stars": 597,
-    "description": "This tool generates a png from a Home Assistant Lovelace view, which can be displayed on a Kindle device which has the Online Screensaver plugin installed.",
-    "topics": [],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "RedDot-3ND7355",
-    "repo": "MPO-GPU-FIX",
-    "stars": 643,
-    "description": "MPO Fix for 5000/6000/7000 AMD GPUs & RTX 2000/3000/4000/GTX 1600",
-    "topics": [],
-    "language": "C#"
-  },
-  {
-    "owner": "enricoros",
-    "repo": "big-AGI",
-    "stars": 6924,
-    "description": "AI suite powered by state-of-the-art models and providing advanced AI/AGI functions. Includes AI personas, AGI functions, world-class Beam multi-model chats, text-to-image, voice, response streaming, code highlighting and execution, PDF import, presets for developers, much more. Deploy on-prem or in the cloud.",
-    "topics": [
-      "agi",
-      "ai-agents",
-      "ai-suite",
-      "ai-workspace",
-      "anthropic-api",
-      "deepseek-api",
-      "gemini-api",
-      "gpt",
-      "gpt-5",
-      "librechat",
-      "multi-modal",
-      "multi-model",
-      "nano-banana",
-      "openai-responses-api",
-      "openwebui",
-      "perplexity-api",
-      "sonnet-4-5",
-      "xai-api"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "moonlight-stream",
-    "repo": "moonlight-qt",
-    "stars": 16852,
-    "description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
-    "topics": [
-      "gamestream",
-      "linux-app",
-      "macos-app",
-      "moonlight",
+      "moe",
+      "networking",
       "nvidia",
-      "qt",
-      "sdl2",
-      "steam-link",
-      "windows-app"
+      "p2p",
+      "rdma"
     ],
     "language": "C++"
   },
   {
-    "owner": "google",
-    "repo": "skia",
-    "stars": 10630,
-    "description": "Skia is a complete 2D graphic library for drawing Text, Geometries, and Images.  See documentation for contribution instructions.",
+    "owner": "increments",
+    "repo": "qiita-markdown",
+    "stars": 406,
+    "description": "Qiita-specified markdown processor.",
     "topics": [],
-    "language": "C++"
+    "language": "Ruby"
   },
   {
-    "owner": "aklivity",
-    "repo": "zilla",
-    "stars": 684,
-    "description": "🦎 A multi-protocol edge & service proxy. Seamlessly interface web apps, IoT clients, & microservices to Apache Kafka® via declaratively defined, stateless APIs.",
+    "owner": "Snailclimb",
+    "repo": "interview-guide",
+    "stars": 1830,
+    "description": "基于 Spring Boot 4.0 + Java 21 + Spring AI + PostgreSQL + pgvector + RustFS + Redis，实现简历智能分析、AI模拟面试、知识库RAG检索等核心功能。非常适合作为学习和简历项目，学习门槛低。",
     "topics": [
-      "api-gateway",
-      "asyncapi",
-      "event-driven-architecture",
-      "event-stream-proxy",
-      "event-streaming",
-      "grpc",
-      "iot",
-      "kafka",
-      "kafka-proxy",
-      "mqtt",
-      "openapi",
-      "proxy",
-      "rest",
-      "server-sent-events",
-      "streaming-api"
+      "gradle",
+      "itext7",
+      "mapstruct",
+      "pgvector",
+      "postgresql",
+      "rag",
+      "redis",
+      "redisson",
+      "redisstreams",
+      "rustfs",
+      "springai",
+      "springboot",
+      "springboot4",
+      "tika"
     ],
     "language": "Java"
   },
   {
-    "owner": "yandex",
-    "repo": "perforator",
-    "stars": 3400,
-    "description": "Perforator is a cluster-wide continuous profiling tool designed for large data centers",
+    "owner": "santifer",
+    "repo": "career-ops",
+    "stars": 40077,
+    "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
     "topics": [
-      "continuous-profiling",
-      "ebpf",
-      "flamegraph",
-      "performance",
-      "performance-tools",
-      "profiling"
+      "ai-agent",
+      "anthropic",
+      "automation",
+      "career",
+      "claude",
+      "claude-code",
+      "cli",
+      "golang",
+      "interview-prep",
+      "job-search",
+      "open-source",
+      "resume"
     ],
-    "language": "C++"
+    "language": "JavaScript"
   },
   {
-    "owner": "nearai",
-    "repo": "ironclaw",
-    "stars": 11878,
-    "description": "IronClaw is OpenClaw inspired implementation in Rust focused on privacy and security",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "pkgforge-dev",
-    "repo": "Termux-Packages",
-    "stars": 213,
-    "description": "Markdown List (Table), JSON & YAML of all the officially Available Packages in the Termux Registry :: https://termux-packages.ajam.dev [Maintainer=@Azathothas]",
+    "owner": "jiaoshijie",
+    "repo": "undotree",
+    "stars": 352,
+    "description": "neovim undotree written in lua",
     "topics": [
-      "android",
-      "android-package",
-      "termux",
-      "termux-app",
-      "termux-awesome-list",
-      "termux-hacking",
-      "termux-pacakges",
-      "termux-package",
-      "termux-tools"
+      "neovim-plugin",
+      "neovim-plugin-lua",
+      "nvim-plugin"
+    ],
+    "language": "Lua"
+  },
+  {
+    "owner": "eclipse-sw360",
+    "repo": "sw360",
+    "stars": 238,
+    "description": "SW360 project",
+    "topics": [
+      "catalog",
+      "ecc",
+      "license-compliance",
+      "license-management",
+      "obligation-management",
+      "vulnerability-management"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "assistant-ui",
+    "repo": "assistant-ui",
+    "stars": 9711,
+    "description": "Typescript/React Library for AI Chat💬🚀",
+    "topics": [
+      "ai-chatbot",
+      "chatbot",
+      "conversational-ai",
+      "copilot",
+      "radix-ui",
+      "react-chatbot",
+      "shadcn",
+      "ui-components",
+      "vercel-ai-sdk"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "neomjs",
+    "repo": "neo",
+    "stars": 3178,
+    "description": "The Application Engine for the AI Era. A multi-threaded, AI-native runtime with a persistent Scene Graph, enabling AI agents to introspect and mutate the living application structure in real-time.",
+    "topics": [
+      "ai-agents",
+      "application-engine",
+      "architecture",
+      "autonomous-agents",
+      "desktop-like",
+      "esm",
+      "frontend",
+      "generative-ai",
+      "javascript",
+      "mcp-servers",
+      "multi-threaded",
+      "neural-link",
+      "no-transpilation",
+      "off-main-thread",
+      "performance",
+      "react-alternative",
+      "self-healing",
+      "spa",
+      "web-workers",
+      "zero-config"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "Genshin-bots",
+    "repo": "gsuid_core",
+    "stars": 308,
+    "description": "💖一套业务逻辑，多个平台支持！异步核心框架GsCore，为插件编写提供完善平台支持、核心数据库统一、复用游戏查询逻辑、网页控制台，支持Bot列表: NoneBot2 & HoshinoBot & ZeroBot & YunZaiBot & Koishi",
+    "topics": [
+      "genshin",
+      "genshin-impact",
+      "genshinuid"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "xonsh",
+    "repo": "xonsh",
+    "stars": 9290,
+    "description": "🐚 Python-powered shell. Full-featured, cross-platform and AI-friendly.",
+    "topics": [
+      "alacritty",
+      "anthropic",
+      "claude",
+      "claude-code",
+      "cmux",
+      "data-engineering",
+      "data-scientists",
+      "devops",
+      "devsecops",
+      "hyper",
+      "iterm2",
+      "kitty",
+      "nix",
+      "nixos",
+      "raspberry-pi",
+      "security-automation",
+      "vscode-extension",
+      "wezterm",
+      "xonsh"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "SwiftPackageIndex",
+    "repo": "PackageList",
+    "stars": 836,
+    "description": "The canonical list of repositories indexed by the Swift Package Index ",
+    "topics": [
+      "spm",
+      "swift"
+    ],
+    "language": "Swift"
+  },
+  {
+    "owner": "warmcat",
+    "repo": "libwebsockets",
+    "stars": 5261,
+    "description": "canonical libwebsockets.org networking library",
+    "topics": [
+      "c",
+      "c-library",
+      "client-server",
+      "embeddable",
+      "freertos",
+      "http2",
+      "libev",
+      "libevent",
+      "libuv",
+      "libwebsockets",
+      "lightweight",
+      "lws",
+      "portable-library",
+      "sshd",
+      "websockets"
+    ],
+    "language": "C"
+  },
+  {
+    "owner": "lablup",
+    "repo": "backend.ai",
+    "stars": 633,
+    "description": "Backend.AI is a streamlined, container-based computing cluster platform that hosts popular computing/ML frameworks and diverse programming languages, with pluggable heterogeneous accelerator support including CUDA GPU, ROCm GPU, Gaudi NPU, Google TPU, GraphCore IPU and other NPUs.",
+    "topics": [
+      "api",
+      "backendai",
+      "cloud-computing",
+      "containers",
+      "distributed-computing",
+      "docker",
+      "documentation",
+      "hpc",
+      "monitoring",
+      "paas",
+      "python"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "OpenLightingProject",
+    "repo": "open-fixture-library",
+    "stars": 243,
+    "description": "A library and website for lighting technology's DMX fixture definition files.",
+    "topics": [
+      "dmx",
+      "dmx512",
+      "gdtf",
+      "hacktoberfest",
+      "json",
+      "lighting",
+      "nodejs",
+      "nuxt",
+      "rdm",
+      "vue"
+    ],
+    "language": "JSON"
+  },
+  {
+    "owner": "fossology",
+    "repo": "fossology",
+    "stars": 982,
+    "description": "FOSSology is an open source license compliance software system and toolkit.  As a toolkit you can run license, copyright and export control scans from the command line.  As a system, a database and web ui are provided to give you a compliance workflow. License, copyright and export scanners are tools used in the workflow.",
+    "topics": [
+      "compliance",
+      "compliance-automation",
+      "compliance-check",
+      "fossology",
+      "license",
+      "license-checking",
+      "license-management",
+      "license-scan",
+      "oss",
+      "spdx",
+      "spdx-licenses"
     ],
     "language": "HTML"
   },
   {
-    "owner": "open-telemetry",
-    "repo": "opentelemetry-dotnet-contrib",
-    "stars": 634,
-    "description": "This repository contains set of components extending functionality of the OpenTelemetry .NET SDK. Instrumentation libraries, exporters, and other components can find their home here.",
-    "topics": [
-      "dotnet",
-      "dotnet-core",
-      "opentelemetry"
-    ],
-    "language": "C#"
+    "owner": "power721",
+    "repo": "alist-tvbox",
+    "stars": 2980,
+    "description": "AList proxy server for TvBox, support playlist and search. ",
+    "topics": [],
+    "language": "Java"
   },
   {
-    "owner": "Homebrew",
-    "repo": "homebrew-core",
-    "stars": 15223,
-    "description": "🍻 Default formulae for the missing package manager for macOS (or Linux)",
+    "owner": "milady-ai",
+    "repo": "milady",
+    "stars": 394,
+    "description": "terminally online",
     "topics": [
-      "core",
-      "formulae",
-      "hacktoberfest",
-      "homebrew",
-      "ruby",
-      "tap"
+      "agent",
+      "agent-skills",
+      "agents",
+      "autonomous-agents",
+      "clawd",
+      "clawdbot",
+      "clawdbot-plugin",
+      "eliza",
+      "elizaos",
+      "openclaw",
+      "openclaw-skills"
     ],
-    "language": "Ruby"
+    "language": "TypeScript"
+  },
+  {
+    "owner": "Azure",
+    "repo": "azure-sdk-for-python",
+    "stars": 5530,
+    "description": "This repository is for active development of the Azure SDK for Python. For consumers of the SDK we recommend visiting our public developer docs at https://learn.microsoft.com/python/azure/ or our versioned developer docs at https://azure.github.io/azure-sdk-for-python. ",
+    "topics": [
+      "azure",
+      "azure-sdk",
+      "hacktoberfest",
+      "python"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "thorsten",
+    "repo": "phpMyFAQ",
+    "stars": 617,
+    "description": "phpMyFAQ - Open Source FAQ web application for PHP 8.3+ and MySQL, PostgreSQL and other databases",
+    "topics": [
+      "database",
+      "docker",
+      "docker-compose",
+      "elasticsearch",
+      "faq",
+      "frankenphp",
+      "kubernetes",
+      "mariadb",
+      "mcp-server",
+      "mssql",
+      "mysql",
+      "opensearch",
+      "php",
+      "phpmyfaq",
+      "postgresql",
+      "sqlite"
+    ],
+    "language": "PHP"
+  },
+  {
+    "owner": "OpenCTI-Platform",
+    "repo": "opencti",
+    "stars": 9202,
+    "description": "Open Cyber Threat Intelligence Platform",
+    "topics": [
+      "cti",
+      "cyber",
+      "cybersecurity",
+      "intelligence",
+      "osint",
+      "security",
+      "threat-intelligence"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "pytorch",
+    "repo": "executorch",
+    "stars": 4548,
+    "description": "On-device AI across mobile, embedded and edge for PyTorch",
+    "topics": [
+      "deep-learning",
+      "embedded",
+      "gpu",
+      "machine-learning",
+      "mobile",
+      "neural-network",
+      "tensor"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "marcusquinn",
+    "repo": "aidevops",
+    "stars": 216,
+    "description": "Vibe-Coding is easy. DevOps is hard. OpenCode & Git token-efficient AI agent automation for your app, business, and personal development. Opinionated tools, services, CLI & API stack for speed, security, and 24/7 results. Open-source first. SOTA everything. Try it on your repos to see the magic.",
+    "topics": [
+      "agents",
+      "agents-md",
+      "ai",
+      "ai-agents",
+      "ai-assistant",
+      "ai-assistants",
+      "ai-assisted-development",
+      "ai-code-review",
+      "ai-coding",
+      "ai-dev-ops",
+      "ai-devops",
+      "ai-system-admin",
+      "claude",
+      "devops",
+      "devops-tools",
+      "git-workflow",
+      "git-worktrees",
+      "opencode",
+      "opencode-plugin"
+    ],
+    "language": "Shell"
+  },
+  {
+    "owner": "kubescape",
+    "repo": "kubescape",
+    "stars": 11330,
+    "description": "Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernetes users and administrators precious time, effort, and resources.",
+    "topics": [
+      "best-practice",
+      "devops",
+      "kubernetes",
+      "mitre-attack",
+      "nsa",
+      "security",
+      "vulnerability-detection"
+    ],
+    "language": "Go"
+  },
+  {
+    "owner": "datalayer",
+    "repo": "jupyter-mcp-server",
+    "stars": 1034,
+    "description": "🪐 🔧 Model Context Protocol (MCP) Server for Jupyter.",
+    "topics": [
+      "ai",
+      "jupyter",
+      "mcp",
+      "mcp-server",
+      "tools"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "archlinuxcn",
+    "repo": "repo",
+    "stars": 1827,
+    "description": "Arch Linux CN Repository",
+    "topics": [
+      "archlinux",
+      "archlinuxcn",
+      "packages",
+      "repository"
+    ],
+    "language": "Shell"
   },
   {
     "owner": "yogeshwaran01",
     "repo": "github-stats-terminal-style",
-    "stars": 300,
+    "stars": 304,
     "description": "Generate :octocat: Stats as like Terminal Interface with typing effects dynamically for your profile Readme",
     "topics": [
       "developer-tools",
@@ -3294,581 +3305,769 @@
     "language": "TypeScript"
   },
   {
-    "owner": "RockinChaos",
-    "repo": "Shiru",
-    "stars": 243,
-    "description": "A personal anime library manager for watching and tracking your collection in real time. Lightweight, powerful, and paws-itively fast. No waiting required!",
-    "topics": [],
-    "language": "Svelte"
-  },
-  {
-    "owner": "AdguardTeam",
-    "repo": "AdguardFilters",
-    "stars": 4242,
-    "description": "AdGuard Content Blocking Filters",
+    "owner": "starship",
+    "repo": "starship",
+    "stars": 56905,
+    "description": "☄🌌️  The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
     "topics": [
-      "adblock",
-      "adguard",
-      "filter-list",
-      "open-source",
-      "ublock"
+      "bash",
+      "fish",
+      "fish-prompt",
+      "fish-theme",
+      "oh-my-zsh",
+      "powershell",
+      "rust",
+      "shell-prompt",
+      "starship",
+      "zsh",
+      "zsh-prompt",
+      "zsh-theme"
     ],
-    "language": "Adblock Filter List"
-  },
-  {
-    "owner": "WebKit",
-    "repo": "WebKit",
-    "stars": 9755,
-    "description": "Home of the WebKit project, the browser engine used by Safari, Mail, App Store and many other applications on macOS, iOS and Linux.",
-    "topics": [
-      "browser",
-      "gtk",
-      "ios",
-      "javascript",
-      "macos",
-      "web",
-      "webkit"
-    ],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "cpprefjp",
-    "repo": "site",
-    "stars": 422,
-    "description": "cpprefjpサイトのMarkdownソース",
-    "topics": [
-      "c-plus-plus",
-      "document",
-      "japanese",
-      "language-learning",
-      "library-learning",
-      "reference"
-    ],
-    "language": null
-  },
-  {
-    "owner": "zzzwannasleep",
-    "repo": "LinPlayer",
-    "stars": 204,
-    "description": "一个开源的播放器",
-    "topics": [],
-    "language": "Dart"
-  },
-  {
-    "owner": "reactjs",
-    "repo": "react-tabs",
-    "stars": 3149,
-    "description": "An accessible and easy tab component for ReactJS.",
-    "topics": [],
-    "language": "JavaScript"
-  },
-  {
-    "owner": "external-secrets",
-    "repo": "external-secrets",
-    "stars": 6552,
-    "description": "External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets.",
-    "topics": [
-      "external-secrets",
-      "hacktoberfest",
-      "kubernetes",
-      "kubernetes-secrets",
-      "secrets-manager"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "postgres",
-    "repo": "postgres",
-    "stars": 20631,
-    "description": "Mirror of the official PostgreSQL GIT repository. Note that this is just a *mirror* - we don't work with pull requests on github. To contribute, please see https://wiki.postgresql.org/wiki/Submitting_a_Patch",
-    "topics": [],
-    "language": "C"
-  },
-  {
-    "owner": "lynx-family",
-    "repo": "lynx",
-    "stars": 14780,
-    "description": "Empower the Web community and invite more to build across platforms.",
-    "topics": [
-      "cross-platform",
-      "lynx",
-      "lynxjs"
-    ],
-    "language": "C++"
-  },
-  {
-    "owner": "lhmouse",
-    "repo": "mcfgthread",
-    "stars": 312,
-    "description": "Cornerstone of the MOST efficient std::thread on Windows for mingw-w64",
-    "topics": [
-      "gcc",
-      "mingw",
-      "mingw-w64",
-      "mutex",
-      "thread",
-      "windows"
-    ],
-    "language": "C"
-  },
-  {
-    "owner": "gofiber",
-    "repo": "recipes",
-    "stars": 3440,
-    "description": "📁 Examples for 🚀 Fiber",
-    "topics": [
-      "cookbook",
-      "examples",
-      "fiber",
-      "hacktoberfest",
-      "recipe"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "B-M-Capital-Research",
-    "repo": "honeclaw",
-    "stars": 228,
-    "description": "HoneClaw (Hone-Financial) is dedicated to being a professional investment assistant that truly understands you.",
-    "topics": [],
     "language": "Rust"
   },
   {
-    "owner": "Dicklesworthstone",
-    "repo": "mcp_agent_mail",
-    "stars": 1890,
-    "description": "Asynchronous coordination layer for AI coding agents: identities, inboxes, searchable threads, and advisory file leases over FastMCP + Git + SQLite",
+    "owner": "metabase",
+    "repo": "metabase",
+    "stars": 47038,
+    "description": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
     "topics": [
-      "ai-agents",
-      "coordination",
-      "fastmcp",
-      "mcp",
-      "python"
-    ],
-    "language": "Python"
-  },
-  {
-    "owner": "git",
-    "repo": "git-scm.com",
-    "stars": 2370,
-    "description": "The git-scm.com website. Note that this repository is only for the website; issues with git itself should go to https://git-scm.com/community.",
-    "topics": [],
-    "language": "HTML"
-  },
-  {
-    "owner": "Beingpax",
-    "repo": "VoiceInk",
-    "stars": 4646,
-    "description": "Voice-to-text app for macOS to transcribe what you say to text almost instantly",
-    "topics": [
-      "macos",
-      "macos-app",
-      "swift"
-    ],
-    "language": "Swift"
-  },
-  {
-    "owner": "zammad",
-    "repo": "zammad",
-    "stars": 5531,
-    "description": "Zammad is a web based open source helpdesk/customer support system.",
-    "topics": [
-      "coffeescript",
-      "customer-care",
-      "customer-support",
-      "graphql",
-      "helpdesk",
-      "javascript",
-      "rails",
-      "ruby",
-      "support",
-      "ticketing",
-      "typescript",
-      "vite",
-      "vuejs",
-      "zammad"
-    ],
-    "language": "Ruby"
-  },
-  {
-    "owner": "emmercm",
-    "repo": "igir",
-    "stars": 803,
-    "description": "🕹 A zero-setup ROM collection manager that sorts, filters, extracts or archives, patches, and reports on collections of any size on any OS.",
-    "topics": [
-      "1g1r",
-      "analogue-pocket",
-      "anbernic",
-      "batocera",
-      "cmpro",
-      "emulation",
-      "fpga",
-      "logiqx",
-      "mame",
-      "mister",
-      "no-intro",
-      "recalbox",
-      "redump",
-      "retroarch",
-      "retropie",
-      "roms",
-      "rvzstd",
-      "torrentzip",
-      "tosec"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "THUDM",
-    "repo": "slime",
-    "stars": 5372,
-    "description": "slime is an LLM post-training framework for RL Scaling.",
-    "topics": [],
-    "language": "Python"
-  },
-  {
-    "owner": "gitroomhq",
-    "repo": "postiz-app",
-    "stars": 29044,
-    "description": "📨 The ultimate social media scheduling tool, with a bunch of AI  🤖",
-    "topics": [
-      "nextjs",
-      "open-source",
-      "open-source-social-media-scheduling-tool",
-      "oss",
-      "redis",
-      "scheduling-tool",
-      "social-media-scheduling-tool",
-      "typescript"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "dromara",
-    "repo": "easy-query",
-    "stars": 757,
-    "description": "java/kotlin high performance lightweight solution for jdbc query,support oltp and olap query,一款java下面支持强类型、轻量级、高性能的ORM,致力于解决jdbc查询,拥有对象模型筛选、隐式子查询、隐式join",
-    "topics": [
-      "java",
-      "jdbc",
-      "join",
-      "kotlin",
+      "analytics",
+      "bi",
+      "business-intelligence",
+      "businessintelligence",
+      "clojure",
+      "dashboard",
+      "data",
+      "data-analysis",
+      "data-visualization",
+      "database",
+      "metabase",
       "mysql",
-      "orm",
-      "sharding"
+      "postgres",
+      "postgresql",
+      "reporting",
+      "slack",
+      "sql-editor",
+      "visualization"
+    ],
+    "language": "Clojure"
+  },
+  {
+    "owner": "llvm",
+    "repo": "llvm-project",
+    "stars": 38058,
+    "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+    "topics": [],
+    "language": "LLVM"
+  },
+  {
+    "owner": "abhigyanpatwari",
+    "repo": "GitNexus",
+    "stars": 30411,
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "sgl-project",
+    "repo": "sglang",
+    "stars": 26502,
+    "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+    "topics": [
+      "attention",
+      "blackwell",
+      "cuda",
+      "deepseek",
+      "diffusion",
+      "glm",
+      "gpt-oss",
+      "inference",
+      "llama",
+      "llm",
+      "minimax",
+      "moe",
+      "qwen",
+      "qwen-image",
+      "reinforcement-learning",
+      "transformer",
+      "vlm",
+      "wan"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "nautechsystems",
+    "repo": "nautilus_trader",
+    "stars": 22293,
+    "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+    "topics": [
+      "algorithmic-trading-engine",
+      "artificial-intelligence",
+      "crypto-trading",
+      "equity-trading",
+      "forex",
+      "futures-trading",
+      "machine-learning",
+      "options-trading",
+      "python",
+      "rust",
+      "sports-betting",
+      "trading",
+      "trading-platform"
+    ],
+    "language": "Rust"
+  },
+  {
+    "owner": "anomalyco",
+    "repo": "opencode",
+    "stars": 150135,
+    "description": "The open source coding agent.",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "wes-lin",
+    "repo": "Cloud189Checkin",
+    "stars": 675,
+    "description": "天翼网盘自动签到",
+    "topics": [
+      "189cloud"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "enonic",
+    "repo": "xp",
+    "stars": 208,
+    "description": "Enonic XP",
+    "topics": [
+      "cms",
+      "java",
+      "typescript"
     ],
     "language": "Java"
   },
   {
-    "owner": "gdamore",
-    "repo": "tcell",
-    "stars": 5128,
-    "description": "Tcell is an alternate terminal package, similar in some ways to termbox, but better in others.",
-    "topics": [],
-    "language": "Go"
+    "owner": "manaflow-ai",
+    "repo": "cmux",
+    "stars": 15510,
+    "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
+    "topics": [
+      "amp",
+      "claude-code",
+      "codex",
+      "gemini",
+      "ghostty",
+      "opencode",
+      "terminal",
+      "tmux"
+    ],
+    "language": "Swift"
   },
   {
-    "owner": "taskforcesh",
-    "repo": "bullmq",
-    "stars": 8747,
-    "description": "BullMQ - Message Queue and Batch processing for NodeJS, Python, Elixir and PHP based on Redis",
+    "owner": "dyad-sh",
+    "repo": "dyad",
+    "stars": 20182,
+    "description": "Local, open-source AI app builder for power users ✨ v0 / Lovable / Replit / Bolt alternative 🌟 Star if you like it!",
     "topics": [
-      "background-jobs",
-      "elixir",
-      "nodejs",
-      "php",
-      "python",
-      "queue",
-      "redis",
+      "ai-app-builder",
+      "anthropic",
+      "artificial-intelligence",
+      "bolt",
+      "deepseek",
+      "gemini",
+      "generative-ai",
+      "github",
+      "llm",
+      "llms",
+      "lovable",
+      "nextjs",
+      "ollama",
+      "openai",
+      "qwen",
+      "react",
+      "typescript",
+      "v0",
+      "vercel"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "antdv-next",
+    "repo": "antdv-next",
+    "stars": 690,
+    "description": "Ant Design for Vue",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "AdguardTeam",
+    "repo": "FiltersRegistry",
+    "stars": 337,
+    "description": "Known filters subscriptions transformed for better compatibility with AdGuard",
+    "topics": [
+      "adguard",
+      "filters",
+      "filters-metadata",
+      "filters-subscriptions"
+    ],
+    "language": "Adblock Filter List"
+  },
+  {
+    "owner": "BG-Software-LLC",
+    "repo": "SuperiorSkyblock2",
+    "stars": 207,
+    "description": "Optimized, feature packed Skyblock core.",
+    "topics": [
+      "bgsoftware",
+      "bukkit",
+      "java",
+      "minecraft",
+      "plugin",
+      "skyblock",
+      "spigot",
+      "superiorskyblock"
+    ],
+    "language": "Java"
+  },
+  {
+    "owner": "abetlen",
+    "repo": "llama-cpp-python",
+    "stars": 10239,
+    "description": "Python bindings for llama.cpp",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "logto-io",
+    "repo": "logto",
+    "stars": 11945,
+    "description": "🧑‍🚀 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.",
+    "topics": [
+      "authentication",
+      "authorization",
+      "email",
+      "identity",
+      "jwt",
+      "login",
+      "logto",
+      "mfa",
+      "oauth2",
+      "openid-connect",
+      "password",
+      "passwordless",
+      "rbac",
+      "saml",
+      "signup",
+      "sms",
+      "social-login",
+      "sso",
+      "totp",
       "typescript"
     ],
     "language": "TypeScript"
   },
   {
-    "owner": "hassio-addons",
-    "repo": "app-ssh",
-    "stars": 493,
-    "description": "Advanced SSH & Web Terminal - Home Assistant Community Apps",
+    "owner": "backnotprop",
+    "repo": "plannotator",
+    "stars": 4653,
+    "description": "Annotate and review coding agent plans and code diffs visually, share with your team, send feedback to agents with one click.",
     "topics": [
-      "addon",
-      "addons",
-      "app",
-      "apps",
-      "home-assistant",
-      "home-automation",
-      "homeassistant",
-      "ssh",
-      "ssh-server"
-    ],
-    "language": "Jinja"
-  },
-  {
-    "owner": "webpro-nl",
-    "repo": "knip",
-    "stars": 11032,
-    "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-    "topics": [
-      "deadcode",
-      "dependency-analysis",
-      "dependency-management",
-      "javascript",
-      "lint",
-      "linter",
-      "maintenance",
-      "typescript",
-      "unused-code",
-      "unused-exports"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "renovatebot",
-    "repo": "github-action",
-    "stars": 494,
-    "description": null,
-    "topics": [
-      "github-action",
-      "github-actions",
-      "renovate"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "meilisearch",
-    "repo": "meilisearch-js-plugins",
-    "stars": 528,
-    "description": "The search client to use Meilisearch with InstantSearch.",
-    "topics": [
-      "angular",
-      "client",
-      "geosearch",
-      "instantsearch",
-      "js",
-      "meilisearch",
-      "react",
-      "vue"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "iOfficeAI",
-    "repo": "AionUi",
-    "stars": 22234,
-    "description": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
-    "topics": [
-      "acp",
-      "ai",
-      "ai-agent",
-      "chat",
-      "chatbot",
+      "agents",
       "claude-code",
-      "clawd",
-      "clawdbot",
+      "code-review",
       "codex",
-      "cowork",
-      "gemini",
-      "gemini-cli",
-      "llm",
-      "nano-banana",
-      "office",
-      "openclaw",
+      "obsidian",
       "opencode",
-      "skills",
-      "webui"
+      "pi-mono",
+      "plan-mode",
+      "skills"
     ],
     "language": "TypeScript"
   },
   {
-    "owner": "yizhiyanhua-ai",
-    "repo": "fireworks-tech-graph",
-    "stars": 3767,
-    "description": "Claude Code skill for generating production-quality SVG+PNG technical diagrams. Supports 8 diagram types, 5 visual styles, and deep AI/Agent domain knowledge.",
+    "owner": "NVIDIA",
+    "repo": "TensorRT-LLM",
+    "stars": 13484,
+    "description": "TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way.",
+    "topics": [
+      "blackwell",
+      "cuda",
+      "llm-serving",
+      "moe",
+      "pytorch"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "0xPugal",
+    "repo": "fuzz4bounty",
+    "stars": 955,
+    "description": "1337 Wordlists for Bug Bounty Hunting",
+    "topics": [
+      "bruteforce",
+      "bugbounty",
+      "dirsearch",
+      "ffuf",
+      "fuzz",
+      "fuzz4bounty",
+      "wordlist"
+    ],
+    "language": "Go"
+  },
+  {
+    "owner": "Olshansk",
+    "repo": "rss-feeds",
+    "stars": 523,
+    "description": "Generate RSS feeds for all the blogs that don't have one",
     "topics": [],
     "language": "Python"
   },
   {
-    "owner": "setarcos",
-    "repo": "ch341prog",
-    "stars": 416,
-    "description": "A simple SPI/IIC programer based on ch341A.",
+    "owner": "ColeMurray",
+    "repo": "background-agents",
+    "stars": 1600,
+    "description": "An open-source background agents coding system",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "Agents365-ai",
+    "repo": "video-podcast-maker",
+    "stars": 617,
+    "description": "AI-powered video podcast creation skill for coding agents. Supports Bilibili & YouTube, multi-language (zh-CN/en-US), 6 TTS engines (Edge/Azure/ElevenLabs/OpenAI/Doubao/CosyVoice), 4K Remotion rendering.",
     "topics": [
-      "chip-programmer",
-      "prom-writer"
+      "agent-skills",
+      "ai-video",
+      "bilibili",
+      "claude-code",
+      "claude-code-skill",
+      "claude-skills",
+      "elevenlabs",
+      "openai-tts",
+      "openclaw",
+      "openclaw-skills",
+      "remotion",
+      "skill-md",
+      "skillsmp",
+      "tts",
+      "video-pipeline",
+      "video-podcast",
+      "youtube"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "RiseInRose",
+    "repo": "MiniGPT-4-ZH",
+    "stars": 859,
+    "description": "MiniGPT-4 中文部署翻译 完善部署细节",
+    "topics": [],
+    "language": "Python"
+  },
+  {
+    "owner": "cbsd",
+    "repo": "cbsd",
+    "stars": 758,
+    "description": "Yet one more wrapper around jail, bhyve, QEMU and XEN",
+    "topics": [
+      "bhyve",
+      "cbsd",
+      "freebsd",
+      "jail",
+      "qemu",
+      "qemu-kvm",
+      "virtualization",
+      "xen"
     ],
     "language": "C"
   },
   {
-    "owner": "tokio-rs",
-    "repo": "toasty",
-    "stars": 2266,
-    "description": "An async ORM for Rust",
-    "topics": [],
-    "language": "Rust"
-  },
-  {
-    "owner": "Adam-CAD",
-    "repo": "CADAM",
-    "stars": 2134,
-    "description": "CADAM is the open source text-to-CAD web application",
+    "owner": "Tencent",
+    "repo": "WeKnora",
+    "stars": 14018,
+    "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
     "topics": [
-      "agents",
+      "agent",
+      "agentic",
       "ai",
-      "ai-agents",
-      "cad",
-      "llms",
-      "openscad",
-      "react",
-      "text-to-cad",
-      "wasm"
+      "chatbot",
+      "embeddings",
+      "evaluation",
+      "generative-ai",
+      "golang",
+      "knowledge-base",
+      "llm",
+      "multi-tenant",
+      "multimodel",
+      "ollama",
+      "openai",
+      "question-answering",
+      "rag",
+      "reranking",
+      "semantic-search",
+      "vector-search",
+      "wiki"
     ],
-    "language": "TypeScript"
+    "language": "Go"
   },
   {
-    "owner": "hoowhoami",
-    "repo": "EchoMusic",
-    "stars": 1284,
-    "description": "🎉 一个简约的第三方酷狗概念版音乐播放器",
-    "topics": [
-      "flutter",
-      "kugou",
-      "music",
-      "music-player"
-    ],
-    "language": "Vue"
-  },
-  {
-    "owner": "slackhq",
-    "repo": "circuit",
-    "stars": 1826,
-    "description": "⚡️ A Compose-driven architecture for Kotlin and Android applications.",
-    "topics": [
-      "android",
-      "architecture",
-      "compose",
-      "kotlin",
-      "mvi",
-      "udf"
-    ],
-    "language": "Kotlin"
-  },
-  {
-    "owner": "ZeroZ-lab",
-    "repo": "cc-design",
-    "stars": 334,
-    "description": "High-fidelity HTML design and prototype guidance skill for AI agents",
+    "owner": "jason5ng32",
+    "repo": "OhEarningsCal",
+    "stars": 485,
+    "description": "使用日历软件订阅美股的财报日期",
     "topics": [],
     "language": "JavaScript"
   },
   {
-    "owner": "kweaver-ai",
-    "repo": "kweaver-core",
-    "stars": 507,
-    "description": "KWeaver Core is a harness-first foundation for enterprise decision agents. It turns fragmented data, knowledge, tools, and policies into governed context, safe execution, and verifiable feedback loops. With semantic modeling, real-time access, runtime control, and TraceAI, it helps AI systems reason, adapt, and act reliable in complex enterprises.",
-    "topics": [
-      "agents",
-      "bkn",
-      "bussiness-knowledge-network",
-      "decision-intelligence",
-      "harness",
-      "harness-engineering",
-      "knowledge-network",
-      "ontology"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "tom-doerr",
-    "repo": "repo_posts",
-    "stars": 261,
-    "description": null,
+    "owner": "kakaxi-1",
+    "repo": "IPTV",
+    "stars": 440,
+    "description": "📺IPTV 神源收集站",
     "topics": [],
-    "language": "Python"
+    "language": "JavaScript"
   },
   {
-    "owner": "hotovo",
-    "repo": "aider-desk",
-    "stars": 1148,
-    "description": "Platform for AI-powered software engineers",
+    "owner": "shadps4-emu",
+    "repo": "shadPS4",
+    "stars": 30918,
+    "description": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
     "topics": [
-      "ai",
-      "ai-coding",
-      "ai-coding-tools",
-      "ai-developer-tools",
-      "ai-development",
-      "coding",
-      "electron-app"
+      "cpp",
+      "cpp23",
+      "emulation",
+      "emulator",
+      "imgui",
+      "linux",
+      "macos",
+      "playstation4",
+      "ps4",
+      "sdl3",
+      "vulkan",
+      "windows"
     ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "obs-websocket-community-projects",
-    "repo": "obs-websocket-js",
-    "stars": 759,
-    "description": "Consumes https://github.com/obsproject/obs-websocket",
-    "topics": [
-      "javascript",
-      "nodejs",
-      "obs",
-      "obs-studio",
-      "obs-websocket",
-      "websocket-client"
-    ],
-    "language": "TypeScript"
-  },
-  {
-    "owner": "gfpcom",
-    "repo": "free-proxy-list",
-    "stars": 293,
-    "description": "🚀 The Best Free HTTP, SOCKS4/SOCKS5, SSL,SS/SSR Proxy List,V2Ray/XRay(Vmess/Vless) Configs, Tuic, Wireguard, Hyeseria, Trojan-Go/Trojan-GFW Servers  - 🔄 Updated Every 30 Minutes⏰",
-    "topics": [
-      "anonymous-proxy",
-      "free-proxy-list",
-      "google-proxy",
-      "http-proxy",
-      "hyeseria",
-      "hyeseria2",
-      "proxy-checker",
-      "proxy-list",
-      "proxy-lists",
-      "shadowsocks",
-      "socks-proxy",
-      "socks4-proxy",
-      "socks5-proxy",
-      "ssl-proxy",
-      "trojan-go",
-      "tuic",
-      "v2ray",
-      "vless",
-      "vmess",
-      "wireguard"
-    ],
-    "language": "Go"
-  },
-  {
-    "owner": "yandex",
-    "repo": "yatool",
-    "stars": 215,
-    "description": "Yatool is a cross-platform distribution, building, testing, and debugging toolkit focused on monorepositories",
-    "topics": [],
     "language": "C++"
   },
   {
-    "owner": "firstcontributions",
-    "repo": "first-contributions",
-    "stars": 53557,
-    "description": "🚀✨ Help beginners to contribute to open source projects",
+    "owner": "Xilinx",
+    "repo": "XRT",
+    "stars": 658,
+    "description": "Run Time for AIE and FPGA based platforms",
     "topics": [
-      "beginner",
-      "beginner-friendly",
-      "contribute",
-      "contribution",
-      "contributions-welcome",
-      "good-first-contribution",
-      "good-first-issue",
-      "good-first-pr",
-      "open-source",
-      "tutorial"
+      "fpga",
+      "linux-kernel",
+      "vitis",
+      "xrt"
     ],
+    "language": "C++"
+  },
+  {
+    "owner": "SoliSpirit",
+    "repo": "v2ray-configs",
+    "stars": 478,
+    "description": "V2Ray configs for multiple protocols and countries, updated every 15 minutes for fast, secure connections!",
+    "topics": [],
     "language": null
+  },
+  {
+    "owner": "xtensor-stack",
+    "repo": "xsimd",
+    "stars": 2668,
+    "description": "C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical functions (SSE, AVX, AVX512, NEON, SVE, WebAssembly, VSX, RISC-V))",
+    "topics": [
+      "avx",
+      "avx512",
+      "cpp",
+      "cpp17",
+      "mathematical-functions",
+      "neon",
+      "simd",
+      "simd-instructions",
+      "simd-intrinsics",
+      "sse",
+      "sve",
+      "vectorization",
+      "vsx",
+      "wasm"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "keplergl",
+    "repo": "kepler.gl",
+    "stars": 11779,
+    "description": "Kepler.gl is a powerful open source geospatial analysis tool for large-scale data sets.",
+    "topics": [
+      "data-visualization",
+      "geospatial",
+      "kepler",
+      "mapbox",
+      "visualization"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "pixie-io",
+    "repo": "pixie",
+    "stars": 6429,
+    "description": "Instant Kubernetes-Native Application Observability",
+    "topics": [
+      "aks",
+      "apache-arrow",
+      "cloud-native",
+      "cncf",
+      "distributed-systems",
+      "ebpf",
+      "eks",
+      "gke",
+      "golang",
+      "kubernetes",
+      "machine-learning",
+      "metrics",
+      "minikube",
+      "monitoring",
+      "observability",
+      "pandas",
+      "pixie",
+      "px",
+      "px-run",
+      "vega"
+    ],
+    "language": "C++"
+  },
+  {
+    "owner": "NetBSDfr",
+    "repo": "smolBSD",
+    "stars": 649,
+    "description": "smolBSD is a tiny BSD UNIX (NetBSD) system creation tool, primarily aimed at building modern, lightweight, fast micro VMs",
+    "topics": [
+      "bsd",
+      "microvm",
+      "netbsd",
+      "qemu"
+    ],
+    "language": "Shell"
+  },
+  {
+    "owner": "ulsklyc",
+    "repo": "oikos",
+    "stars": 374,
+    "description": "Self-hosted family planner - tasks, calendars, shopping, meals, budget. Your data, your server.  ",
+    "topics": [
+      "docker",
+      "family",
+      "family-planner",
+      "home-automation",
+      "open-source",
+      "planner-app",
+      "privacy-first",
+      "progressive-web-app",
+      "pwa",
+      "self-hosted",
+      "selfhosted",
+      "selfhosted-apps"
+    ],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "Milkdown",
+    "repo": "milkdown",
+    "stars": 11401,
+    "description": "🍼 Plugin driven WYSIWYG  markdown editor framework.",
+    "topics": [
+      "editor",
+      "gfm",
+      "javascript",
+      "markdown",
+      "markdown-editor",
+      "milkdown",
+      "prosemirror",
+      "remarkjs",
+      "rich-text-editor",
+      "typescript",
+      "wysiwyg",
+      "wysiwyg-editor"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "tobihagemann",
+    "repo": "turbo",
+    "stars": 289,
+    "description": "A composable dev process for Claude Code, packaged as modular skills.",
+    "topics": [
+      "agent-skills",
+      "claude-code",
+      "claude-skills",
+      "developer-tools",
+      "skills"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "renmu123",
+    "repo": "biliLive-tools",
+    "stars": 1304,
+    "description": "直播一站式处理工具，支持直播录制&视频处理&弹幕处理&录播姬自动上传",
+    "topics": [],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "Drop-OSS",
+    "repo": "drop",
+    "stars": 631,
+    "description": "Drop is an open-source game distribution platform. Mirror of https://lab.droposs.org/drop-oss/drop",
+    "topics": [],
+    "language": "Vue"
+  },
+  {
+    "owner": "abap2UI5",
+    "repo": "abap2UI5",
+    "stars": 359,
+    "description": "Build UI5 Apps Purely in ABAP",
+    "topics": [
+      "abap",
+      "abap2ui5",
+      "abapgit",
+      "fiori",
+      "open-source",
+      "openui5",
+      "sapui5",
+      "ui5"
+    ],
+    "language": "ABAP"
+  },
+  {
+    "owner": "Priivacy-ai",
+    "repo": "spec-kitty",
+    "stars": 1156,
+    "description": "Spec-Driven Development for serious software developers. Spec Coding with with Claude, Cursor, Gemini, Codex. Kanban dashboard, git worktrees, auto-merge and more.",
+    "topics": [
+      "agentic-coding",
+      "ai-agents",
+      "ai-coding-workflow",
+      "ai-development-dashboard",
+      "ai-jira",
+      "ai-progress-tracking",
+      "claude-code",
+      "code-workflow",
+      "coding-agent-orchestration",
+      "cursor-agent",
+      "development-kanban",
+      "gemini-cli",
+      "github-copilot",
+      "kanban-workflow",
+      "multi-agent-support",
+      "spec-driven-development",
+      "spec-workflow-automation",
+      "structured-development",
+      "teams",
+      "windsurf"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "cypress-io",
+    "repo": "eslint-plugin-cypress",
+    "stars": 726,
+    "description": "An ESLint plugin for projects that use Cypress",
+    "topics": [],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "kubewharf",
+    "repo": "katalyst-core",
+    "stars": 550,
+    "description": "Katalyst aims to provide a universal solution to help improve resource utilization and optimize the overall costs in the cloud. This is the core components in Katalyst system, including multiple agents and centralized components",
+    "topics": [],
+    "language": "Go"
+  },
+  {
+    "owner": "isard-vdi",
+    "repo": "isard",
+    "stars": 236,
+    "description": "Isard VDI. Open Source KVM Virtual Desktops based on KVM Linux and dockers. Please use https://gitlab.com/isard/isardvdi",
+    "topics": [
+      "desktop",
+      "gpu",
+      "hypervisor",
+      "kvm",
+      "linux",
+      "orquestrate",
+      "qemu",
+      "rethinkdb",
+      "vdi",
+      "virtualization"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "apache",
+    "repo": "auron",
+    "stars": 1755,
+    "description": "The Auron accelerator for distributed computing framework (e.g., Spark) leverages native vectorized execution to accelerate query processing",
+    "topics": [
+      "arrow",
+      "big-data",
+      "datafusion",
+      "rust-lang",
+      "spark"
+    ],
+    "language": "Rust"
+  },
+  {
+    "owner": "Yu9191",
+    "repo": "Rewrite",
+    "stars": 263,
+    "description": null,
+    "topics": [],
+    "language": "JavaScript"
+  },
+  {
+    "owner": "apecloud",
+    "repo": "ApeRAG",
+    "stars": 1154,
+    "description": "ApeRAG: Production-ready GraphRAG with multi-modal indexing, AI agents, MCP support, and scalable K8s deployment",
+    "topics": [
+      "agents",
+      "context-engineering",
+      "graphrag",
+      "knowledge-graph",
+      "mcp"
+    ],
+    "language": "Python"
+  },
+  {
+    "owner": "SonarSource",
+    "repo": "SonarJS",
+    "stars": 1229,
+    "description": "SonarSource Static Analyzer for JavaScript and TypeScript",
+    "topics": [
+      "code-quality",
+      "javascript",
+      "language-team",
+      "sonarcloud",
+      "sonarqube",
+      "static-analysis",
+      "static-analyzer",
+      "static-code-analysis",
+      "typescript"
+    ],
+    "language": "TypeScript"
+  },
+  {
+    "owner": "frappe",
+    "repo": "press",
+    "stars": 503,
+    "description": "Full service cloud hosting for the Frappe stack - powers Frappe Cloud",
+    "topics": [
+      "cloud",
+      "docker",
+      "erpnext",
+      "frappe",
+      "hosting",
+      "saas"
+    ],
+    "language": "Python"
   }
 ]
