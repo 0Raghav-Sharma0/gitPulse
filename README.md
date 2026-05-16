@@ -280,6 +280,43 @@ http://localhost:3000
 
 ---
 
+### Docker
+
+Build and run the app with Docker Compose:
+
+```bash
+cp .env.example .env.local
+# edit .env.local with required secrets
+
+docker compose up --build
+```
+
+The app will be available at:
+
+```bash
+http://localhost:3000
+```
+
+The Compose stack includes:
+
+- `db` — PostgreSQL 16
+- `redis` — Redis 7
+- `app` — Next.js Docker container
+
+If you want a standalone image instead of Compose:
+
+```bash
+docker build -t gitpulse .
+
+docker run -p 3000:3000 \
+  --env-file .env.local \
+  --env DATABASE_URL=postgres://gitpulse:gitpulse@db:5432/gitpulse \
+  --env DIRECT_URL=postgres://gitpulse:gitpulse@db:5432/gitpulse \
+  gitpulse
+```
+
+---
+
 # 🔮 Roadmap
 
 Future improvements planned for GitPulse:

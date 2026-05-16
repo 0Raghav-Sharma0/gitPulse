@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "prisma generate && next dev",
     "build": "prisma generate && next build",
+    "build:vercel": "prisma generate && node scripts/prisma-deploy.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "lint:report": "node scripts/eslint-baseline.mjs report",

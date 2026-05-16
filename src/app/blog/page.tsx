@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -12,7 +13,13 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndex() {
-  const posts: BlogPost[] = await getPublishedPosts();
+  let posts: BlogPost[] = [];
+  try {
+    posts = await getPublishedPosts();
+  } catch (error) {
+    console.warn("⚠️ Could not load published blog posts during build or runtime", error);
+  }
+
   const featuredPost = posts[0];
   const regularPosts = posts.slice(1);
 

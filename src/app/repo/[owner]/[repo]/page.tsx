@@ -44,7 +44,7 @@ function isValidOwnerRepo(owner: string, repo: string): boolean {
 
 function buildRepoSignInHref(owner: string, repo: string): string {
     const callbackUrl = encodeURIComponent(`/repo/${owner}/${repo}`);
-    return `/api/auth/signin?callbackUrl=${callbackUrl}`;
+    return `/login?callbackUrl=${callbackUrl}`;
 }
 
 function RepoUnavailableState({ owner, repo }: { owner: string; repo: string }) {

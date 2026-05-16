@@ -1,13 +1,20 @@
+export const dynamic = "force-dynamic";
 import { MetadataRoute } from "next";
+import type { BlogPost } from "@prisma/client";
 import { getCanonicalSiteUrl } from "@/lib/site-url";
 import { getPublishedPosts } from "@/lib/services/blog-service";
 import { getCuratedRepos, getIndexableTopics } from "@/lib/repo-catalog";
 
-export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = getCanonicalSiteUrl();
-    const blogPosts = await getPublishedPosts();
+    let blogPosts: BlogPost[] = [];
+
+    try {
+        blogPosts = await getPublishedPosts();
+    } catch (error) {
+        console.error("Failed to fetch published posts for sitemap; continuing with default routes.", error);
+    }
 
     const defaultRoutes: MetadataRoute.Sitemap = [
         {

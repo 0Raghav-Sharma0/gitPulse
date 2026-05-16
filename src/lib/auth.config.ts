@@ -1,15 +1,36 @@
 import type { NextAuthConfig } from "next-auth";
 import GitHub from "next-auth/providers/github";
+import {
+    getAuthSecret,
+    getGitHubOAuthConfigError,
+    getGitHubOAuthCredentials,
+} from "./auth-env";
 import { INVALID_SESSION_ERROR_CODE } from "./session-guard";
 
+function buildGitHubProvider() {
+    if (getGitHubOAuthConfigError()) {
+        return null;
+    }
+
+    const { clientId, clientSecret } = getGitHubOAuthCredentials();
+    return GitHub({
+        clientId,
+        clientSecret,
+        authorization: {
+            params: {
+                scope: "read:user user:email repo",
+            },
+        },
+    });
+}
+
+const githubProvider = buildGitHubProvider();
+
 const authConfig: NextAuthConfig = {
-    secret: process.env.AUTH_SECRET,
-    providers: [
-        GitHub({
-            clientId: process.env.AUTH_GITHUB_ID,
-            clientSecret: process.env.AUTH_GITHUB_SECRET,
-        }),
-    ],
+    secret: getAuthSecret(),
+    trustHost: true,
+    useSecureCookies: process.env.NODE_ENV === "production",
+    providers: githubProvider ? [githubProvider] : [],
     callbacks: {
         authorized({ auth, request: { nextUrl } }) {
             const isLoggedIn = !!auth?.user;
@@ -60,7 +81,7 @@ const authConfig: NextAuthConfig = {
         },
     },
     pages: {
-        signIn: "/",
+        signIn: "/login",
     },
 };
 

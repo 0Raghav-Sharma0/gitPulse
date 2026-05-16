@@ -9,11 +9,19 @@ import { BlogPost } from "@prisma/client";
 import { Metadata } from "next";
 
 // Generates static params for all blog posts
+export const dynamic = "force-dynamic";
 export async function generateStaticParams() {
-  const posts: BlogPost[] = await getPublishedPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  try {
+    const posts: BlogPost[] = await getPublishedPosts();
+    return posts.map((post) => ({
+      slug: post.slug,
+    }));
+  } catch (error) {
+    // During Docker build, the database may not be available yet.
+    // Return empty array to skip static generation; routes will be generated on-demand.
+    console.warn("⚠️ Could not generate blog static params - database may not be available during build. Blog routes will be generated on-demand.");
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

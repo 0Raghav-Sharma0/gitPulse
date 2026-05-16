@@ -1,0 +1,63 @@
+# Production stack — use with a server/VPS (not Vercel).
+#
+# Setup:
+#   cp .env.production.example .env.production
+#   # fill in secrets and set APP_URL to your public HTTPS URL
+#   docker compose -f docker-compose.prod.yml up -d --build
+#
+# GitHub OAuth callback (add in GitHub OAuth App settings):
+#   https://YOUR_DOMAIN/api/auth/callback/github
+
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-gitpulse}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env.production}
+      POSTGRES_DB: ${POSTGRES_DB:-gitpulse}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-gitpulse} -d ${POSTGRES_DB:-gitpulse}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DATABASE_URL: postgres://${POSTGRES_USER:-gitpulse}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-gitpulse}
+        DIRECT_URL: postgres://${POSTGRES_USER:-gitpulse}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-gitpulse}
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    env_file:
+      - .env.production
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-gitpulse}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-gitpulse}
+      DIRECT_URL: postgres://${POSTGRES_USER:-gitpulse}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-gitpulse}
+      REDIS_URL: redis://redis:6379
+      NEXT_PUBLIC_APP_URL: ${APP_URL:?Set APP_URL in .env.production}
+      AUTH_URL: ${APP_URL}
+      NEXTAUTH_URL: ${APP_URL}
+      NEXTAUTH_URL_INTERNAL: http://app:3000
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    command: sh -c "npx prisma migrate deploy && npm run start"
+
+volumes:
+  db_data:
+  redis_data:

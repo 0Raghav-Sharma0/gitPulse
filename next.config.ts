@@ -48,6 +48,10 @@ export default withPWA({
   },
   runtimeCaching: [
     {
+      urlPattern: /\/api\/auth\/.*/i,
+      handler: 'NetworkOnly',
+    },
+    {
       urlPattern: /^https:\/\/fonts\.(?:gstatic|googleapis)\.com\/.*/i,
       handler: 'CacheFirst',
       options: {
