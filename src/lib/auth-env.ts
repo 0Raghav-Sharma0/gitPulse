@@ -38,3 +38,22 @@ export function getGitHubOAuthCredentials(): {
 export function getAuthSecret(): string | undefined {
     return readEnv("AUTH_SECRET") ?? readEnv("NEXTAUTH_SECRET");
 }
+
+export function getAuthConfigErrors(): string[] {
+    const errors: string[] = [];
+    const oauthError = getGitHubOAuthConfigError();
+    if (oauthError) {
+        errors.push(oauthError);
+    }
+    if (!getAuthSecret()) {
+        errors.push(
+            "Set AUTH_SECRET in Vercel (run: openssl rand -base64 32).",
+        );
+    }
+    if (!readEnv("DATABASE_URL")) {
+        errors.push(
+            "Set DATABASE_URL (Neon pooled URL) and DIRECT_URL (Neon direct URL) in Vercel Production.",
+        );
+    }
+    return errors;
+}

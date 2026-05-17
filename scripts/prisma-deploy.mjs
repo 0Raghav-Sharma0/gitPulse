@@ -1,4 +1,7 @@
 import { spawnSync } from "node:child_process";
+import { ensureDatabaseEnv } from "./resolve-db-env.mjs";
+
+ensureDatabaseEnv();
 
 const MAX_ATTEMPTS = Number.parseInt(process.env.PRISMA_DEPLOY_MAX_ATTEMPTS ?? "3", 10);
 const RETRY_DELAY_MS = Number.parseInt(process.env.PRISMA_DEPLOY_RETRY_DELAY_MS ?? "15000", 10);

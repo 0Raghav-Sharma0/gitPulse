@@ -5,6 +5,7 @@ import {
     getGitHubOAuthConfigError,
     getGitHubOAuthCredentials,
 } from "./auth-env";
+import { prisma } from "./db";
 import { INVALID_SESSION_ERROR_CODE } from "./session-guard";
 
 function buildGitHubProvider() {
@@ -42,10 +43,28 @@ const authConfig: NextAuthConfig = {
             return true;
         },
         async jwt({ token, profile, account, user }) {
+            if (account?.provider === "github" && account.providerAccountId) {
+                const linked = await prisma.account.findUnique({
+                    where: {
+                        provider_providerAccountId: {
+                            provider: "github",
+                            providerAccountId: account.providerAccountId,
+                        },
+                    },
+                    include: { user: true },
+                });
+                if (linked?.user) {
+                    token.id = linked.user.id;
+                    if (linked.user.githubLogin) {
+                        token.username = linked.user.githubLogin;
+                    }
+                }
+            }
+
             const candidateUserId = user?.id ?? token.id ?? token.sub;
             token.id = typeof candidateUserId === "string" ? candidateUserId : undefined;
-            if (profile?.login) {
-                token.username = profile.login;
+            if (profile && "login" in profile && profile.login) {
+                token.username = String(profile.login);
             }
             if (account?.access_token) {
                 token.accessToken = account.access_token;

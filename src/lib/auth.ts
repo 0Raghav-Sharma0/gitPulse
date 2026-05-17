@@ -1,40 +1,42 @@
 import NextAuth from "next-auth";
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import { linkGithubOAuthUser } from "./auth-oauth-db";
 import { queueWelcomeEmailDelivery } from "./emails/delivery-service";
 import authConfig from "./auth.config";
-import { prisma } from "./db";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
     ...authConfig,
-    adapter: PrismaAdapter(prisma),
     session: {
         strategy: "jwt",
     },
     callbacks: {
         ...authConfig.callbacks,
-        async signIn({ user, profile }) {
-            if (user?.id && user?.email) {
-                const username = profile?.login || user.name || user.email.split("@")[0];
-                queueWelcomeEmailDelivery({
-                    userId: user.id,
-                    toEmail: user.email,
-                    username: String(username),
-                }).catch((error: unknown) => {
-                    console.error("Failed to queue welcome email:", error);
-                });
+        async signIn({ account, profile }) {
+            if (account?.provider !== "github") {
+                return true;
             }
 
-            if (user?.id && profile?.login) {
-                await prisma.user
-                    .update({
-                        where: { id: user.id },
-                        data: { githubLogin: profile.login },
-                    })
-                    .catch((error: unknown) => {
-                        console.error("Failed to persist githubLogin:", error);
+            try {
+                const dbUser = await linkGithubOAuthUser(account, profile);
+                if (dbUser.email) {
+                    const username =
+                        dbUser.githubLogin ||
+                        dbUser.name ||
+                        dbUser.email.split("@")[0];
+                    queueWelcomeEmailDelivery({
+                        userId: dbUser.id,
+                        toEmail: dbUser.email,
+                        username: String(username),
+                    }).catch((error: unknown) => {
+                        console.error("Failed to queue welcome email:", error);
                     });
+                }
+                return true;
+            } catch (error: unknown) {
+                const message =
+                    error instanceof Error ? error.message : String(error);
+                console.error("[auth] GitHub sign-in database error:", message);
+                return false;
             }
-            return true;
         },
     },
 });
