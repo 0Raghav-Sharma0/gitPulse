@@ -7,8 +7,8 @@ const ERROR_COPY: Record<
     Configuration: {
         title: "Sign-in could not be completed",
         description:
-            "The server could not finish GitHub login. On Vercel this is usually a missing or unreachable database.",
-        hint: "Add DATABASE_URL and DIRECT_URL (Neon / Vercel Postgres), run migrations, then redeploy. Sign in only at https://git-pulse-bice.vercel.app — not preview deployment URLs.",
+            "GitHub authorized the app, but the server could not finish creating your session.",
+        hint: "Open /api/health — if database is ok, try signing in again at https://git-pulse-bice.vercel.app/login (not a preview URL). If it still fails, check Vercel → Logs for lines starting with [auth].",
     },
     AccessDenied: {
         title: "Access denied",

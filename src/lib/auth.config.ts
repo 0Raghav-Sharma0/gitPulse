@@ -42,27 +42,35 @@ const authConfig: NextAuthConfig = {
             }
             return true;
         },
-        async jwt({ token, profile, account, user }) {
+        async jwt({ token, profile, account }) {
             if (account?.provider === "github" && account.providerAccountId) {
-                const linked = await prisma.account.findUnique({
-                    where: {
-                        provider_providerAccountId: {
-                            provider: "github",
-                            providerAccountId: account.providerAccountId,
+                try {
+                    const linked = await prisma.account.findUnique({
+                        where: {
+                            provider_providerAccountId: {
+                                provider: "github",
+                                providerAccountId: account.providerAccountId,
+                            },
                         },
-                    },
-                    include: { user: true },
-                });
-                if (linked?.user) {
-                    token.id = linked.user.id;
-                    if (linked.user.githubLogin) {
-                        token.username = linked.user.githubLogin;
+                        include: { user: true },
+                    });
+                    if (linked?.user) {
+                        token.id = linked.user.id;
+                        if (linked.user.githubLogin) {
+                            token.username = linked.user.githubLogin;
+                        }
                     }
+                } catch (error: unknown) {
+                    const message =
+                        error instanceof Error ? error.message : String(error);
+                    console.error("[auth] jwt account lookup failed:", message);
                 }
             }
 
-            const candidateUserId = user?.id ?? token.id ?? token.sub;
-            token.id = typeof candidateUserId === "string" ? candidateUserId : undefined;
+            // Do not use OAuth `user.id` — for GitHub it is a numeric provider id, not our Prisma cuid.
+            if (!token.id && typeof token.sub === "string") {
+                token.id = token.sub;
+            }
             if (profile && "login" in profile && profile.login) {
                 token.username = String(profile.login);
             }

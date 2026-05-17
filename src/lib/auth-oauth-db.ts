@@ -92,30 +92,53 @@ export async function linkGithubOAuthUser(
         return existingUser;
     }
 
-    return prisma.user.create({
-        data: {
-            email,
-            emailVerified: email ? new Date() : undefined,
-            name:
-                typeof profile?.name === "string"
-                    ? profile.name
-                    : githubLogin,
-            image:
-                typeof profile?.image === "string" ? profile.image : undefined,
-            githubLogin,
-            accounts: {
-                create: {
-                    type: account.type,
-                    provider: "github",
-                    providerAccountId,
-                    access_token: account.access_token ?? undefined,
-                    refresh_token: account.refresh_token ?? undefined,
-                    expires_at: account.expires_at ?? undefined,
-                    token_type: account.token_type ?? undefined,
-                    scope: account.scope ?? undefined,
-                    id_token: account.id_token ?? undefined,
+    if (!githubLogin && !email) {
+        throw new Error(
+            "GitHub profile is missing login and email; ensure the OAuth app has user:email scope.",
+        );
+    }
+
+    try {
+        return await prisma.user.create({
+            data: {
+                email,
+                emailVerified: email ? new Date() : undefined,
+                name:
+                    typeof profile?.name === "string"
+                        ? profile.name
+                        : githubLogin,
+                image:
+                    typeof profile?.image === "string"
+                        ? profile.image
+                        : undefined,
+                githubLogin,
+                accounts: {
+                    create: {
+                        type: account.type,
+                        provider: "github",
+                        providerAccountId,
+                        access_token: account.access_token ?? undefined,
+                        refresh_token: account.refresh_token ?? undefined,
+                        expires_at: account.expires_at ?? undefined,
+                        token_type: account.token_type ?? undefined,
+                        scope: account.scope ?? undefined,
+                        id_token: account.id_token ?? undefined,
+                    },
                 },
             },
-        },
-    });
+        });
+    } catch (error: unknown) {
+        if (
+            error instanceof Error &&
+            error.message.includes("Unique constraint")
+        ) {
+            const byLogin = githubLogin
+                ? await prisma.user.findUnique({ where: { githubLogin } })
+                : null;
+            if (byLogin) {
+                return byLogin;
+            }
+        }
+        throw error;
+    }
 }

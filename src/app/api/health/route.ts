@@ -40,6 +40,8 @@ export async function GET() {
 
     try {
         await prisma.$queryRaw`SELECT 1`;
+        await prisma.$queryRaw`SELECT 1 FROM "User" LIMIT 0`;
+        await prisma.$queryRaw`SELECT 1 FROM "Account" LIMIT 0`;
         checks.database = { ok: true };
     } catch (error) {
         checks.database = {
