@@ -331,6 +331,7 @@ Future improvements planned for GitPulse:
 
 <div align="center">
 
+  
 # 👨‍💻 Author
 
 **Raghav Sharma**
