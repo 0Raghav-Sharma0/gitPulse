@@ -17,6 +17,7 @@ function buildGitHubProvider() {
     return GitHub({
         clientId,
         clientSecret,
+        issuer: "https://github.com/login/oauth",
         authorization: {
             params: {
                 scope: "read:user user:email repo",
