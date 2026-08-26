@@ -1,4 +1,14 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+vi.mock("@/lib/auth", () => ({
+    auth: vi.fn().mockResolvedValue(null),
+}));
+
+vi.mock("@/lib/auth-oauth-db", () => ({
+    getGithubAccessTokenForUser: vi.fn().mockResolvedValue(undefined),
+    linkGithubOAuthUser: vi.fn(),
+}));
+
 import {
     getErrorStatus,
     isErrorWithMessage,

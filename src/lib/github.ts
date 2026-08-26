@@ -13,6 +13,12 @@ import {
   getCachedFilesBatch,
 } from "./cache";
 import { unstable_cache } from 'next/cache';
+import { auth } from "@/lib/auth";
+import { getGithubAccessTokenForUser } from "@/lib/auth-oauth-db";
+
+export interface GitHubRequestOptions {
+  accessToken?: string;
+}
 
 interface ErrorWithStatus {
   status?: number;
@@ -94,28 +100,109 @@ export function isGitHubRepo(value: unknown): value is GitHubRepo {
   );
 }
 
-// Validate GitHub token
-const githubToken = process.env.GITHUB_TOKEN;
-if (!githubToken) {
+if (!process.env.GITHUB_TOKEN) {
   console.warn("⚠️ GITHUB_TOKEN environment variable is not set - API rate limits will be very restrictive");
 }
 
-const octokit = new Octokit({
-  auth: githubToken,
-  request: {
-    // NOTE: cache:"no-store" disables HTTP caching for all GitHub API calls.
-    // This is intentional — it prevents stale data in edge/serverless deployments
-    // where the module reloads frequently. Caching is handled at the application
-    // layer via KV (see cache.ts) using SHA-based keys for automatic invalidation.
-    fetch: (url: string, options?: RequestInit) => {
-      return fetch(url, {
-        ...options,
-        cache: "no-store",
-        next: { revalidate: 0 }
-      });
+let cachedEnvTokenValid: boolean | null = null;
+
+async function getValidEnvGitHubToken(): Promise<string | undefined> {
+  const token = process.env.GITHUB_TOKEN?.trim();
+  if (!token) {
+    return undefined;
+  }
+
+  if (cachedEnvTokenValid === false) {
+    return undefined;
+  }
+  if (cachedEnvTokenValid === true) {
+    return token;
+  }
+
+  try {
+    const response = await fetch("https://api.github.com/rate_limit", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+      },
+      cache: "no-store",
+    });
+
+    if (response.status === 401) {
+      cachedEnvTokenValid = false;
+      console.warn(
+        "[github] GITHUB_TOKEN is invalid; using OAuth or unauthenticated requests instead",
+      );
+      return undefined;
+    }
+
+    cachedEnvTokenValid = true;
+    return token;
+  } catch {
+    return token;
+  }
+}
+
+async function resolveGitHubAuth(options?: GitHubRequestOptions): Promise<{
+  token: string | undefined;
+  isUserAuth: boolean;
+}> {
+  let userToken = options?.accessToken;
+  let sessionUserId: string | undefined;
+  let githubLogin: string | undefined;
+  let providerAccountId: string | undefined;
+
+  if (!userToken) {
+    try {
+      const session = await auth();
+      userToken = session?.accessToken;
+      sessionUserId = session?.user?.id;
+      githubLogin = session?.user?.username;
+    } catch {
+      // auth() is unavailable outside a request context (e.g. scripts/tests).
+    }
+  }
+
+  if (!userToken) {
+    userToken = await getGithubAccessTokenForUser({
+      userId: sessionUserId,
+      githubLogin,
+      providerAccountId,
+    });
+  }
+
+  const isUserAuth = Boolean(userToken);
+  const token = userToken || (await getValidEnvGitHubToken());
+  return { token, isUserAuth };
+}
+
+function createOctokit(authToken?: string): Octokit {
+  return new Octokit({
+    auth: authToken,
+    request: {
+      // NOTE: cache:"no-store" disables HTTP caching for all GitHub API calls.
+      // This is intentional — it prevents stale data in edge/serverless deployments
+      // where the module reloads frequently. Caching is handled at the application
+      // layer via KV (see cache.ts) using SHA-based keys for automatic invalidation.
+      fetch: (url: string, options?: RequestInit) => {
+        return fetch(url, {
+          ...options,
+          cache: "no-store",
+          next: { revalidate: 0 }
+        });
+      },
     },
-  },
-});
+  });
+}
+
+async function getRequestOctokit(options?: GitHubRequestOptions): Promise<{
+  octokit: Octokit;
+  isUserAuth: boolean;
+  token: string | undefined;
+}> {
+  const { token, isUserAuth } = await resolveGitHubAuth(options);
+  return { octokit: createOctokit(token), isUserAuth, token };
+}
 
 // In-memory caches for the current process lifetime.
 // NOTE: In Vercel serverless functions these Maps are effectively useless as a
@@ -234,17 +321,21 @@ const REPO_DETAILS_QUERY = `
 /**
  * Core Profile Fetcher (hit by unstable_cache)
  */
-async function getProfileRaw(username: string): Promise<GitHubProfile> {
-  // Check memory cache first
-  if (profileCache.has(username)) {
+async function getProfileRaw(username: string, options?: GitHubRequestOptions): Promise<GitHubProfile> {
+  const { octokit, isUserAuth } = await getRequestOctokit(options);
+
+  // Check memory cache first (public profile data only)
+  if (!isUserAuth && profileCache.has(username)) {
     return profileCache.get(username)!;
   }
 
   // Check KV cache
-  const cached = await getCachedProfileData(username);
-  if (cached && isGitHubProfile(cached)) {
-    profileCache.set(username, cached);
-    return cached;
+  if (!isUserAuth) {
+    const cached = await getCachedProfileData(username);
+    if (cached && isGitHubProfile(cached)) {
+      profileCache.set(username, cached);
+      return cached;
+    }
   }
 
   // Fetch from GitHub
@@ -253,8 +344,10 @@ async function getProfileRaw(username: string): Promise<GitHubProfile> {
   });
 
   // Cache in both memory and KV
-  profileCache.set(username, data);
-  await cacheProfileData(username, data);
+  if (!isUserAuth) {
+    profileCache.set(username, data);
+    await cacheProfileData(username, data);
+  }
 
   return data;
 }
@@ -271,19 +364,22 @@ export const getProfile = unstable_cache(
   }
 );
 
-export async function getRepo(owner: string, repo: string): Promise<GitHubRepo> {
+export async function getRepo(owner: string, repo: string, options?: GitHubRequestOptions): Promise<GitHubRepo> {
+  const { octokit, isUserAuth } = await getRequestOctokit(options);
   const cacheKey = `${owner}/${repo}`;
 
   // Check memory cache
-  if (repoCache.has(cacheKey)) {
+  if (!isUserAuth && repoCache.has(cacheKey)) {
     return repoCache.get(cacheKey)!;
   }
 
   // Check KV cache
-  const cached = await getCachedRepoMetadata(owner, repo);
-  if (cached && isGitHubRepo(cached)) {
-    repoCache.set(cacheKey, cached);
-    return cached;
+  if (!isUserAuth) {
+    const cached = await getCachedRepoMetadata(owner, repo);
+    if (cached && isGitHubRepo(cached)) {
+      repoCache.set(cacheKey, cached);
+      return cached;
+    }
   }
 
   // Fetch from GitHub
@@ -293,8 +389,10 @@ export async function getRepo(owner: string, repo: string): Promise<GitHubRepo> 
   });
 
   // Cache in both memory and KV
-  repoCache.set(cacheKey, data);
-  await cacheRepoMetadata(owner, repo, data);
+  if (!isUserAuth) {
+    repoCache.set(cacheKey, data);
+    await cacheRepoMetadata(owner, repo, data);
+  }
 
   return data;
 }
@@ -303,7 +401,8 @@ export async function getRepo(owner: string, repo: string): Promise<GitHubRepo> 
  * Fetch latest commit SHA for the repository default branch.
  * Intentionally bypasses app-level metadata cache to keep revision checks fresh.
  */
-export async function getDefaultBranchHeadSha(owner: string, repo: string): Promise<string> {
+export async function getDefaultBranchHeadSha(owner: string, repo: string, options?: GitHubRequestOptions): Promise<string> {
+  const { octokit } = await getRequestOctokit(options);
   const { data: repoData } = await octokit.rest.repos.get({
     owner,
     repo,
@@ -317,7 +416,9 @@ export async function getDefaultBranchHeadSha(owner: string, repo: string): Prom
   return branchData.commit.sha;
 }
 
-export async function getRepoFileTree(owner: string, repo: string, branch: string = "main"): Promise<{ tree: FileNode[], hiddenFiles: { path: string; reason: string }[] }> {
+export async function getRepoFileTree(owner: string, repo: string, branch: string = "main", options?: GitHubRequestOptions): Promise<{ tree: FileNode[], hiddenFiles: { path: string; reason: string }[] }> {
+  const { octokit, isUserAuth } = await getRequestOctokit(options);
+
   // Get the tree recursively
   // First, get the branch SHA
   let sha = branch;
@@ -334,9 +435,11 @@ export async function getRepoFileTree(owner: string, repo: string, branch: strin
   }
 
   // Check KV cache for tree
-  const cachedTree = await getCachedFileTree(owner, repo, sha);
-  if (cachedTree) {
-    return { tree: cachedTree as FileNode[], hiddenFiles: [] }; // Hidden files not cached separately but that's ok
+  if (!isUserAuth) {
+    const cachedTree = await getCachedFileTree(owner, repo, sha);
+    if (cachedTree) {
+      return { tree: cachedTree as FileNode[], hiddenFiles: [] }; // Hidden files not cached separately but that's ok
+    }
   }
 
   const { data } = await octokit.rest.git.getTree({
@@ -390,7 +493,9 @@ export async function getRepoFileTree(owner: string, repo: string, branch: strin
   }));
 
   // Cache the minimal tree
-  await cacheFileTree(owner, repo, sha, minimalTree);
+  if (!isUserAuth) {
+    await cacheFileTree(owner, repo, sha, minimalTree);
+  }
 
   return { tree: minimalTree, hiddenFiles };
 }
@@ -398,15 +503,20 @@ export async function getRepoFileTree(owner: string, repo: string, branch: strin
 /**
  * Fetch enhanced repository details using GraphQL
  */
-export async function getRepoDetailsGraphQL(owner: string, repo: string) {
+export async function getRepoDetailsGraphQL(owner: string, repo: string, options?: GitHubRequestOptions) {
   const { graphql } = await import("@octokit/graphql");
+  const { token } = await resolveGitHubAuth(options);
+
+  if (!token) {
+    return null;
+  }
 
   try {
     const data = await graphql<RepoDetailsGraphQLResponse>(REPO_DETAILS_QUERY, {
       owner,
       name: repo,
       headers: {
-        authorization: `token ${process.env.GITHUB_TOKEN}`,
+        authorization: `token ${token}`,
       },
     });
 
@@ -441,25 +551,29 @@ export async function getRepoDetailsGraphQL(owner: string, repo: string) {
 /**
  * Core Repo Context Fetcher (hit by unstable_cache)
  */
-async function getRepoFullContextRaw(owner: string, repo: string): Promise<RepoFullContext> {
+async function getRepoFullContextRaw(owner: string, repo: string, options?: GitHubRequestOptions): Promise<RepoFullContext> {
+  const { isUserAuth } = await resolveGitHubAuth(options);
+
   // Check Mega-Key cache first
-  const cached = await getCachedRepoFullContext(owner, repo);
-  if (cached && isGitHubRepo(cached.metadata)) {
-    // Put into memory caches for efficiency if needed
-    repoCache.set(`${owner}/${repo}`, cached.metadata);
-    return {
-      metadata: cached.metadata,
-      languages: Array.isArray(cached.languages) ? (cached.languages as RepoLanguage[]) : [],
-      commits: Array.isArray(cached.commits) ? (cached.commits as RepoCommit[]) : [],
-      readme: typeof cached.readme === "string" ? cached.readme : null
-    };
+  if (!isUserAuth) {
+    const cached = await getCachedRepoFullContext(owner, repo);
+    if (cached && isGitHubRepo(cached.metadata)) {
+      // Put into memory caches for efficiency if needed
+      repoCache.set(`${owner}/${repo}`, cached.metadata);
+      return {
+        metadata: cached.metadata,
+        languages: Array.isArray(cached.languages) ? (cached.languages as RepoLanguage[]) : [],
+        commits: Array.isArray(cached.commits) ? (cached.commits as RepoCommit[]) : [],
+        readme: typeof cached.readme === "string" ? cached.readme : null
+      };
+    }
   }
 
   // Fetch all in parallel
   const [metadata, details, readme] = await Promise.all([
-    getRepo(owner, repo),
-    getRepoDetailsGraphQL(owner, repo),
-    getRepoReadme(owner, repo)
+    getRepo(owner, repo, options),
+    getRepoDetailsGraphQL(owner, repo, options),
+    getRepoReadme(owner, repo, options)
   ]);
 
   const context = {
@@ -470,7 +584,9 @@ async function getRepoFullContextRaw(owner: string, repo: string): Promise<RepoF
   };
 
   // Cache as Mega-Key
-  await cacheRepoFullContext(owner, repo, context);
+  if (!isUserAuth) {
+    await cacheRepoFullContext(owner, repo, context);
+  }
 
   return context;
 }
@@ -491,11 +607,14 @@ export async function getFileContent(
   owner: string,
   repo: string,
   path: string,
-  sha?: string
+  sha?: string,
+  options?: GitHubRequestOptions
 ) {
+  const { octokit, isUserAuth } = await getRequestOctokit(options);
+
   try {
     // If SHA is provided, check cache directly
-    if (sha) {
+    if (sha && !isUserAuth) {
       const cached = await getCachedFile(owner, repo, path, sha);
       if (cached) {
         return cached;
@@ -523,7 +642,9 @@ export async function getFileContent(
         });
 
         const content = Buffer.from(data.content, "base64").toString("utf-8");
-        await cacheFile(owner, repo, path, sha, content);
+        if (!isUserAuth) {
+          await cacheFile(owner, repo, path, sha, content);
+        }
         return content;
       } catch (error: unknown) {
         const status = getErrorStatus(error);
@@ -544,7 +665,7 @@ export async function getFileContent(
       const currentSha = data.sha;
 
       // Check KV cache with SHA (if we didn't have it before)
-      if (!sha) {
+      if (!sha && !isUserAuth) {
         const cached = await getCachedFile(owner, repo, path, currentSha);
         if (cached) {
           return cached;
@@ -555,7 +676,9 @@ export async function getFileContent(
       const content = Buffer.from(data.content, "base64").toString("utf-8");
 
       // Cache for future requests
-      await cacheFile(owner, repo, path, currentSha, content);
+      if (!isUserAuth) {
+        await cacheFile(owner, repo, path, currentSha, content);
+      }
 
       return content;
     }
@@ -574,14 +697,19 @@ export async function getFileContent(
 export async function getFileContentBatch(
   owner: string,
   repo: string,
-  files: Array<{ path: string; sha?: string }>
+  files: Array<{ path: string; sha?: string }>,
+  options?: GitHubRequestOptions
 ): Promise<Array<{ path: string; content: string | null }>> {
+  const { isUserAuth } = await resolveGitHubAuth(options);
+
   // Step 1: Separate files that already have SHAs (eligible for batch cache hit)
   const filesWithSha = files.filter(f => !!f.sha) as Array<{ path: string; sha: string }>;
   const filesWithoutSha = files.filter(f => !f.sha);
 
   // Step 2: Batch fetch from KV for files with SHAs
-  const cachedContents = await getCachedFilesBatch(owner, repo, filesWithSha);
+  const cachedContents = !isUserAuth
+    ? await getCachedFilesBatch(owner, repo, filesWithSha)
+    : filesWithSha.map(() => null);
 
   const results: Array<{ path: string; content: string | null }> = [];
   const missingFromCache: Array<{ path: string; sha: string }> = [];
@@ -600,7 +728,7 @@ export async function getFileContentBatch(
   const remainingFiles = [...filesWithoutSha, ...missingFromCache];
   const remainingPromises = remainingFiles.map(async ({ path, sha }) => {
     try {
-      const content = await getFileContent(owner, repo, path, sha);
+      const content = await getFileContent(owner, repo, path, sha, options);
       return { path, content };
     } catch (error: unknown) {
       if (!isErrorWithMessage(error) || error.message !== "Not a file") {
@@ -614,7 +742,8 @@ export async function getFileContentBatch(
   return [...results, ...remainingResults];
 }
 
-export async function getProfileReadme(username: string) {
+export async function getProfileReadme(username: string, options?: GitHubRequestOptions) {
+  const { octokit } = await getRequestOctokit(options);
   try {
     const { data } = await octokit.rest.repos.getReadme({
       owner: username,
@@ -626,7 +755,8 @@ export async function getProfileReadme(username: string) {
   }
 }
 
-export async function getRepoReadme(owner: string, repo: string) {
+export async function getRepoReadme(owner: string, repo: string, options?: GitHubRequestOptions) {
+  const { octokit } = await getRequestOctokit(options);
   try {
     const { data } = await octokit.rest.repos.getReadme({
       owner,
@@ -641,7 +771,8 @@ export async function getRepoReadme(owner: string, repo: string) {
 /**
  * Get all public repositories for a user
  */
-export async function getUserRepos(username: string): Promise<GitHubRepo[]> {
+export async function getUserRepos(username: string, options?: GitHubRequestOptions): Promise<GitHubRepo[]> {
+  const { octokit } = await getRequestOctokit(options);
   try {
     const { data } = await octokit.rest.repos.listForUser({
       username,
@@ -658,7 +789,8 @@ export async function getUserRepos(username: string): Promise<GitHubRepo[]> {
 /**
  * Get public starred repositories for a user
  */
-export async function getStarredRepos(username: string): Promise<GitHubRepo[]> {
+export async function getStarredRepos(username: string, options?: GitHubRequestOptions): Promise<GitHubRepo[]> {
+  const { octokit } = await getRequestOctokit(options);
   try {
     const { data } = await octokit.rest.activity.listReposStarredByUser({
       username,
@@ -675,9 +807,10 @@ export async function getStarredRepos(username: string): Promise<GitHubRepo[]> {
 /**
  * Get READMEs for a user's repositories
  */
-export async function getReposReadmes(username: string) {
+export async function getReposReadmes(username: string, options?: GitHubRequestOptions) {
+  const { octokit } = await getRequestOctokit(options);
   try {
-    const repos = await getUserRepos(username);
+    const repos = await getUserRepos(username, options);
 
     const readmePromises = repos.map(async (repo) => {
       try {
@@ -719,7 +852,8 @@ export async function getReposReadmes(username: string) {
  * Get recent commits authored by a specific user across a list of their repositories.
  * Useful for determining qualitative traits like commit quality, coding style, and habits.
  */
-export async function getRecentCommitsForUser(username: string, repos: string[], maxTokens: number = 30) {
+export async function getRecentCommitsForUser(username: string, repos: string[], maxTokens: number = 30, options?: GitHubRequestOptions) {
+  const { octokit } = await getRequestOctokit(options);
   try {
     const commitsPromises = repos.slice(0, 10).map(async (repo) => {
       try {
@@ -756,7 +890,8 @@ export async function getRecentCommitsForUser(username: string, repos: string[],
  * Get repositories for a user sorted by creation date.
  * Useful for building a timeline of the user's technology evolution.
  */
-export async function getUserReposByAge(username: string, sortDirection: 'oldest' | 'newest' = 'oldest', limit: number = 10) {
+export async function getUserReposByAge(username: string, sortDirection: 'oldest' | 'newest' = 'oldest', limit: number = 10, options?: GitHubRequestOptions) {
+  const { octokit } = await getRequestOctokit(options);
   try {
     // We already have getUserRepos which fetches up to 100 recent repos.
     // However, to get the absolute oldest, we should use the standard fetch but sort appropriately.

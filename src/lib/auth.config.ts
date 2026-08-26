@@ -7,6 +7,7 @@ import {
 } from "./auth-env";
 import { prisma } from "./db";
 import { INVALID_SESSION_ERROR_CODE } from "./session-guard";
+import { getGithubAccessTokenForUser } from "./auth-oauth-db";
 
 function buildGitHubProvider() {
     if (getGitHubOAuthConfigError()) {
@@ -77,6 +78,26 @@ const authConfig: NextAuthConfig = {
             }
             if (account?.access_token) {
                 token.accessToken = account.access_token;
+            } else {
+                try {
+                    const refreshedToken = await getGithubAccessTokenForUser({
+                        userId:
+                            typeof token.id === "string" ? token.id : undefined,
+                        githubLogin:
+                            typeof token.username === "string"
+                                ? token.username
+                                : undefined,
+                        providerAccountId:
+                            typeof token.sub === "string" ? token.sub : undefined,
+                    });
+                    if (refreshedToken) {
+                        token.accessToken = refreshedToken;
+                    }
+                } catch (error: unknown) {
+                    const message =
+                        error instanceof Error ? error.message : String(error);
+                    console.error("[auth] jwt token refresh failed:", message);
+                }
             }
             if (account?.scope) {
                 token.oauthScope = account.scope;

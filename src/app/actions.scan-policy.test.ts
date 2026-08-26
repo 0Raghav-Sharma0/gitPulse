@@ -44,6 +44,14 @@ vi.mock("@vercel/kv", () => ({
     },
 }));
 
+vi.mock("@/lib/kv-client", () => ({
+    kvGet: kvGetMock,
+    kvIncr: kvIncrMock,
+    kvExpire: kvExpireMock,
+    isKvConfigured: vi.fn(() => true),
+    safeKvOperation: vi.fn(async (operation: () => Promise<unknown>) => operation()),
+}));
+
 vi.mock("@/lib/github", () => ({
     getProfile: vi.fn(),
     getRepo: vi.fn(),

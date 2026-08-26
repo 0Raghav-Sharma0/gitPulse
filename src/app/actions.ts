@@ -14,7 +14,7 @@ import { headers } from "next/headers";
 import type { ReportFalsePositiveReason } from "@prisma/client";
 import { auth } from "@/lib/auth";
 import { isAdminUser } from "@/lib/admin-auth";
-import { kv } from "@vercel/kv";
+import { kvGet, kvIncr, kvExpire } from "@/lib/kv-client";
 import {
     getProfile,
     getRepo,
@@ -24,6 +24,7 @@ import {
     getProfileReadme,
     getUserRepos,
     getRepoReadme,
+    getErrorStatus,
 } from "@/lib/github";
 import {
     trackEvent,
@@ -97,6 +98,17 @@ function getErrorMessage(error: unknown): string {
         return (error as { message: string }).message;
     }
     return String(error);
+}
+
+function formatGitHubFetchError(error: unknown, resourceLabel: string): string {
+    const message = getErrorMessage(error);
+    const status = getErrorStatus(error);
+
+    if (status === 401 || message.toLowerCase().includes("bad credentials")) {
+        return "GitHub authentication failed. Please sign out and sign in again.";
+    }
+
+    return `${resourceLabel}: ${message}`;
 }
 
 // ─── Private: Analytics tracking ─────────────────────────────────────────────
@@ -182,7 +194,7 @@ export async function fetchGitHubData(input: string) {
             }
             return { type: "profile", data };
         } catch (e: unknown) {
-            return { error: `User not found: ${getErrorMessage(e)}` };
+            return { error: formatGitHubFetchError(e, "User not found") };
         }
     }
     if (parts.length === 2) {
@@ -199,7 +211,7 @@ export async function fetchGitHubData(input: string) {
             }
             return { type: "repo", data: repoData, fileTree: tree, hiddenFiles };
         } catch (e: unknown) {
-            return { error: `Repository not found: ${getErrorMessage(e)}` };
+            return { error: formatGitHubFetchError(e, "Repository not found") };
         }
     }
     return { error: "Invalid input format" };
@@ -524,7 +536,7 @@ export async function scanRepositoryVulnerabilities(
         };
     } else {
         if (config.analysisProfile === "deep" && limitKey) {
-            const currentScans = await kv.get<number>(limitKey) || 0;
+            const currentScans = (await kvGet<number>(limitKey)) ?? 0;
             if (currentScans >= DEEP_SCAN_MONTHLY_LIMIT) {
                 throw new Error(`Monthly Deep Scan limit reached (${DEEP_SCAN_MONTHLY_LIMIT}/${DEEP_SCAN_MONTHLY_LIMIT}).`);
             }
@@ -538,9 +550,8 @@ export async function scanRepositoryVulnerabilities(
 
     // Deep quota counts only fresh deep scans (cache hits do not consume quota).
     if (config.analysisProfile === "deep" && limitKey && !isCacheHit) {
-        await kv.incr(limitKey);
-        // Expire key after 32 days to clean up
-        await kv.expire(limitKey, 32 * 24 * 60 * 60);
+        await kvIncr(limitKey);
+        await kvExpire(limitKey, 32 * 24 * 60 * 60);
     }
 
     let scanId: string | undefined;
@@ -597,7 +608,7 @@ export async function getRemainingDeepScans(): Promise<{ used: number; total: nu
     const monthKey = `${now.getFullYear()}_${now.getMonth() + 1}`;
     const limitKey = `user:${session.user.id}:deep_scans:${monthKey}`;
 
-    const currentScans = await kv.get<number>(limitKey) || 0;
+    const currentScans = (await kvGet<number>(limitKey)) ?? 0;
 
     return { used: currentScans, total, resetsAt, isUnlimited: false };
 }

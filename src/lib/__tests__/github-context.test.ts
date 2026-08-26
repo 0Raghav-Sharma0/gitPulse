@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
 const {
     getBranchMock,
@@ -65,7 +65,30 @@ vi.mock("@/lib/cache", () => ({
     getCachedFilesBatch: vi.fn(),
 }));
 
+vi.mock("@/lib/auth", () => ({
+    auth: vi.fn().mockResolvedValue(null),
+}));
+
+vi.mock("@/lib/auth-oauth-db", () => ({
+    getGithubAccessTokenForUser: vi.fn().mockResolvedValue(undefined),
+    linkGithubOAuthUser: vi.fn(),
+}));
+
 import { getRepoDetailsGraphQL, getRepoFileTree, getRepoFullContext } from "@/lib/github";
+
+const ORIGINAL_GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
+beforeAll(() => {
+    process.env.GITHUB_TOKEN = "test-token";
+});
+
+afterAll(() => {
+    if (ORIGINAL_GITHUB_TOKEN === undefined) {
+        delete process.env.GITHUB_TOKEN;
+    } else {
+        process.env.GITHUB_TOKEN = ORIGINAL_GITHUB_TOKEN;
+    }
+});
 
 describe("getRepoFileTree", () => {
     beforeEach(() => {

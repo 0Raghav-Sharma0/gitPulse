@@ -8,11 +8,12 @@ const ERROR_COPY: Record<
         title: "Sign-in could not be completed",
         description:
             "GitHub authorized the app, but the server could not finish creating your session.",
-        hint: "Open /api/health — if database is ok, try signing in again at https://git-pulse-bice.vercel.app/login (not a preview URL). If it still fails, check Vercel → Logs for lines starting with [auth].",
+        hint: "For local dev, start Postgres with `docker compose up db -d`, run `npm run prisma:deploy`, then try again. On production, open /api/health — if database is not ok, check DATABASE_URL and DIRECT_URL in Vercel. If it still fails, check server logs for lines starting with [auth].",
     },
     AccessDenied: {
         title: "Access denied",
         description: "You are not allowed to sign in with this account.",
+        hint: "If you're developing locally, ensure Postgres is running (`docker compose up db -d`) and migrations are applied (`npm run prisma:deploy`).",
     },
     Verification: {
         title: "Verification failed",

@@ -35,7 +35,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 const message =
                     error instanceof Error ? error.message : String(error);
                 console.error("[auth] GitHub sign-in database error:", message);
-                return false;
+                // NextAuth maps `false` to AccessDenied; redirect to a clearer error page instead.
+                return "/auth/error?error=Configuration";
             }
         },
     },

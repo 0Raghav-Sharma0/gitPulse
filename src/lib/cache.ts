@@ -1,7 +1,7 @@
 import { kv } from "@vercel/kv";
 import { createHash } from "node:crypto";
 import { gzipSync, gunzipSync } from "node:zlib";
-
+import { safeKvOperation } from "./kv-client";
 /**
  * Vercel KV caching utilities for GitHub API responses
  * Gracefully degrades when KV is unavailable
@@ -19,16 +19,6 @@ interface RepoFullContextCachePayload {
     languages: unknown;
     commits: unknown;
     readme: string | null;
-}
-
-// Helper to handle KV errors gracefully
-async function safeKvOperation<T>(operation: () => Promise<T>): Promise<T | null> {
-    try {
-        return await operation();
-    } catch (error) {
-        console.warn("KV operation failed (gracefully degrading):", error);
-        return null;
-    }
 }
 
 /**
