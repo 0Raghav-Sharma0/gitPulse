@@ -1,14 +1,27 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+
+vi.mock("@/lib/auth-oauth-db", () => ({
+    getGithubAccessTokenForUser: vi.fn().mockResolvedValue(undefined),
+    resolveLinkedUserId: vi.fn().mockResolvedValue(undefined),
+    linkGithubOAuthUser: vi.fn(),
+}));
+
 import authConfig from "@/lib/auth.config";
+import { resolveLinkedUserId } from "@/lib/auth-oauth-db";
 import { INVALID_SESSION_ERROR_CODE } from "@/lib/session-guard";
 
 describe("auth.config callbacks", () => {
-    it("uses token.sub as fallback id in jwt callback", async () => {
+    beforeEach(() => {
+        vi.mocked(resolveLinkedUserId).mockReset();
+        vi.mocked(resolveLinkedUserId).mockResolvedValue(undefined);
+    });
+
+    it("does not use token.sub as the Prisma user id", async () => {
         const jwt = authConfig.callbacks?.jwt;
         expect(jwt).toBeTypeOf("function");
 
         const result = await jwt?.({
-            token: { sub: "user_sub_id" },
+            token: { sub: "168120496" },
             profile: undefined,
             account: undefined,
             user: undefined,
@@ -17,8 +30,8 @@ describe("auth.config callbacks", () => {
             isNewUser: false,
         } as never);
 
-        expect(result?.id).toBe("user_sub_id");
-        expect(result?.error).toBeUndefined();
+        expect(result?.id).toBeUndefined();
+        expect(result?.error).toBe(INVALID_SESSION_ERROR_CODE);
     });
 
     it("marks session as invalid when no user id can be resolved", async () => {

@@ -18,6 +18,11 @@ import type { StreamUpdate } from "@/lib/streaming-types";
 import type { GitHubProfile } from "@/lib/github";
 import type { ModelPreference } from "@/lib/ai-client";
 
+export interface RepoFileRef {
+    path: string;
+    sha?: string;
+}
+
 // ─── Types ─────────────────────────────────────────────────────────────────────
 
 export interface RepoQueryParams {
@@ -25,6 +30,7 @@ export interface RepoQueryParams {
     owner: string;
     repo: string;
     filePaths: string[];
+    fileRefs?: RepoFileRef[];
     history?: { role: "user" | "model"; content: string }[];
     profileData?: GitHubProfile;
     modelPreference?: ModelPreference;
@@ -79,7 +85,24 @@ export function pruneFilePaths(paths: string[]): string[] {
     );
 }
 
-// ─── Pipeline ──────────────────────────────────────────────────────────────────
+export function buildShaLookup(fileRefs?: RepoFileRef[]): Map<string, string> {
+    const lookup = new Map<string, string>();
+    for (const file of fileRefs ?? []) {
+        if (file.sha) {
+            lookup.set(file.path, file.sha);
+        }
+    }
+    return lookup;
+}
+
+async function yieldCachedAnswerIfAvailable(
+    owner: string,
+    repo: string,
+    query: string,
+    relevantFiles: string[],
+): Promise<string | null> {
+    return getCachedRepoQueryAnswer(owner, repo, query, relevantFiles);
+}
 
 /**
  * Core repository query pipeline as a streaming generator.
@@ -96,10 +119,12 @@ export async function* executeRepoQueryStream(
         streamAnswer = answerWithContextStream,
     } = deps;
 
-    const { query, owner, repo, filePaths, history = [], profileData, modelPreference } = params;
+    const { query, owner, repo, filePaths, fileRefs, history = [], profileData, modelPreference } = params;
+    const shaByPath = buildShaLookup(fileRefs);
 
     try {
         const isThinking = modelPreference === "thinking";
+        let answerBuffer = "";
 
         // Step 0: Short-circuit check
         // Check if we have ANY recent answer for this exact query in this repo.
@@ -124,6 +149,15 @@ export async function* executeRepoQueryStream(
         const prunedPaths = pruneFilePaths(filePaths);
         const relevantFiles = await analyzeFiles(query, prunedPaths, owner, repo, modelPreference, history);
 
+        const cachedAnswer = await yieldCachedAnswerIfAvailable(owner, repo, query, relevantFiles);
+        if (cachedAnswer) {
+            console.log(`🧠 AI Response Cache Hit (stream): ${owner}/${repo}`);
+            yield { type: "files", files: relevantFiles };
+            yield { type: "content", text: cachedAnswer, append: true };
+            yield { type: "complete", relevantFiles };
+            return;
+        }
+
         yield { type: "files", files: relevantFiles };
         yield {
             type: "status",
@@ -137,7 +171,7 @@ export async function* executeRepoQueryStream(
         const fileResults = await fetchFiles(
             owner,
             repo,
-            relevantFiles.map((path) => ({ path }))
+            relevantFiles.map((path) => ({ path, sha: shaByPath.get(path) }))
         );
 
         let context = "";
@@ -180,8 +214,13 @@ export async function* executeRepoQueryStream(
             if (chunk.startsWith("THOUGHT:")) {
                 yield { type: "thought", text: chunk.replace("THOUGHT:", "") };
             } else {
+                answerBuffer += chunk;
                 yield { type: "content", text: chunk, append: true };
             }
+        }
+
+        if (answerBuffer) {
+            await cacheRepoQueryAnswer(owner, repo, query, relevantFiles, answerBuffer);
         }
 
         yield { type: "complete", relevantFiles };

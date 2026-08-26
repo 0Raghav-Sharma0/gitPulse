@@ -1,6 +1,7 @@
 import { getGenAI, DEFAULT_MODEL, type ModelPreference } from "./ai-client";
 import { buildGitPulsePrompt, formatHistoryText } from "./prompt-builder";
 import { cacheQuerySelection, getCachedQuerySelection } from "./cache";
+import { tryHeuristicFileSelection } from "./file-selection-heuristics";
 import type { GitHubProfile } from "./github";
 import { getRecentCommitsForUser, getUserReposByAge } from "./github";
 import type { GenerationConfig } from "@google/generative-ai";
@@ -24,6 +25,41 @@ function getStringArray(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
 }
 
+function getAnswerTools(
+  modelPreference: ModelPreference,
+  repoDetails: { owner: string; repo: string },
+  profileData?: GitHubProfile,
+): GeminiTool[] {
+  if (modelPreference === "thinking" && repoDetails.repo === "profile" && profileData) {
+    return [{
+      functionDeclarations: [
+        {
+          name: "fetch_recent_commits",
+          description: "Fetch recent commits authored by the user to analyze coding style and real-world activity.",
+          parameters: {
+            type: "OBJECT",
+            properties: {
+              dummy: { type: "STRING", description: "Ignore this parameter" }
+            }
+          }
+        },
+        {
+          name: "fetch_repos_by_age",
+          description: "Fetch older repositories to analyze the evolution of their tech stack over time.",
+          parameters: {
+            type: "OBJECT",
+            properties: {
+              dummy: { type: "STRING", description: "Ignore this parameter" }
+            }
+          }
+        }
+      ]
+    }];
+  }
+
+  return [];
+}
+
 function getThinkingGenerationConfig(includeThoughts: boolean, thinkingLevel: "HIGH" | "LOW" | "MINIMAL"): GenerationConfig {
   return {
     thinkingConfig: {
@@ -31,6 +67,10 @@ function getThinkingGenerationConfig(includeThoughts: boolean, thinkingLevel: "H
       thinking_level: thinkingLevel,
     },
   } as unknown as GenerationConfig;
+}
+
+function getFlashThinkingLevel(modelPreference: ModelPreference): "HIGH" | "LOW" | "MINIMAL" {
+  return modelPreference === "thinking" ? "HIGH" : "MINIMAL";
 }
 
 // ─── File Selection ────────────────────────────────────────────────────────────
@@ -43,6 +83,15 @@ export async function analyzeFileSelection(
   modelPreference: ModelPreference = "flash",
   history: { role: "user" | "model"; content: string }[] = []
 ): Promise<string[]> {
+  const heuristicSelection = tryHeuristicFileSelection(question, fileTree, history);
+  if (heuristicSelection !== null) {
+    if (owner && repo && heuristicSelection.length > 0) {
+      await cacheQuerySelection(owner, repo, question, heuristicSelection);
+    }
+    console.log(`⚡ Heuristic file selection: ${heuristicSelection.length} files`);
+    return heuristicSelection;
+  }
+
   // 1. SMART BYPASS: Triggered only when the user explicitly mentions an exact filename
   // Uses word-boundary matching to avoid false positives (e.g. "contributing" hitting CONTRIBUTING.md)
   const mentionedFiles = fileTree.filter((path) => {
@@ -124,7 +173,7 @@ ${isDeepThinking ?
     // For large/complex selections, we use the reasoning model with low thinking to keep it fast
     const model = getGenAI().getGenerativeModel({
       model: DEFAULT_MODEL,
-      generationConfig: getThinkingGenerationConfig(modelPreference === "thinking", modelPreference === "thinking" ? "HIGH" : "LOW"),
+      generationConfig: getThinkingGenerationConfig(modelPreference === "thinking", getFlashThinkingLevel(modelPreference)),
     });
 
     const result = await model.generateContent(prompt);
@@ -222,41 +271,12 @@ export async function answerWithContext(
     - Only use tools if the answer requires data not available in the provided context.`;
   }
 
-  const tools: GeminiTool[] = [];
-
-  if (modelPreference === "thinking" && repoDetails.repo === "profile" && profileData) {
-    tools.push({
-      functionDeclarations: [
-        {
-          name: "fetch_recent_commits",
-          description: "Fetch recent commits authored by the user to analyze coding style and real-world activity.",
-          parameters: {
-            type: "OBJECT",
-            properties: {
-              dummy: { type: "STRING", description: "Ignore this parameter" }
-            }
-          }
-        },
-        {
-          name: "fetch_repos_by_age",
-          description: "Fetch older repositories to analyze the evolution of their tech stack over time.",
-          parameters: {
-            type: "OBJECT",
-            properties: {
-              dummy: { type: "STRING", description: "Ignore this parameter" }
-            }
-          }
-        }
-      ]
-    });
-  } else {
-    tools.push({ googleSearch: {} });
-  }
+  const tools = getAnswerTools(modelPreference, repoDetails, profileData);
 
   const model = getGenAI().getGenerativeModel({
     model: DEFAULT_MODEL,
-    tools,
-    generationConfig: getThinkingGenerationConfig(modelPreference === "thinking", modelPreference === "thinking" ? "HIGH" : "LOW"),
+    ...(tools.length > 0 ? { tools } : {}),
+    generationConfig: getThinkingGenerationConfig(modelPreference === "thinking", getFlashThinkingLevel(modelPreference)),
   });
 
   const chat = model.startChat();
@@ -315,44 +335,30 @@ export async function* answerWithContextStream(
     - Only use tools if the answer requires data not available in the provided context.`;
   }
 
-  const tools: GeminiTool[] = [];
-
-  if (modelPreference === "thinking" && repoDetails.repo === "profile" && profileData) {
-    tools.push({
-      functionDeclarations: [
-        {
-          name: "fetch_recent_commits",
-          description: "Fetch recent commits authored by the user to analyze coding style and real-world activity.",
-          parameters: {
-            type: "OBJECT",
-            properties: {
-              dummy: { type: "STRING", description: "Ignore this parameter" }
-            }
-          }
-        },
-        {
-          name: "fetch_repos_by_age",
-          description: "Fetch older repositories to analyze the evolution of their tech stack over time.",
-          parameters: {
-            type: "OBJECT",
-            properties: {
-              dummy: { type: "STRING", description: "Ignore this parameter" }
-            }
-          }
-        }
-      ]
-    });
-  } else {
-    tools.push({ googleSearch: {} });
-  }
+  const tools = getAnswerTools(modelPreference, repoDetails, profileData);
 
   const model = getGenAI().getGenerativeModel({
     model: DEFAULT_MODEL,
-    tools,
-    generationConfig: getThinkingGenerationConfig(modelPreference === "thinking", modelPreference === "thinking" ? "HIGH" : "LOW"),
+    ...(tools.length > 0 ? { tools } : {}),
+    generationConfig: getThinkingGenerationConfig(modelPreference === "thinking", getFlashThinkingLevel(modelPreference)),
   });
 
   const chat = model.startChat();
+
+  if (tools.length === 0) {
+    const streamResult = await chat.sendMessageStream(prompt);
+    for await (const chunk of streamResult.stream) {
+      const parts = ((chunk as StreamChunkShape).candidates?.[0]?.content?.parts ?? []);
+      for (const part of parts) {
+        if (part.thought) {
+          yield `THOUGHT:${part.text}`;
+        } else if (part.text) {
+          yield part.text;
+        }
+      }
+    }
+    return;
+  }
 
   // --- Phase 1: Send message (non-streaming) to detect if a tool call is needed ---
   const firstResult = await chat.sendMessage(prompt);

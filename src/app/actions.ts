@@ -44,6 +44,7 @@ import type { ModelPreference } from "@/lib/ai-client";
 import {
     executeRepoQuery,
     executeRepoQueryStream,
+    type RepoFileRef,
 } from "@/lib/services/query-pipeline";
 import {
     buildScanConfig,
@@ -354,13 +355,15 @@ export async function* generateAnswerStream(
     filePaths: string[],
     history: { role: "user" | "model"; content: string }[] = [],
     profileData?: GitHubProfile,
-    modelPreference: ModelPreference = "flash"
+    modelPreference: ModelPreference = "flash",
+    fileRefs?: RepoFileRef[]
 ): AsyncGenerator<StreamUpdate> {
     yield* executeRepoQueryStream({
         query,
         owner: repoDetails.owner,
         repo: repoDetails.repo,
         filePaths,
+        fileRefs,
         history,
         profileData,
         modelPreference,

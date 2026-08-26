@@ -2,9 +2,38 @@ import NextAuth from "next-auth";
 import { linkGithubOAuthUser } from "./auth-oauth-db";
 import { queueWelcomeEmailDelivery } from "./emails/delivery-service";
 import authConfig from "./auth.config";
+import { getGitHubOAuthConfigError, getGitHubOAuthCredentials } from "./auth-env";
+import GitHub from "next-auth/providers/github";
+import { ensureDatabaseEnv } from "./resolve-db-env";
+
+ensureDatabaseEnv();
+
+function buildRuntimeGitHubProvider() {
+    if (getGitHubOAuthConfigError()) {
+        return null;
+    }
+
+    const { clientId, clientSecret } = getGitHubOAuthCredentials();
+    return GitHub({
+        clientId,
+        clientSecret,
+        issuer: "https://github.com/login/oauth",
+        authorization: {
+            params: {
+                scope: "read:user user:email repo",
+            },
+        },
+    });
+}
+
+const runtimeGitHubProvider = buildRuntimeGitHubProvider();
+if (!runtimeGitHubProvider) {
+    console.error("[auth] GitHub OAuth provider is not configured at runtime.");
+}
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
     ...authConfig,
+    providers: runtimeGitHubProvider ? [runtimeGitHubProvider] : [],
     session: {
         strategy: "jwt",
     },
@@ -35,8 +64,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 const message =
                     error instanceof Error ? error.message : String(error);
                 console.error("[auth] GitHub sign-in database error:", message);
-                // NextAuth maps `false` to AccessDenied; redirect to a clearer error page instead.
-                return "/auth/error?error=Configuration";
+                const reason = encodeURIComponent(message.slice(0, 240));
+                return `/auth/error?error=Configuration&reason=${reason}`;
             }
         },
     },

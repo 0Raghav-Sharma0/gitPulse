@@ -8,7 +8,7 @@ const ERROR_COPY: Record<
         title: "Sign-in could not be completed",
         description:
             "GitHub authorized the app, but the server could not finish creating your session.",
-        hint: "For local dev, start Postgres with `docker compose up db -d`, run `npm run prisma:deploy`, then try again. On production, open /api/health — if database is not ok, check DATABASE_URL and DIRECT_URL in Vercel. If it still fails, check server logs for lines starting with [auth].",
+        hint: "Use the production URL only: https://git-pulse-bice.vercel.app/login — not a preview deployment URL. In Vercel → Settings → Environment Variables (Production), confirm APP_URL, AUTH_URL, NEXTAUTH_URL, NEXT_PUBLIC_APP_URL, DATABASE_URL, DIRECT_URL, AUTH_GITHUB_ID, AUTH_GITHUB_SECRET, and AUTH_SECRET. GitHub OAuth callback must be https://git-pulse-bice.vercel.app/api/auth/callback/github. Redeploy after changing env vars, then open /api/health.",
     },
     AccessDenied: {
         title: "Access denied",
@@ -26,13 +26,42 @@ const ERROR_COPY: Record<
 };
 
 interface AuthErrorPageProps {
-    searchParams: Promise<{ error?: string }>;
+    searchParams: Promise<{ error?: string; reason?: string }>;
+}
+
+async function getDatabaseHealthHint(): Promise<string | null> {
+    try {
+        const baseUrl =
+            process.env.NEXT_PUBLIC_APP_URL?.trim() ||
+            process.env.APP_URL?.trim() ||
+            "http://localhost:3000";
+        const response = await fetch(`${baseUrl}/api/health`, {
+            cache: "no-store",
+        });
+        if (!response.ok) {
+            return "Database health check failed. Confirm Postgres is running and DATABASE_URL in .env.local is correct.";
+        }
+        const payload = (await response.json()) as {
+            checks?: { database?: { ok?: boolean; detail?: string } };
+        };
+        if (payload.checks?.database?.ok) {
+            return "Database health check passed. Restart `npm run dev` if you recently changed .env.local, then try signing in again.";
+        }
+        return payload.checks?.database?.detail
+            ? `Database issue: ${payload.checks.database.detail}`
+            : "Database health check failed.";
+    } catch {
+        return null;
+    }
 }
 
 export default async function AuthErrorPage({ searchParams }: AuthErrorPageProps) {
     const params = await searchParams;
     const errorKey = params.error ?? "Default";
     const copy = ERROR_COPY[errorKey] ?? ERROR_COPY.Default;
+    const reason = params.reason?.trim();
+    const healthHint =
+        errorKey === "Configuration" ? await getDatabaseHealthHint() : null;
 
     return (
         <main className="min-h-screen bg-[#FDFCFB] text-gray-900 flex items-center justify-center p-6">
@@ -46,6 +75,16 @@ export default async function AuthErrorPage({ searchParams }: AuthErrorPageProps
                 {copy.hint ? (
                     <p className="text-gray-600 text-sm mb-6 leading-relaxed bg-amber-50 border border-amber-200 rounded-lg p-3">
                         {copy.hint}
+                    </p>
+                ) : null}
+                {healthHint ? (
+                    <p className="text-gray-600 text-sm mb-6 leading-relaxed bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                        {healthHint}
+                    </p>
+                ) : null}
+                {reason ? (
+                    <p className="text-xs text-gray-500 mb-6 leading-relaxed bg-gray-50 border border-gray-200 rounded-lg p-3 font-mono break-all">
+                        Details: {decodeURIComponent(reason)}
                     </p>
                 ) : null}
                 <p className="text-xs text-gray-500 mb-6">

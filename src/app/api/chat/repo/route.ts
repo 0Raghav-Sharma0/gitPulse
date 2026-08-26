@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json();
-        const { query, repoDetails, filePaths, history, profileData, modelPreference } = body;
+        const { query, repoDetails, filePaths, fileRefs, history, profileData, modelPreference } = body;
         const owner = typeof repoDetails?.owner === "string" ? repoDetails.owner : undefined;
         const repo = typeof repoDetails?.repo === "string" ? repoDetails.repo : undefined;
         const queryPreview = typeof query === "string" ? query.slice(0, 160) : undefined;
@@ -60,7 +60,8 @@ export async function POST(req: NextRequest) {
                         filePaths,
                         history,
                         profileData,
-                        modelPreference
+                        modelPreference,
+                        fileRefs
                     );
 
                     for await (const chunk of generator) {

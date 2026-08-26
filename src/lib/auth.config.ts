@@ -7,7 +7,7 @@ import {
 } from "./auth-env";
 import { prisma } from "./db";
 import { INVALID_SESSION_ERROR_CODE } from "./session-guard";
-import { getGithubAccessTokenForUser } from "./auth-oauth-db";
+import { getGithubAccessTokenForUser, resolveLinkedUserId } from "./auth-oauth-db";
 
 function buildGitHubProvider() {
     if (getGitHubOAuthConfigError()) {
@@ -69,9 +69,24 @@ const authConfig: NextAuthConfig = {
                 }
             }
 
-            // Do not use OAuth `user.id` — for GitHub it is a numeric provider id, not our Prisma cuid.
+            // Never treat GitHub's numeric provider id as our Prisma user id.
             if (!token.id && typeof token.sub === "string") {
-                token.id = token.sub;
+                try {
+                    const linkedUserId = await resolveLinkedUserId({
+                        githubLogin:
+                            typeof token.username === "string"
+                                ? token.username
+                                : undefined,
+                        providerAccountId: token.sub,
+                    });
+                    if (linkedUserId) {
+                        token.id = linkedUserId;
+                    }
+                } catch (error: unknown) {
+                    const message =
+                        error instanceof Error ? error.message : String(error);
+                    console.error("[auth] jwt user id lookup failed:", message);
+                }
             }
             if (profile && "login" in profile && profile.login) {
                 token.username = String(profile.login);
@@ -110,7 +125,10 @@ const authConfig: NextAuthConfig = {
             return token;
         },
         async session({ session, token }) {
-            const resolvedUserId = typeof token.id === "string" ? token.id : (typeof token.sub === "string" ? token.sub : undefined);
+            const resolvedUserId =
+                typeof token.id === "string" && !/^\d+$/.test(token.id)
+                    ? token.id
+                    : undefined;
             if (resolvedUserId && session.user) {
                 session.user.id = resolvedUserId;
             }

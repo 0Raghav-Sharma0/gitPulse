@@ -343,13 +343,14 @@ export function ChatInterface({ repoContext, onToggleSidebar, initialPrompt }: C
         combinedInputForServer: string,
         selectedModelPreference: ModelPreference
     ) => {
-        const filePaths = repoContext.fileTree
-            .map((file) => file.path)
-            .filter((path) =>
-                !REQUEST_FILE_PATH_SKIP_PATTERN.test(path) &&
-                !path.includes("node_modules/") &&
-                !path.includes(".git/")
-            );
+        const fileRefs = repoContext.fileTree
+            .filter((file) =>
+                !REQUEST_FILE_PATH_SKIP_PATTERN.test(file.path) &&
+                !file.path.includes("node_modules/") &&
+                !file.path.includes(".git/")
+            )
+            .map((file) => ({ path: file.path, sha: file.sha }));
+        const filePaths = fileRefs.map((file) => file.path);
         const historyForServer = messages.slice(-8).map((message) => ({ role: message.role, content: message.content }));
         const response = await fetch("/api/chat/repo", {
             method: "POST",
@@ -358,6 +359,7 @@ export function ChatInterface({ repoContext, onToggleSidebar, initialPrompt }: C
                 query: combinedInputForServer,
                 repoDetails: { owner: repoContext.owner, repo: repoContext.repo },
                 filePaths,
+                fileRefs,
                 history: historyForServer,
                 profileData: ownerProfile,
                 modelPreference: selectedModelPreference,

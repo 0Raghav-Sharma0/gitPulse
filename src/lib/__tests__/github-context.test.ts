@@ -71,6 +71,7 @@ vi.mock("@/lib/auth", () => ({
 
 vi.mock("@/lib/auth-oauth-db", () => ({
     getGithubAccessTokenForUser: vi.fn().mockResolvedValue(undefined),
+    resolveLinkedUserId: vi.fn().mockResolvedValue(undefined),
     linkGithubOAuthUser: vi.fn(),
 }));
 

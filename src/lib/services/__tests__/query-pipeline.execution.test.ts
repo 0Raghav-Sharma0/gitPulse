@@ -34,6 +34,35 @@ describe("executeRepoQueryStream", () => {
         getLatestRepoQueryAnswerMock.mockReset();
     });
 
+    it("returns cached answer after file selection in stream mode", async () => {
+        getLatestRepoQueryAnswerMock.mockResolvedValue(null);
+        getCachedRepoQueryAnswerMock.mockResolvedValue("cached stream answer");
+
+        const analyzeFiles = vi.fn().mockResolvedValue(["README.md"]);
+        const fetchFiles = vi.fn();
+
+        const updates: StreamUpdate[] = [];
+        for await (const update of executeRepoQueryStream(
+            {
+                query: "what is this repo?",
+                owner: "acme",
+                repo: "widget",
+                filePaths: ["README.md", "package.json"],
+            },
+            { analyzeFiles, fetchFiles }
+        )) {
+            updates.push(update);
+        }
+
+        expect(fetchFiles).not.toHaveBeenCalled();
+        expect(updates).toEqual([
+            expect.objectContaining({ type: "status" }),
+            { type: "files", files: ["README.md"] },
+            { type: "content", text: "cached stream answer", append: true },
+            { type: "complete", relevantFiles: ["README.md"] },
+        ]);
+    });
+
     it("short-circuits when a latest cached answer exists", async () => {
         getLatestRepoQueryAnswerMock.mockResolvedValue("recent answer");
 
